@@ -1,0 +1,69 @@
+---
+tags: pattern, pattern/function, factorio, code-logic, project/DOOM, pattern/variant/simple
+date: 2025-04-25
+pattern_type: function
+pattern_variant: simple
+source_file: p_plats.c
+line: 301
+project: DOOM
+first_seen: 2025-04-25
+occurrences: 1
+ai_analyzed: non
+optimizable: non
+---
+
+# 🏭 Usine modulaire (FUNCTION) (Simple)
+
+## Contexte
+- **Fichier**: `p_plats.c`
+- **Ligne**: 301
+- **Fonction**: P_AddActivePlat
+- **Projet**: DOOM
+- **Variante**: Simple
+- **Complexité**: standard
+
+## Métaphore Factorio
+🏭 **Usine modulaire**
+
+Comme une usine qui prend des entrées, effectue un traitement, et produit des sorties.
+
+## Code Source
+```c
+void P_RemoveActivePlat(plat_t* plat)
+{
+    int		i;
+    for (i = 0;i < MAXPLATS;i++)
+	if (plat == activeplats[i])
+	{
+	    (activeplats[i])->sector->specialdata = NULL;
+	    P_RemoveThinker(&(activeplats[i])->thinker);
+	    activeplats[i] = NULL;
+	    
+	    return;
+	}
+    I_Error ("P_RemoveActivePlat: can't find plat!");
+}
+```
+
+## Note Factorio-style
+*Ce pattern fonctionne comme usine modulaire dans Factorio. Il comme une usine qui prend des entrées, effectue un traitement, et produit des sorties.*
+
+## Patterns Similaires
+- [[function_DOOM_ec01a880|p_plats.c:288]] (EV_StopPlat)
+- [[function_DOOM_8c6a5174|p_ceilng.c:270]] (P_RemoveActiveCeiling)
+- [[function_DOOM_e044292a|p_ceilng.c:251]] (P_AddActiveCeiling)
+
+## Note Perso
+*Ajouter vos notes personnelles ici...*
+
+## Statistiques du Pattern
+- **Première détection**: 2025-04-25
+- **Dernière mise à jour**: 2025-04-25
+- **Nombre d'occurrences**: 1 fichiers
+- **Analysé par IA**: Non
+- **Optimisable**: Non
+
+## Patterns liés
+[[return_DOOM_3e1b4f0f|🚚 Convoyeur de sortie (RETURN)]]
+[[return_DOOM_e198b61b|🚚 Convoyeur de sortie (RETURN)]]
+[[return_DOOM_e198b61b|🚚 Convoyeur de sortie (RETURN)]]

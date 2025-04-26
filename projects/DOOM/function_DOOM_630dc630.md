@@ -1,0 +1,76 @@
+---
+tags: pattern, pattern/function, factorio, code-logic, project/DOOM, pattern/variant/simple
+date: 2025-04-25
+pattern_type: function
+pattern_variant: simple
+source_file: am_map.c
+line: 805
+project: DOOM
+first_seen: 2025-04-25
+occurrences: 1
+ai_analyzed: non
+optimizable: non
+---
+
+# 🏭 Usine modulaire (FUNCTION) (Simple)
+
+## Contexte
+- **Fichier**: `am_map.c`
+- **Ligne**: 805
+- **Fonction**: AM_Ticker
+- **Projet**: DOOM
+- **Variante**: Simple
+- **Complexité**: standard
+
+## Métaphore Factorio
+🏭 **Usine modulaire**
+
+Comme une usine qui prend des entrées, effectue un traitement, et produit des sorties.
+
+## Code Source
+```c
+void AM_Ticker (void)
+{
+
+    if (!automapactive)
+	return;
+
+    amclock++;
+
+    if (followplayer)
+	AM_doFollowPlayer();
+
+    // Change the zoom if necessary
+    if (ftom_zoommul != FRACUNIT)
+	AM_changeWindowScale();
+
+    // Change x,y location
+    if (m_paninc.x || m_paninc.y)
+	AM_changeWindowLoc();
+
+    // Update light level
+    // AM_updateLightLev();
+
+}
+```
+
+## Note Factorio-style
+*Ce pattern fonctionne comme usine modulaire dans Factorio. Il comme une usine qui prend des entrées, effectue un traitement, et produit des sorties.*
+
+## Patterns Similaires
+- [[function_DOOM_bece71d0|i_video.c:309]] (I_StartTic)
+
+## Note Perso
+*Ajouter vos notes personnelles ici...*
+
+## Statistiques du Pattern
+- **Première détection**: 2025-04-25
+- **Dernière mise à jour**: 2025-04-25
+- **Nombre d'occurrences**: 1 fichiers
+- **Analysé par IA**: Non
+- **Optimisable**: Non
+
+## Patterns liés
+[[return_DOOM_3e1b4f0f|🚚 Convoyeur de sortie (RETURN)]]
+[[return_DOOM_e198b61b|🚚 Convoyeur de sortie (RETURN)]]
+[[return_DOOM_e198b61b|🚚 Convoyeur de sortie (RETURN)]]

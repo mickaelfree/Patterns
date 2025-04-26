@@ -1,0 +1,2849 @@
+---
+tags: index, pattern, factorio, project/DOOM
+date: 2025-04-25
+project: DOOM
+---
+
+# Patterns Factorio-Style pour DOOM
+
+Cette bibliothèque contient des patterns de code extraits du projet **DOOM** et documentés dans un style inspiré par Factorio.
+Chaque pattern est une brique logique réutilisable que vous pouvez explorer et combiner.
+
+## Patterns par catégorie
+
+### 🔄 Tapis roulant à activation garantie (DO WHILE)
+
+- [[do_while_DOOM_25918417|p_mobj.c:60]] P_SetMobjState
+- [[do_while_DOOM_530f6d58|p_pspr.c:69]] P_SetPsprite
+- [[do_while_DOOM_d72092b2|m_cheat.c:88]] cht_GetParam
+- [[do_while_DOOM_22867d1f|r_draw.c:138]] R_DrawColumn
+- [[do_while_DOOM_a3578562|p_pspr.c:183]] P_CheckAmmo
+- [[do_while_DOOM_b78c6761|z_zone.c:215]] 
+- [[do_while_DOOM_aaa04fc0|r_draw.c:244]] R_DrawColumnLow
+- [[do_while_DOOM_f95c2f34|d_main.c:331]] D_Display
+- [[do_while_DOOM_a360c0fa|r_draw.c:352]] R_DrawFuzzColumn
+- [[do_while_DOOM_d377fca2|i_video.c:394]] if
+- [[do_while_DOOM_2fa9cdc6|r_draw.c:435]] R_DrawTranslatedColumn
+- [[do_while_DOOM_bc5a0a45|i_video.c:436]] if
+- [[do_while_DOOM_90126b72|wi_stuff.c:469]] WI_drawOnLnode
+- [[do_while_DOOM_51d2e9c4|i_video.c:498]] 
+- [[do_while_DOOM_cd442d3d|d_net.c:511]] 
+- [[do_while_DOOM_7373c1fb|g_game.c:511]] G_Responder
+- [[do_while_DOOM_70e6586b|p_floor.c:511]] 
+- [[do_while_DOOM_295c7e64|r_draw.c:549]] R_DrawSpan
+- [[do_while_DOOM_83914918|r_draw.c:674]] R_DrawSpanLow
+- [[do_while_DOOM_856f8fb6|wi_stuff.c:704]] WI_drawTime
+- [[do_while_DOOM_b1640881|d_main.c:767]] FindResponseFile
+- [[do_while_DOOM_492cc1f0|i_video.c:981]] Expand4
+- [[do_while_DOOM_fcc51709|m_menu.c:1625]] switch
+- [[do_while_DOOM_86b86787|m_menu.c:1635]] switch
+
+### 🔀 Répartiteur alternatif (ELSE)
+
+- [[else_DOOM_46c9780a|hu_lib.c:76]] HUlib_addCharToTextLine
+- [[else_DOOM_8ee0b3f0|p_plats.c:80]] 
+- [[else_DOOM_01994d4c|p_floor.c:81]] switch
+- [[else_DOOM_5cff4dd0|hu_lib.c:90]] HUlib_delCharFromTextLine
+- [[else_DOOM_e5bed89d|p_lights.c:108]] T_LightFlash
+- [[else_DOOM_bd308f89|p_floor.c:110]] switch
+- [[else_DOOM_d94d3cee|p_tick.c:115]] P_RunThinkers
+- [[else_DOOM_3d49148c|hu_lib.c:125]] HUlib_drawTextLine
+- [[else_DOOM_84ca0d4c|r_plane.c:148]] R_MapPlane
+- [[else_DOOM_92a34c98|p_floor.c:149]] switch
+- [[else_DOOM_fa64553d|r_segs.c:150]] if
+- [[else_DOOM_7f1aa449|p_mobj.c:159]] 
+- [[else_DOOM_1e5315df|hu_lib.c:162]] 
+- [[else_DOOM_b1a22580|r_plane.c:162]] R_MapPlane
+- [[else_DOOM_67ef7a5e|p_lights.c:165]] T_StrobeFlash
+- [[else_DOOM_a95de9df|p_spec.c:166]] P_InitPicAnims
+- [[else_DOOM_ca6d7d70|w_wad.c:181]] 
+- [[else_DOOM_23e3cbb2|p_floor.c:182]] switch
+- [[else_DOOM_a268b1fe|p_inter.c:212]] P_GiveWeapon
+- [[else_DOOM_22a641d4|s_sound.c:218]] S_Start
+- [[else_DOOM_7aef3186|wadread.c:218]] 
+- [[else_DOOM_fe3cb2d7|p_pspr.c:226]] P_CheckAmmo
+- [[else_DOOM_5d2e24ce|z_zone.c:231]] 
+- [[else_DOOM_b9d5da35|d_net.c:235]] HGetPacket
+- [[else_DOOM_0b7113bc|p_mobj.c:236]] 
+- [[else_DOOM_d77ff99a|p_switch.c:236]] 
+- [[else_DOOM_9362c604|i_video.c:263]] 
+- [[else_DOOM_4f6aeee5|z_zone.c:273]] 
+- [[else_DOOM_08d6b2c0|r_plane.c:282]] 
+- [[else_DOOM_f55d1a26|r_segs.c:291]] if
+- [[else_DOOM_5cfb6a99|r_plane.c:293]] 
+- [[else_DOOM_aa1ee5bf|s_sound.c:295]] S_StartSoundAtVolume
+- [[else_DOOM_58af1d2a|g_game.c:296]] G_BuildTiccmd
+- [[else_DOOM_e09ade44|i_net.c:312]] I_InitNetwork
+- [[else_DOOM_dae1487e|r_main.c:314]] if
+- [[else_DOOM_889fcdc6|r_main.c:320]] if
+- [[else_DOOM_681e51bb|s_sound.c:321]] S_StartSoundAtVolume
+- [[else_DOOM_2a38401a|m_misc.c:325]] M_SaveDefaults
+- [[else_DOOM_8016867c|p_maputl.c:325]] P_LineOpening
+- [[else_DOOM_0f3e0891|p_enemy.c:326]] P_Move
+- [[else_DOOM_8871151d|r_draw.c:327]] R_DrawFuzzColumn
+- [[else_DOOM_408341c9|r_draw.c:334]] R_DrawFuzzColumn
+- [[else_DOOM_c378370c|r_main.c:337]] 
+- [[else_DOOM_0bae187b|p_pspr.c:357]] A_ReFire
+- [[else_DOOM_15ea13cc|am_map.c:362]] AM_restoreScaleAndLoc
+- [[else_DOOM_4ec4d4be|g_game.c:368]] G_BuildTiccmd
+- [[else_DOOM_c0b4cccf|soundsrv.c:371]] grabdata
+- [[else_DOOM_875752dd|p_maputl.c:374]] 
+- [[else_DOOM_c549bd0d|d_main.c:387]] D_DoomLoop
+- [[else_DOOM_b1ff34ac|p_setup.c:387]] P_LoadLineDefs
+- [[else_DOOM_865c4d86|soundsrv.c:388]] grabdata
+- [[else_DOOM_db94043b|d_net.c:389]] NetUpdate
+- [[else_DOOM_3e1bae38|g_game.c:395]] G_BuildTiccmd
+- [[else_DOOM_0808fa46|p_setup.c:400]] P_LoadLineDefs
+- [[else_DOOM_3e92c509|p_setup.c:411]] P_LoadLineDefs
+- [[else_DOOM_fe2f050f|f_finale.c:415]] F_CastTicker
+- [[else_DOOM_5472d539|r_draw.c:419]] R_DrawTranslatedColumn
+- [[else_DOOM_62351e01|p_floor.c:426]] 
+- [[else_DOOM_7d3a4703|p_doors.c:428]] 
+- [[else_DOOM_042ba5d9|r_segs.c:428]] 
+- [[else_DOOM_083bbb32|d_net.c:436]] NetUpdate
+- [[else_DOOM_e0caa642|p_maputl.c:444]] P_SetThingPosition
+- [[else_DOOM_d5bec1fc|p_mobj.c:450]] P_MobjThinker
+- [[else_DOOM_c595668e|p_enemy.c:465]] 
+- [[else_DOOM_1651839d|r_segs.c:469]] 
+- [[else_DOOM_7fe7ac04|r_data.c:474]] 
+- [[else_DOOM_03324527|r_draw.c:476]] R_InitTranslationTables
+- [[else_DOOM_59e93d12|m_misc.c:480]] WritePCXfile
+- [[else_DOOM_914fbebf|r_segs.c:482]] 
+- [[else_DOOM_52b24ab1|wi_stuff.c:483]] WI_drawOnLnode
+- [[else_DOOM_cc0464f6|w_wad.c:493]] 
+- [[else_DOOM_4872cfd1|wi_stuff.c:494]] WI_drawOnLnode
+- [[else_DOOM_b5199d07|d_main.c:500]] D_DoAdvanceDemo
+- [[else_DOOM_abd594b5|i_video.c:504]] 
+- [[else_DOOM_7ae5dbc4|d_net.c:507]] 
+- [[else_DOOM_2632c1f1|soundsrv.c:523]] outputushort
+- [[else_DOOM_904e2556|r_things.c:527]] R_ProjectSprite
+- [[else_DOOM_59fc4280|p_pspr.c:535]] A_Saw
+- [[else_DOOM_085178c2|p_inter.c:539]] P_TouchSpecialThing
+- [[else_DOOM_d5946d0c|w_wad.c:541]] W_Profile
+- [[else_DOOM_d44f8c1f|hu_stuff.c:547]] 
+- [[else_DOOM_c7747e80|p_map.c:547]] P_ThingHeightClip
+- [[else_DOOM_61edd17b|r_main.c:566]] R_InitTextureMapping
+- [[else_DOOM_5ba68be0|r_things.c:567]] R_ProjectSprite
+- [[else_DOOM_d55b1a30|p_maputl.c:578]] PIT_AddLineIntercepts
+- [[else_DOOM_e3c333e0|hu_stuff.c:593]] HU_queueChatChar
+- [[else_DOOM_76b8d470|r_things.c:594]] R_ProjectSprite
+- [[else_DOOM_ccce7ec7|s_sound.c:600]] 
+- [[else_DOOM_0b07f5ef|hu_stuff.c:609]] HU_dequeueChatChar
+- [[else_DOOM_113e3df0|st_stuff.c:613]] 
+- [[else_DOOM_b27d25e1|i_video.c:621]] if
+- [[else_DOOM_e314ef08|wi_stuff.c:630]] 
+- [[else_DOOM_d70087dd|p_setup.c:635]] P_SetupLevel
+- [[else_DOOM_d0692140|p_maputl.c:643]] PIT_AddThingIntercepts
+- [[else_DOOM_a5d709bc|soundsrv.c:648]] 
+- [[else_DOOM_cd5698e2|p_doors.c:649]] 
+- [[else_DOOM_7b960f97|i_video.c:659]] if
+- [[else_DOOM_752d67c8|i_video.c:664]] 
+- [[else_DOOM_7860a72b|r_main.c:687]] R_ExecuteSetViewSize
+- [[else_DOOM_1a54d16e|st_stuff.c:689]] 
+- [[else_DOOM_cd5698e2|p_doors.c:693]] 
+- [[else_DOOM_660c94d9|d_net.c:697]] 
+- [[else_DOOM_3b090c4a|r_things.c:705]] R_DrawPSprite
+- [[else_DOOM_f7a7130b|r_main.c:709]] R_ExecuteSetViewSize
+- [[else_DOOM_3021b86d|f_finale.c:710]] F_Drawer
+- [[else_DOOM_db7e3bc4|wi_stuff.c:716]] WI_drawTime
+- [[else_DOOM_71d96328|p_map.c:719]] P_SlideMove
+- [[else_DOOM_16c12faa|hu_stuff.c:728]] if
+- [[else_DOOM_70b749eb|p_map.c:730]] P_SlideMove
+- [[else_DOOM_ff0cb8f8|r_things.c:732]] R_DrawPSprite
+- [[else_DOOM_1b8a24c7|i_sound.c:807]] I_InitSound
+- [[else_DOOM_1d065e97|s_sound.c:809]] S_AdjustSoundParams
+- [[else_DOOM_81d987d8|p_maputl.c:810]] if
+- [[else_DOOM_c950f207|st_stuff.c:812]] 
+- [[else_DOOM_58da8e97|p_maputl.c:832]] if
+- [[else_DOOM_469af804|s_sound.c:861]] S_getChannel
+- [[else_DOOM_93ede477|st_stuff.c:866]] if
+- [[else_DOOM_e65a0418|r_things.c:880]] 
+- [[else_DOOM_152f5ef7|i_video.c:896]] I_InitGraphics
+- [[else_DOOM_3d23fea9|g_game.c:933]] 
+- [[else_DOOM_0faf1aab|am_map.c:959]] AM_clipMline
+- [[else_DOOM_d45974a3|d_main.c:1002]] D_DoomMain
+- [[else_DOOM_29abfc46|am_map.c:1033]] 
+- [[else_DOOM_7774eb9c|wi_stuff.c:1040]] 
+- [[else_DOOM_6eb05524|p_enemy.c:1064]] A_Tracer
+- [[else_DOOM_b2182cc9|g_game.c:1085]] if
+- [[else_DOOM_76fe7cd7|am_map.c:1136]] 
+- [[else_DOOM_7e3c3269|m_menu.c:1397]] 
+- [[else_DOOM_5671b4b5|g_game.c:1399]] G_InitNew
+- [[else_DOOM_a6f0dc31|wi_stuff.c:1616]] 
+- [[else_DOOM_c226b6c4|p_enemy.c:1625]] 
+- [[else_DOOM_bfd4b1f7|m_menu.c:1672]] switch
+- [[else_DOOM_a214ef41|wi_stuff.c:1723]] 
+- [[else_DOOM_472ef269|p_enemy.c:1727]] 
+- [[else_DOOM_81deb722|wi_stuff.c:1809]] WI_initVariables
+
+### 🔄 Répartiteur intelligent (ELSE IF)
+
+- [[else_if_DOOM_fc8532c0|f_wipe.c:110]] if
+- [[else_if_DOOM_7b17dd15|p_doors.c:151]] if
+- [[else_if_DOOM_70e820d7|p_mobj.c:173]] if
+- [[else_if_DOOM_79948891|p_pspr.c:191]] P_CheckAmmo
+- [[else_if_DOOM_2368b7f1|f_wipe.c:196]] if
+- [[else_if_DOOM_c7762760|p_pspr.c:197]] P_CheckAmmo
+- [[else_if_DOOM_2fad8b75|p_pspr.c:202]] P_CheckAmmo
+- [[else_if_DOOM_a17234e7|p_pspr.c:207]] P_CheckAmmo
+- [[else_if_DOOM_97a82ec2|p_pspr.c:211]] P_CheckAmmo
+- [[else_if_DOOM_fa942bb8|p_pspr.c:215]] P_CheckAmmo
+- [[else_if_DOOM_c7765806|p_pspr.c:220]] P_CheckAmmo
+- [[else_if_DOOM_ccd0ab95|p_floor.c:237]] if
+- [[else_if_DOOM_d41baef0|p_mobj.c:320]] if
+- [[else_if_DOOM_041467ec|s_sound.c:337]] S_StartSoundAtVolume
+- [[else_if_DOOM_d06b69f9|i_net.c:341]] I_NetCmd
+- [[else_if_DOOM_2de0e71d|p_user.c:371]] if
+- [[else_if_DOOM_22448e20|r_things.c:417]] R_DrawVisSprite
+- [[else_if_DOOM_94005066|i_video.c:420]] if
+- [[else_if_DOOM_90c793ad|i_video.c:476]] if
+- [[else_if_DOOM_45b20c70|r_segs.c:493]] if
+- [[else_if_DOOM_5709aa25|r_segs.c:505]] if
+- [[else_if_DOOM_333f6eec|st_stuff.c:564]] 
+- [[else_if_DOOM_d0ff6302|s_sound.c:576]] if
+- [[else_if_DOOM_5491fdab|st_stuff.c:578]] 
+- [[else_if_DOOM_94614499|r_things.c:583]] R_ProjectSprite
+- [[else_if_DOOM_dc5b9230|r_things.c:588]] R_ProjectSprite
+- [[else_if_DOOM_987b1720|st_stuff.c:595]] 
+- [[else_if_DOOM_eeb0ab8a|st_stuff.c:625]] 
+- [[else_if_DOOM_9dbf5077|am_map.c:635]] if
+- [[else_if_DOOM_edb39bfe|hu_stuff.c:648]] if
+- [[else_if_DOOM_f18f7d16|st_stuff.c:657]] 
+- [[else_if_DOOM_6aeb2107|st_stuff.c:664]] 
+- [[else_if_DOOM_bf8786c1|hu_stuff.c:665]] if
+- [[else_if_DOOM_6efc059d|hu_stuff.c:684]] if
+- [[else_if_DOOM_0a4977a0|p_inter.c:692]] P_KillMobj
+- [[else_if_DOOM_88acfb35|am_map.c:708]] if
+- [[else_if_DOOM_5c61a9b9|soundsrv.c:719]] if
+- [[else_if_DOOM_5ddd079f|r_things.c:722]] R_DrawPSprite
+- [[else_if_DOOM_dd426ac5|r_things.c:727]] R_DrawPSprite
+- [[else_if_DOOM_e682ec64|i_video.c:748]] I_InitGraphics
+- [[else_if_DOOM_565596e3|s_sound.c:800]] S_AdjustSoundParams
+- [[else_if_DOOM_5887873f|p_maputl.c:804]] if
+- [[else_if_DOOM_2dfb7fbe|p_maputl.c:826]] if
+- [[else_if_DOOM_ea77bd60|st_stuff.c:841]] if
+- [[else_if_DOOM_477c7a6a|s_sound.c:842]] S_getChannel
+- [[else_if_DOOM_efc79685|p_maputl.c:871]] 
+- [[else_if_DOOM_05c3bf36|st_stuff.c:884]] if
+- [[else_if_DOOM_2b4728a4|r_things.c:914]] if
+- [[else_if_DOOM_76570bd3|r_things.c:921]] if
+- [[else_if_DOOM_59fd791e|am_map.c:932]] AM_clipMline
+- [[else_if_DOOM_4252bb3c|am_map.c:939]] AM_clipMline
+- [[else_if_DOOM_9afd75a0|am_map.c:946]] AM_clipMline
+- [[else_if_DOOM_ccbae057|wi_stuff.c:957]] if
+- [[else_if_DOOM_b802c342|wi_stuff.c:969]] if
+- [[else_if_DOOM_84d26b21|st_stuff.c:1029]] ST_doPaletteStuff
+- [[else_if_DOOM_d48bca03|g_game.c:1089]] if
+- [[else_if_DOOM_2f9be535|am_map.c:1147]] if
+- [[else_if_DOOM_a7eb9f4d|am_map.c:1151]] if
+- [[else_if_DOOM_6b3b9ca8|am_map.c:1155]] if
+- [[else_if_DOOM_985e2b2f|am_map.c:1160]] if
+- [[else_if_DOOM_470d7ecb|wi_stuff.c:1162]] WI_updateNetgameStats
+- [[else_if_DOOM_54e8dfcc|wi_stuff.c:1186]] WI_updateNetgameStats
+- [[else_if_DOOM_e2f7b8ff|wi_stuff.c:1212]] WI_updateNetgameStats
+- [[else_if_DOOM_44fb073c|wi_stuff.c:1238]] WI_updateNetgameStats
+- [[else_if_DOOM_1d767615|wi_stuff.c:1249]] WI_updateNetgameStats
+- [[else_if_DOOM_0dbe647b|wi_stuff.c:1361]] if
+- [[else_if_DOOM_6e13cec3|m_menu.c:1369]] if
+- [[else_if_DOOM_7be4b039|wi_stuff.c:1375]] if
+- [[else_if_DOOM_84dc1d9b|m_menu.c:1380]] if
+- [[else_if_DOOM_ce39b37f|wi_stuff.c:1390]] if
+- [[else_if_DOOM_aa131d22|g_game.c:1394]] G_InitNew
+- [[else_if_DOOM_7a7c93d1|m_menu.c:1408]] if
+- [[else_if_DOOM_4f8647ae|wi_stuff.c:1413]] if
+- [[else_if_DOOM_f0a1f3d9|m_menu.c:1422]] if
+- [[else_if_DOOM_82e04290|wi_stuff.c:1425]] if
+- [[else_if_DOOM_47a29d5f|g_game.c:1429]] G_InitNew
+- [[else_if_DOOM_cd00cb72|m_menu.c:1441]] if
+
+### 🔢 Palette de ressources (ENUM)
+
+- [[enum_DOOM_dca66a64|f_wipe.h:30]] 
+- [[enum_DOOM_fbccbe2e|info.h:30]] 
+- [[enum_DOOM_c62023a3|wi_stuff.h:31]] 
+- [[enum_DOOM_97f4179d|m_bbox.h:32]] 
+- [[enum_DOOM_acac6d23|doomdef.h:33]] 
+- [[enum_DOOM_72c66bf4|doomtype.h:34]] 
+- [[enum_DOOM_c4193714|d_event.h:35]] 
+- [[enum_DOOM_68ee9461|doomdef.h:38]] 
+- [[enum_DOOM_a109ca01|sounds.c:42]] 
+- [[enum_DOOM_02dbe492|doomdata.h:43]] 
+- [[enum_DOOM_b738fd5c|sounds.h:45]] 
+- [[enum_DOOM_b95a25a6|p_enemy.c:51]] 
+- [[enum_DOOM_8db2683c|d_net.h:51]] 
+- [[enum_DOOM_cd61dcf0|doomdef.h:51]] 
+- [[enum_DOOM_30852e07|d_event.h:53]] 
+- [[enum_DOOM_f9be9e8d|d_player.h:53]] 
+- [[enum_DOOM_d0787b5d|st_stuff.h:59]] 
+- [[enum_DOOM_d6e3454c|p_pspr.h:60]] 
+- [[enum_DOOM_9ef8889b|doomdef.h:63]] 
+- [[enum_DOOM_0408050d|d_player.h:68]] 
+- [[enum_DOOM_30c5343a|st_stuff.h:68]] 
+- [[enum_DOOM_941e2311|d_event.h:72]] 
+- [[enum_DOOM_b738fd5c|sounds.h:99]] 
+- [[enum_DOOM_98efa3cf|wi_stuff.c:114]] 
+- [[enum_DOOM_4202caf4|p_mobj.h:117]] 
+- [[enum_DOOM_ecbc1810|sounds.h:123]] 
+- [[enum_DOOM_eee0af17|doomdef.h:127]] 
+- [[enum_DOOM_cd451d1c|soundst.h:143]] 
+- [[enum_DOOM_4fe57e51|doomdef.h:147]] 
+- [[enum_DOOM_2eadd584|soundst.h:150]] 
+- [[enum_DOOM_5baef3da|soundst.h:158]] 
+- [[enum_DOOM_9b83822a|doomdef.h:162]] 
+- [[enum_DOOM_f378eb18|r_defs.h:168]] 
+- [[enum_DOOM_b75f246e|info.h:174]] 
+- [[enum_DOOM_ecbc1810|sounds.h:177]] 
+- [[enum_DOOM_6c0f0f4a|doomdef.h:180]] 
+- [[enum_DOOM_d979b1d6|doomdef.h:201]] 
+- [[enum_DOOM_f3fd6fd7|doomdef.h:214]] 
+- [[enum_DOOM_aa340874|p_spec.h:218]] 
+- [[enum_DOOM_3f78b6be|p_saveg.c:220]] 
+- [[enum_DOOM_c7d3c67e|doomdef.h:233]] 
+- [[enum_DOOM_fcf1555a|m_menu.c:239]] 
+- [[enum_DOOM_da1d44c0|p_spec.h:262]] 
+- [[enum_DOOM_4a3c393c|p_spec.h:273]] 
+- [[enum_DOOM_3f430c03|m_menu.c:275]] 
+- [[enum_DOOM_02e12bee|m_menu.c:305]] 
+- [[enum_DOOM_e2c47a79|p_spec.h:328]] 
+- [[enum_DOOM_78754e35|p_saveg.c:329]] 
+- [[enum_DOOM_502d47ba|m_menu.c:339]] 
+- [[enum_DOOM_879e6431|m_menu.c:377]] 
+- [[enum_DOOM_46efc6b0|p_spec.h:397]] 
+- [[enum_DOOM_fc774393|m_menu.c:398]] 
+- [[enum_DOOM_bc309bb6|p_spec.h:407]] 
+- [[enum_DOOM_f17413be|m_menu.c:422]] 
+- [[enum_DOOM_d219f1af|m_menu.c:452]] 
+- [[enum_DOOM_0d75f26f|p_spec.h:480]] 
+- [[enum_DOOM_6c5a058f|p_spec.h:537]] 
+- [[enum_DOOM_48a95708|p_spec.h:575]] 
+- [[enum_DOOM_f6e681ce|p_spec.h:602]] 
+- [[enum_DOOM_7930bce5|am_map.c:851]] AM_clipMline
+- [[enum_DOOM_d7982586|info.h:1163]] 
+
+### 🔄 Chaîne de montage (FOR)
+
+- [[for_DOOM_30b366e9|m_argv.c:45]] M_CheckParm
+- [[for_DOOM_18896399|p_saveg.c:53]] 
+- [[for_DOOM_0d4a53bf|p_telept.c:75]] 
+- [[for_DOOM_bdc78a1e|p_saveg.c:84]] 
+- [[for_DOOM_bc2be63c|hu_lib.c:112]] HUlib_drawTextLine
+- [[for_DOOM_cf17ecc4|p_switch.c:121]] 
+- [[for_DOOM_2edcee26|p_enemy.c:125]] P_RecursiveSound
+- [[for_DOOM_11e20ed6|p_saveg.c:126]] P_ArchiveWorld
+- [[for_DOOM_895b1ad3|r_things.c:133]] R_InstallSpriteLump
+- [[for_DOOM_6f72e7b9|i_net.c:138]] PacketSend
+- [[for_DOOM_16f765d6|p_saveg.c:139]] P_ArchiveWorld
+- [[for_DOOM_cdfa2d8d|p_setup.c:144]] P_LoadVertexes
+- [[for_DOOM_838e49dc|p_spec.c:155]] P_InitPicAnims
+- [[for_DOOM_d949475c|hu_lib.c:158]] 
+- [[for_DOOM_a8db4523|f_wipe.c:160]] wipe_initMelt
+- [[for_DOOM_7d490afb|r_segs.c:162]] for
+- [[for_DOOM_99e2aaac|p_switch.c:164]] P_StartButton
+- [[for_DOOM_c2fffd98|p_sight.c:166]] P_CrossSubsector
+- [[for_DOOM_91877caf|d_main.c:170]] D_ProcessEvents
+- [[for_DOOM_fa59757f|p_setup.c:176]] P_LoadSegs
+- [[for_DOOM_a5b7ffc2|p_switch.c:176]] P_StartButton
+- [[for_DOOM_88dd9f6e|p_saveg.c:179]] P_UnArchiveWorld
+- [[for_DOOM_0835f554|wadread.c:186]] openwad
+- [[for_DOOM_591c7151|f_wipe.c:190]] 
+- [[for_DOOM_82cc5e58|v_video.c:190]] V_CopyRect
+- [[for_DOOM_e5fb832c|r_plane.c:191]] R_ClearPlanes
+- [[for_DOOM_afbdb7f2|p_saveg.c:193]] P_UnArchiveWorld
+- [[for_DOOM_84cec9e9|wadread.c:206]] 
+- [[for_DOOM_0c9e9296|i_net.c:209]] PacketGet
+- [[for_DOOM_8c3abe50|w_wad.c:216]] 
+- [[for_DOOM_09c17526|p_setup.c:217]] P_LoadSubsectors
+- [[for_DOOM_3787278d|r_things.c:217]] for
+- [[for_DOOM_ffc3a6d2|r_plane.c:231]] 
+- [[for_DOOM_f8087488|p_saveg.c:238]] P_ArchiveThinkers
+- [[for_DOOM_e45f2c19|hu_lib.c:240]] HUlib_drawSText
+- [[for_DOOM_40af6d08|v_video.c:243]] 
+- [[for_DOOM_32a03e31|p_setup.c:245]] P_LoadSectors
+- [[for_DOOM_1764acbb|p_lights.c:247]] 
+- [[for_DOOM_75260128|r_things.c:249]] 
+- [[for_DOOM_eac85d5b|r_data.c:254]] R_GenerateComposite
+- [[for_DOOM_9868e64c|p_ceilng.c:255]] P_AddActiveCeiling
+- [[for_DOOM_ec4f0236|hu_lib.c:259]] HUlib_eraseSText
+- [[for_DOOM_b85dce0e|p_plats.c:262]] P_ActivateInStasis
+- [[for_DOOM_6e1f8182|w_wad.c:263]] W_Reload
+- [[for_DOOM_16b4883a|p_ceilng.c:274]] P_RemoveActiveCeiling
+- [[for_DOOM_b98ddc31|f_finale.c:277]] F_TextWrite
+- [[for_DOOM_d7ef77d1|p_plats.c:277]] EV_StopPlat
+- [[for_DOOM_b30999da|p_spec.c:277]] P_FindLowestFloorSurrounding
+- [[for_DOOM_8589e540|p_setup.c:280]] P_LoadNodes
+- [[for_DOOM_fc5458e2|p_lights.c:292]] if
+- [[for_DOOM_874362e6|p_plats.c:292]] P_AddActivePlat
+- [[for_DOOM_4edeca13|i_sound.c:293]] 
+- [[for_DOOM_2fd3e2d1|p_ceilng.c:295]] P_ActivateInStasisCeiling
+- [[for_DOOM_df20fffd|f_finale.c:301]] F_TextWrite
+- [[for_DOOM_8773b91d|r_things.c:303]] R_InitSprites
+- [[for_DOOM_d0759cfb|p_plats.c:304]] P_RemoveActivePlat
+- [[for_DOOM_8cb73605|p_spec.c:304]] P_FindHighestFloorSurrounding
+- [[for_DOOM_94063c59|z_zone.c:304]] Z_FreeTags
+- [[for_DOOM_40156046|v_video.c:308]] 
+- [[for_DOOM_d7f6a660|i_sound.c:309]] 
+- [[for_DOOM_022fad03|p_setup.c:313]] 
+- [[for_DOOM_8d419f18|m_misc.c:318]] M_SaveDefaults
+- [[for_DOOM_c3629bb9|p_ceilng.c:320]] EV_CeilingCrushStop
+- [[for_DOOM_0296f2c8|r_data.c:326]] 
+- [[for_DOOM_bb4b34f5|z_zone.c:339]] Z_DumpHeap
+- [[for_DOOM_81f6c8f1|g_game.c:342]] G_BuildTiccmd
+- [[for_DOOM_0cba413d|p_spec.c:343]] P_FindNextHighestFloor
+- [[for_DOOM_fac893ae|soundsrv.c:346]] grabdata
+- [[for_DOOM_aeaa89b7|r_data.c:349]] 
+- [[for_DOOM_55aa7ae6|r_things.c:359]] R_DrawMaskedColumn
+- [[for_DOOM_5159e117|p_saveg.c:368]] for
+- [[for_DOOM_1954572a|v_video.c:372]] 
+- [[for_DOOM_349a2fb7|z_zone.c:372]] Z_FileDumpHeap
+- [[for_DOOM_e0fac9a4|p_setup.c:373]] P_LoadLineDefs
+- [[for_DOOM_c6a2bafb|p_floor.c:380]] 
+- [[for_DOOM_3f712b91|soundsrv.c:382]] grabdata
+- [[for_DOOM_aea34e26|m_misc.c:388]] 
+- [[for_DOOM_ac21b10c|p_spec.c:389]] P_FindLowestCeilingSurrounding
+- [[for_DOOM_b08db244|am_map.c:398]] AM_findMinMaxBoundaries
+- [[for_DOOM_6969b3f8|d_net.c:400]] NetUpdate
+- [[for_DOOM_7c319312|z_zone.c:403]] Z_CheckHeap
+- [[for_DOOM_5c973fcb|hu_stuff.c:406]] HU_Init
+- [[for_DOOM_31cca50f|r_plane.c:406]] if
+- [[for_DOOM_9051525b|i_sound.c:407]] I_SetChannels
+- [[for_DOOM_1ee90bd9|p_spec.c:414]] P_FindHighestCeilingSurrounding
+- [[for_DOOM_ecba640d|d_net.c:417]] NetUpdate
+- [[for_DOOM_78800e63|r_things.c:430]] R_DrawVisSprite
+- [[for_DOOM_69bffb7e|r_main.c:436]] R_InitPointToAngle
+- [[for_DOOM_ae5c3d8e|s_sound.c:437]] 
+- [[for_DOOM_d41984db|r_plane.c:443]] 
+- [[for_DOOM_35673fec|soundsrv.c:445]] if
+- [[for_DOOM_3b498bac|s_sound.c:446]] 
+- [[for_DOOM_9a9dab3a|p_enemy.c:452]] 
+- [[for_DOOM_a06b1577|p_setup.c:452]] P_LoadSideDefs
+- [[for_DOOM_1ab52fea|r_data.c:453]] 
+- [[for_DOOM_878e692b|soundsrv.c:455]] if
+- [[for_DOOM_80aa88e6|z_zone.c:458]] Z_FreeMemory
+- [[for_DOOM_6d438ee1|d_net.c:463]] CheckAbort
+- [[for_DOOM_837f1f65|p_spec.c:464]] P_FindMinSurroundingLight
+- [[for_DOOM_d85f9199|p_enemy.c:467]] 
+- [[for_DOOM_e13d6589|r_draw.c:467]] R_InitTranslationTables
+- [[for_DOOM_9ad73cba|m_misc.c:476]] WritePCXfile
+- [[for_DOOM_b97ddf69|s_sound.c:476]] S_StopSound
+- [[for_DOOM_a43743c2|g_game.c:477]] G_DoLoadLevel
+- [[for_DOOM_497f948a|p_maputl.c:493]] 
+- [[for_DOOM_715c9af7|r_data.c:504]] 
+- [[for_DOOM_790f12f4|am_map.c:507]] AM_loadPics
+- [[for_DOOM_1cb87bd3|d_net.c:514]] 
+- [[for_DOOM_2423759d|p_floor.c:514]] 
+- [[for_DOOM_6d089952|p_setup.c:514]] 
+- [[for_DOOM_95466546|wi_stuff.c:514]] WI_initAnimatedBack
+- [[for_DOOM_f6de2ff7|p_enemy.c:515]] 
+- [[for_DOOM_e29d95c4|m_misc.c:516]] M_ScreenShot
+- [[for_DOOM_f980204e|m_menu.c:518]] M_ReadSaveStrings
+- [[for_DOOM_19d880b9|r_main.c:519]] R_InitTables
+- [[for_DOOM_768eaf9c|p_setup.c:523]] 
+- [[for_DOOM_5eeac994|r_main.c:528]] R_InitTables
+- [[for_DOOM_89549223|p_maputl.c:529]] 
+- [[for_DOOM_86de09a1|d_net.c:530]] 
+- [[for_DOOM_1fcb4ee2|w_wad.c:533]] W_Profile
+- [[for_DOOM_faa835d0|p_setup.c:538]] 
+- [[for_DOOM_101c07e0|s_sound.c:538]] 
+- [[for_DOOM_e68c39bb|soundsrv.c:545]] initdata
+- [[for_DOOM_20f1479e|m_menu.c:547]] M_DrawLoad
+- [[for_DOOM_abfb0d50|i_video.c:555]] if
+- [[for_DOOM_d8a4d602|w_wad.c:556]] W_Profile
+- [[for_DOOM_afcfcac9|d_net.c:559]] D_CheckNetGame
+- [[for_DOOM_05d8083e|r_main.c:560]] R_InitTextureMapping
+- [[for_DOOM_9fde0b7f|i_video.c:563]] for
+- [[for_DOOM_527ae5cd|m_menu.c:565]] M_DrawSaveLoadBorder
+- [[for_DOOM_7e6928af|p_enemy.c:576]] A_KeenDie
+- [[for_DOOM_2187e891|p_doors.c:578]] P_InitSlidingDoorFrames
+- [[for_DOOM_1fa91929|r_main.c:582]] R_InitTextureMapping
+- [[for_DOOM_8436ea36|i_sound.c:585]] 
+- [[for_DOOM_2c6e4d4e|r_main.c:591]] R_InitTextureMapping
+- [[for_DOOM_317c604a|wi_stuff.c:594]] WI_drawAnimatedBack
+- [[for_DOOM_c5fd998c|p_setup.c:596]] P_SetupLevel
+- [[for_DOOM_6a891cd4|p_mobj.c:613]] P_RespawnSpecials
+- [[for_DOOM_9415a55c|d_net.c:615]] D_QuitNetGame
+- [[for_DOOM_20f1479e|m_menu.c:615]] M_DrawSave
+- [[for_DOOM_f91f165b|p_doors.c:615]] P_FindSlidingDoorType
+- [[for_DOOM_91c45e5a|r_data.c:616]] R_InitSpriteLumps
+- [[for_DOOM_106c06a2|r_main.c:624]] R_InitLightTables
+- [[for_DOOM_3ac1de98|st_stuff.c:636]] for
+- [[for_DOOM_bb4cb31c|d_net.c:657]] 
+- [[for_DOOM_a6bb544d|f_finale.c:665]] F_BunnyScroll
+- [[for_DOOM_6c0b62d3|p_setup.c:669]] P_SetupLevel
+- [[for_DOOM_1ffd9253|hu_stuff.c:673]] 
+- [[for_DOOM_1164f1ff|p_maputl.c:699]] while
+- [[for_DOOM_ddce8284|p_pspr.c:716]] A_FireShotgun2
+- [[for_DOOM_06885638|d_main.c:727]] FindResponseFile
+- [[for_DOOM_6782b4e8|s_sound.c:728]] for
+- [[for_DOOM_369b2ed4|r_main.c:730]] R_ExecuteSetViewSize
+- [[for_DOOM_e5115657|r_main.c:737]] R_ExecuteSetViewSize
+- [[for_DOOM_c0d5f471|d_net.c:738]] 
+- [[for_DOOM_e49512e4|r_main.c:745]] R_ExecuteSetViewSize
+- [[for_DOOM_5859614b|r_draw.c:758]] R_FillBackScreen
+- [[for_DOOM_853ba0e3|r_data.c:765]] 
+- [[for_DOOM_8b771a68|r_things.c:769]] R_DrawPlayerSprites
+- [[for_DOOM_a88960a2|r_data.c:773]] 
+- [[for_DOOM_b9aaf5b2|st_stuff.c:779]] 
+- [[for_DOOM_2b03f892|r_data.c:787]] 
+- [[for_DOOM_a5953d25|p_pspr.c:789]] A_BFGSpray
+- [[for_DOOM_bb5ddd05|i_sound.c:799]] I_InitSound
+- [[for_DOOM_c4f92a43|r_data.c:803]] 
+- [[for_DOOM_572e6654|r_things.c:803]] 
+- [[for_DOOM_bd3c14e6|r_things.c:817]] 
+- [[for_DOOM_4c1f8192|r_data.c:822]] 
+- [[for_DOOM_a01f0819|wi_stuff.c:823]] WI_fragSum
+- [[for_DOOM_be6f2f3c|r_data.c:829]] 
+- [[for_DOOM_a3258d54|p_enemy.c:837]] A_SPosAttack
+- [[for_DOOM_c2d37d2d|s_sound.c:838]] S_getChannel
+- [[for_DOOM_fed801a6|p_maputl.c:846]] 
+- [[for_DOOM_e6d9598a|p_pspr.c:858]] 
+- [[for_DOOM_60bd2eef|r_things.c:860]] 
+- [[for_DOOM_76688876|wi_stuff.c:861]] WI_initDeathmatchStats
+- [[for_DOOM_4207a6e0|r_draw.c:867]] R_DrawViewBorder
+- [[for_DOOM_bbeca1b9|wi_stuff.c:892]] 
+- [[for_DOOM_cd4b0fb1|g_game.c:906]] G_DeathMatchSpawnPlayer
+- [[for_DOOM_de6e323c|wi_stuff.c:921]] 
+- [[for_DOOM_8079b0c1|r_things.c:938]] for
+- [[for_DOOM_673b0d09|i_video.c:944]] InitExpand2
+- [[for_DOOM_f6ea2df2|st_stuff.c:953]] ST_updateWidgets
+- [[for_DOOM_3601a319|g_game.c:954]] for
+- [[for_DOOM_740b0064|r_things.c:968]] R_DrawMasked
+- [[for_DOOM_9bc8a895|st_stuff.c:974]] ST_updateWidgets
+- [[for_DOOM_48d10d10|wi_stuff.c:1013]] 
+- [[for_DOOM_a84c762b|wi_stuff.c:1055]] 
+- [[for_DOOM_35144f1e|st_stuff.c:1066]] ST_drawWidgets
+- [[for_DOOM_fe5c5de5|am_map.c:1087]] AM_drawGrid
+- [[for_DOOM_f42fdc7c|wi_stuff.c:1089]] WI_initNetgameStats
+- [[for_DOOM_0eb7b34e|p_spec.c:1100]] for
+- [[for_DOOM_9cfafbce|am_map.c:1104]] AM_drawGrid
+- [[for_DOOM_5bb54cac|p_spec.c:1114]] for
+- [[for_DOOM_399cf80d|wi_stuff.c:1120]] WI_updateNetgameStats
+- [[for_DOOM_9b4c82eb|g_game.c:1122]] 
+- [[for_DOOM_e8d16bf3|p_spec.c:1128]] 
+- [[for_DOOM_e44b843d|st_stuff.c:1134]] ST_loadGraphics
+- [[for_DOOM_5e2ec673|wi_stuff.c:1143]] WI_updateNetgameStats
+- [[for_DOOM_238b90a6|st_stuff.c:1148]] ST_loadGraphics
+- [[for_DOOM_cad58ec6|st_stuff.c:1158]] ST_loadGraphics
+- [[for_DOOM_662ce9f3|wi_stuff.c:1169]] WI_updateNetgameStats
+- [[for_DOOM_dcbf19b0|st_stuff.c:1178]] ST_loadGraphics
+- [[for_DOOM_afc8b0df|p_spec.c:1185]] EV_DoDonut
+- [[for_DOOM_8ee143f7|wi_stuff.c:1193]] WI_updateNetgameStats
+- [[for_DOOM_aa90d179|p_enemy.c:1194]] 
+- [[for_DOOM_722fbf50|m_menu.c:1195]] M_DrawThermo
+- [[for_DOOM_f938d5d9|am_map.c:1204]] AM_drawLineCharacter
+- [[for_DOOM_b41a4603|st_stuff.c:1213]] ST_unloadGraphics
+- [[for_DOOM_8f47bcac|wi_stuff.c:1219]] WI_updateNetgameStats
+- [[for_DOOM_f0c1278e|am_map.c:1261]] AM_drawPlayers
+- [[for_DOOM_7243eae4|m_menu.c:1261]] M_StringWidth
+- [[for_DOOM_cd32357d|p_spec.c:1271]] P_SpawnSpecials
+- [[for_DOOM_4128958c|am_map.c:1292]] AM_drawThings
+- [[for_DOOM_53d92b79|wi_stuff.c:1292]] WI_drawNetgameStats
+- [[for_DOOM_62bcc4bd|am_map.c:1309]] AM_drawMarks
+- [[for_DOOM_4a4274c9|st_stuff.c:1317]] ST_createWidgets
+- [[for_DOOM_32422a0f|p_spec.c:1337]] P_SpawnSpecials
+- [[for_DOOM_800ae7c0|wi_stuff.c:1476]] for
+- [[for_DOOM_2f77673f|wi_stuff.c:1577]] 
+- [[for_DOOM_deb64393|wi_stuff.c:1587]] 
+- [[for_DOOM_09a365fb|wi_stuff.c:1604]] 
+- [[for_DOOM_20ba0930|wi_stuff.c:1629]] 
+- [[for_DOOM_0702ce04|p_enemy.c:1692]] for
+- [[for_DOOM_1774a01b|wi_stuff.c:1695]] 
+- [[for_DOOM_0ca30db7|m_menu.c:1697]] switch
+- [[for_DOOM_79d7e0dd|m_menu.c:1704]] switch
+- [[for_DOOM_92167cad|wi_stuff.c:1735]] 
+- [[for_DOOM_fa69f6c9|m_menu.c:1759]] 
+- [[for_DOOM_f92504c9|m_menu.c:1792]] 
+- [[for_DOOM_59ffa4cb|p_enemy.c:1823]] A_BrainAwake
+- [[for_DOOM_94ab4ae9|p_enemy.c:1856]] A_BrainScream
+
+### 🏭 Usine modulaire (FUNCTION)
+
+- [[function_DOOM_e6adb4f8|i_main.c:34]] main
+- [[function_DOOM_e1cd593f|m_swap.c:38]] SwapSHORT
+- [[function_DOOM_673cad8e|m_bbox.c:39]] M_ClearBox
+- [[function_DOOM_91122dbf|hu_lib.c:40]] HUlib_init
+- [[function_DOOM_58b4fbda|m_argv.c:40]] M_CheckParm
+- [[function_DOOM_b6b6b4c4|m_cheat.c:42]] cht_CheckCheat
+- [[function_DOOM_0cb1f5d7|m_fixed.c:43]] FixedMul
+- [[function_DOOM_feceb397|m_bbox.c:45]] M_ClearBox
+- [[function_DOOM_e19b15b7|m_swap.c:45]] SwapLONG
+- [[function_DOOM_5b0b7660|hu_lib.c:46]] HUlib_init
+- [[function_DOOM_653ff15d|p_lights.c:46]] T_FireFlicker
+- [[function_DOOM_84d9783c|p_maputl.c:48]] P_AproxDistance
+- [[function_DOOM_f8d62af9|tables.c:49]] SlopeDiv
+- [[function_DOOM_86a827fd|linux.c:49]] myioctl
+- [[function_DOOM_4664e0ca|f_wipe.c:50]] wipe_shittyColMajorXform
+- [[function_DOOM_695d7055|hu_lib.c:53]] HUlib_clearTextLine
+- [[function_DOOM_dc95630b|p_mobj.c:53]] P_SetMobjState
+- [[function_DOOM_bea360d5|p_tick.c:53]] P_InitThinkers
+- [[function_DOOM_681df387|i_system.c:54]] I_Tactile
+- [[function_DOOM_61e03d4a|p_sight.c:54]] P_DivlineSide
+- [[function_DOOM_6b6f1018|m_fixed.c:57]] FixedDiv
+- [[function_DOOM_27d7526a|m_random.c:57]] P_Random
+- [[function_DOOM_36423f87|r_sky.c:57]] R_InitSkyMap
+- [[function_DOOM_8283f58c|p_pspr.c:58]] P_SetPsprite
+- [[function_DOOM_7fc4543e|p_user.c:58]] P_Thrust
+- [[function_DOOM_867e7bd6|st_lib.c:58]] STlib_init
+- [[function_DOOM_7ec3a7fd|m_random.c:63]] P_Random
+- [[function_DOOM_bef0ea0e|p_floor.c:63]] switch
+- [[function_DOOM_cf283550|p_maputl.c:65]] P_PointOnLineSide
+- [[function_DOOM_a9ae4061|p_tick.c:65]] P_AddThinker
+- [[function_DOOM_f5b87057|st_lib.c:65]] STlib_initNum
+- [[function_DOOM_c9647439|w_wad.c:67]] strupr
+- [[function_DOOM_2e56c62a|z_zone.c:67]] Z_ClearZone
+- [[function_DOOM_e90215df|linux.c:67]] myioctl
+- [[function_DOOM_364cc2b8|hu_lib.c:68]] HUlib_initTextLine
+- [[function_DOOM_6166be9d|p_lights.c:68]] P_SpawnFireFlicker
+- [[function_DOOM_065ad47e|r_bsp.c:68]] R_ClearDrawSegs
+- [[function_DOOM_0cc2c83d|m_fixed.c:69]] FixedDiv
+- [[function_DOOM_af158c54|m_misc.c:69]] M_DrawText
+- [[function_DOOM_89392fad|m_random.c:69]] M_Random
+- [[function_DOOM_7d52ab9a|p_doors.c:70]] if
+- [[function_DOOM_97c730f6|i_system.c:71]] I_GetHeapSize
+- [[function_DOOM_da9ca6d4|linux.c:71]] I_InitMusic
+- [[function_DOOM_d4d5ad91|f_wipe.c:72]] wipe_shittyColMajorXform
+- [[function_DOOM_313bca0f|p_inter.c:73]] P_GiveAmmo
+- [[function_DOOM_05624649|w_wad.c:74]] strupr
+- [[function_DOOM_0f581961|m_cheat.c:77]] cht_CheckCheat
+- [[function_DOOM_c578bea9|p_user.c:77]] P_CalcHeight
+- [[function_DOOM_0eca4d2e|p_tick.c:80]] P_RemoveThinker
+- [[function_DOOM_b3ed5632|p_map.c:81]] PIT_StompThing
+- [[function_DOOM_817c08dc|w_wad.c:85]] filelength
+- [[function_DOOM_d8c1e347|hu_lib.c:86]] HUlib_addCharToTextLine
+- [[function_DOOM_75d7366b|i_system.c:88]] I_GetTime
+- [[function_DOOM_0cba25e3|d_net.c:90]] NetbufferSize
+- [[function_DOOM_22c3e1bb|i_net.c:90]] UDPsocket
+- [[function_DOOM_79b12bc2|p_mobj.c:90]] P_ExplodeMissile
+- [[function_DOOM_2ec2d136|st_lib.c:90]] STlib_drawNum
+- [[function_DOOM_366549b3|p_tick.c:92]] P_AllocateThinker
+- [[function_DOOM_7b78f0c0|z_zone.c:93]] Z_Init
+- [[function_DOOM_e58586ac|i_video.c:97]] xlatekey
+- [[function_DOOM_711e947a|d_net.c:98]] NetbufferChecksum
+- [[function_DOOM_d3e2b4a3|p_lights.c:98]] T_LightFlash
+- [[function_DOOM_28cdd550|hu_lib.c:99]] HUlib_delCharFromTextLine
+- [[function_DOOM_2386df82|p_doors.c:100]] if
+- [[function_DOOM_93c87fd6|p_tick.c:101]] P_RunThinkers
+- [[function_DOOM_e38340b8|r_plane.c:101]] R_InitPlanes
+- [[function_DOOM_12fe699c|linux.c:101]] I_InitSound
+- [[function_DOOM_828d4bfd|i_net.c:105]] BindToLocalPort
+- [[function_DOOM_75a3da76|p_enemy.c:105]] P_RecursiveSound
+- [[function_DOOM_7e16b31e|r_draw.c:105]] R_DrawColumn
+- [[function_DOOM_713d25c1|r_things.c:105]] R_InstallSpriteLump
+- [[function_DOOM_b8517978|i_system.c:107]] I_Init
+- [[function_DOOM_d9dd91d5|wadread.c:107]] SwapLONG
+- [[function_DOOM_27abde4a|p_sight.c:108]] P_InterceptVector2
+- [[function_DOOM_9d4a1e65|p_maputl.c:109]] P_BoxOnLineSide
+- [[function_DOOM_ee188471|linux.c:109]] I_SubmitOutputBuffer
+- [[function_DOOM_a72e5727|f_wipe.c:110]] if
+- [[function_DOOM_584ee357|m_misc.c:110]] M_WriteFile
+- [[function_DOOM_db7457a7|p_pspr.c:112]] P_CalcSwing
+- [[function_DOOM_e2c4a55f|p_map.c:114]] P_TeleportMove
+- [[function_DOOM_00f56ab0|p_saveg.c:114]] P_ArchiveWorld
+- [[function_DOOM_7d07f77d|i_system.c:116]] I_Quit
+- [[function_DOOM_a995a972|linux.c:116]] I_ShutdownSound
+- [[function_DOOM_e7e17df3|wadread.c:116]] SwapLONG
+- [[function_DOOM_ae013175|d_net.c:120]] ExpandTics
+- [[function_DOOM_dbabf5a1|r_plane.c:120]] R_MapPlane
+- [[function_DOOM_09c2187b|p_setup.c:122]] P_LoadVertexes
+- [[function_DOOM_9c65caa1|z_zone.c:122]] Z_Free
+- [[function_DOOM_219deca9|p_lights.c:124]] P_SpawnLightFlash
+- [[function_DOOM_af8fdb4c|i_system.c:126]] I_Quit
+- [[function_DOOM_be8660f2|i_net.c:127]] PacketSend
+- [[function_DOOM_eaada954|wadread.c:127]] derror
+- [[function_DOOM_8bf59beb|f_wipe.c:128]] wipe_exitColorXForm
+- [[function_DOOM_43f24c82|p_floor.c:130]] switch
+- [[function_DOOM_cc624e29|p_tick.c:130]] P_Ticker
+- [[function_DOOM_6bc937c0|wadread.c:134]] derror
+- [[function_DOOM_cc4d689c|p_sight.c:135]] P_CrossSubsector
+- [[function_DOOM_e1e1681c|soundsrv.c:136]] derror
+- [[function_DOOM_897e24b0|p_plats.c:138]] EV_DoPlat
+- [[function_DOOM_eb2eebff|p_pspr.c:138]] P_BringUpWeapon
+- [[function_DOOM_38096d3e|r_main.c:138]] R_AddPointToBox
+- [[function_DOOM_b766c2cc|i_system.c:139]] I_WaitVBL
+- [[function_DOOM_8be5a2e0|m_misc.c:139]] M_ReadFile
+- [[function_DOOM_bce4eda0|f_wipe.c:140]] wipe_initMelt
+- [[function_DOOM_01a4f967|wadread.c:140]] strupr
+- [[function_DOOM_f121ead6|d_net.c:142]] HSendPacket
+- [[function_DOOM_0292163d|v_video.c:142]] V_MarkRect
+- [[function_DOOM_fe0dbac0|soundsrv.c:142]] derror
+- [[function_DOOM_7fa5ee10|i_system.c:143]] I_BeginRead
+- [[function_DOOM_1d646e78|r_segs.c:143]] if
+- [[function_DOOM_8e537385|p_spec.c:148]] P_InitPicAnims
+- [[function_DOOM_ae206fa5|p_user.c:148]] P_MovePlayer
+- [[function_DOOM_ed853822|d_main.c:150]] D_PostEvent
+- [[function_DOOM_5b8e8fce|p_doors.c:151]] if
+- [[function_DOOM_4c9a5ffc|st_lib.c:152]] STlib_updateNum
+- [[function_DOOM_7b60702d|wadread.c:152]] filelength
+- [[function_DOOM_672c29e8|p_switch.c:154]] P_StartButton
+- [[function_DOOM_2167f847|r_draw.c:154]] R_DrawColumn
+- [[function_DOOM_013e4c4d|p_lights.c:155]] T_StrobeFlash
+- [[function_DOOM_8d42cda4|v_video.c:157]] V_CopyRect
+- [[function_DOOM_c00a9164|p_enemy.c:158]] P_NoiseAlert
+- [[function_DOOM_86a827fd|i_sound.c:159]] myioctl
+- [[function_DOOM_309428ac|p_setup.c:159]] P_LoadSegs
+- [[function_DOOM_d9f02829|p_maputl.c:160]] P_PointOnDivlineSide
+- [[function_DOOM_01284e00|d_main.c:161]] D_ProcessEvents
+- [[function_DOOM_ddd9709f|i_net.c:161]] PacketGet
+- [[function_DOOM_1098c233|p_pspr.c:161]] P_CheckAmmo
+- [[function_DOOM_b0577c36|r_main.c:161]] R_PointOnSide
+- [[function_DOOM_63db9013|r_segs.c:161]] for
+- [[function_DOOM_6666a4ab|s_sound.c:161]] S_Init
+- [[function_DOOM_cde8c555|i_system.c:162]] I_Error
+- [[function_DOOM_64b5a13a|st_lib.c:162]] STlib_initPercent
+- [[function_DOOM_64c47377|i_video.c:164]] xlatekey
+- [[function_DOOM_a9288f47|p_inter.c:167]] P_GiveWeapon
+- [[function_DOOM_045af29b|p_saveg.c:167]] P_UnArchiveWorld
+- [[function_DOOM_df05057e|p_mobj.c:168]] if
+- [[function_DOOM_e61c21d3|p_ceilng.c:171]] EV_DoCeiling
+- [[function_DOOM_f111026f|p_mobj.c:173]] if
+- [[function_DOOM_fcc4507a|p_enemy.c:174]] P_CheckMeleeRange
+- [[function_DOOM_c2eba343|hu_lib.c:176]] HUlib_initSText
+- [[function_DOOM_efaae5ff|st_lib.c:179]] STlib_initPercent
+- [[function_DOOM_15af657a|p_lights.c:180]] P_SpawnStrobeFlash
+- [[function_DOOM_6926beb2|wi_stuff.c:181]] 0
+- [[function_DOOM_cc1d7f67|p_user.c:182]] P_DeathThink
+- [[function_DOOM_b22d1377|wi_stuff.c:182]] 0
+- [[function_DOOM_d8885bc6|i_video.c:183]] I_StartFrame
+- [[function_DOOM_314c8f48|wi_stuff.c:183]] 1
+- [[function_DOOM_4e5a6c2d|r_data.c:184]] R_DrawColumnInCache
+- [[function_DOOM_def23e68|wi_stuff.c:184]] 2
+- [[function_DOOM_34afef29|r_plane.c:185]] R_ClearPlanes
+- [[function_DOOM_37fc705b|wi_stuff.c:185]] 3
+- [[function_DOOM_ab13c233|wi_stuff.c:186]] 4
+- [[function_DOOM_259a5467|wi_stuff.c:187]] 5
+- [[function_DOOM_4f9636d7|wi_stuff.c:188]] 6
+- [[function_DOOM_9f48778c|p_map.c:189]] PIT_CheckLine
+- [[function_DOOM_88af863d|d_net.c:192]] HGetPacket
+- [[function_DOOM_5f4ada52|st_lib.c:192]] STlib_updatePercent
+- [[function_DOOM_49d873cd|d_main.c:193]] D_Display
+- [[function_DOOM_e224b567|p_mobj.c:193]] if
+- [[function_DOOM_63bc26af|wi_stuff.c:194]] 0
+- [[function_DOOM_9ecbec24|f_finale.c:195]] F_Responder
+- [[function_DOOM_2e7106d3|wi_stuff.c:195]] 0
+- [[function_DOOM_0fd06471|f_wipe.c:196]] if
+- [[function_DOOM_5c41db8b|r_bsp.c:196]] R_ClipPassWallSegment
+- [[function_DOOM_2299010e|wi_stuff.c:196]] 1
+- [[function_DOOM_37a6d32a|p_enemy.c:197]] P_CheckMissileRange
+- [[function_DOOM_74bb044a|wi_stuff.c:197]] 2
+- [[function_DOOM_a519737a|wi_stuff.c:198]] 3
+- [[function_DOOM_917247ca|wi_stuff.c:199]] 4
+- [[function_DOOM_fa329fc8|hu_lib.c:200]] HUlib_initSText
+- [[function_DOOM_0010594a|wi_stuff.c:200]] 5
+- [[function_DOOM_8658293a|wi_stuff.c:201]] 6
+- [[function_DOOM_9bf26b5c|p_setup.c:202]] P_LoadSubsectors
+- [[function_DOOM_e0ce44cf|s_sound.c:202]] S_Start
+- [[function_DOOM_a1467641|p_mobj.c:205]] if
+- [[function_DOOM_c0785aff|p_doors.c:206]] EV_DoLockedDoor
+- [[function_DOOM_440bc1e5|f_finale.c:207]] F_Ticker
+- [[function_DOOM_68235ac1|wi_stuff.c:207]] 0
+- [[function_DOOM_9d6d6aef|r_draw.c:208]] R_DrawColumn
+- [[function_DOOM_0e4bcd42|wi_stuff.c:208]] 0
+- [[function_DOOM_025d92f0|wi_stuff.c:209]] 1
+- [[function_DOOM_4a0fb89d|p_maputl.c:210]] P_MakeDivline
+- [[function_DOOM_a64836e6|wi_stuff.c:210]] 2
+- [[function_DOOM_3678fc7b|st_lib.c:211]] STlib_initMultIcon
+- [[function_DOOM_ccc042e8|wi_stuff.c:211]] 3
+- [[function_DOOM_45809db6|wi_stuff.c:212]] 4
+- [[function_DOOM_0fed7a53|wi_stuff.c:213]] 5
+- [[function_DOOM_99396c03|r_main.c:214]] R_PointOnSide
+- [[function_DOOM_f2ed70ab|wi_stuff.c:214]] 6
+- [[function_DOOM_780ce0bc|g_game.c:215]] G_CmdChecksum
+- [[function_DOOM_1a877dd9|p_lights.c:215]] EV_StartLightStrobing
+- [[function_DOOM_2be952f7|hu_lib.c:216]] HUlib_addLineToSText
+- [[function_DOOM_66a878c9|r_things.c:216]] for
+- [[function_DOOM_d4c094e8|i_net.c:222]] PacketGet
+- [[function_DOOM_88645566|f_wipe.c:226]] wipe_exitMelt
+- [[function_DOOM_67c6e3bd|p_inter.c:228]] P_GiveBody
+- [[function_DOOM_02108967|r_data.c:228]] R_GenerateComposite
+- [[function_DOOM_ed2fee45|p_maputl.c:230]] P_InterceptVector
+- [[function_DOOM_9a206cf6|hu_lib.c:231]] HUlib_addMessageToSText
+- [[function_DOOM_5f9a8b47|p_setup.c:231]] P_LoadSectors
+- [[function_DOOM_1a3ebcd1|p_saveg.c:232]] P_ArchiveThinkers
+- [[function_DOOM_3b7b147a|p_spec.c:234]] twoSided
+- [[function_DOOM_7cc58d31|f_wipe.c:236]] wipe_exitMelt
+- [[function_DOOM_219741b0|w_wad.c:236]] W_Reload
+- [[function_DOOM_ecac8fc0|g_game.c:237]] G_BuildTiccmd
+- [[function_DOOM_a0767293|p_floor.c:237]] if
+- [[function_DOOM_407e1074|r_things.c:240]] for
+- [[function_DOOM_ce3079dd|i_net.c:244]] I_InitNetwork
+- [[function_DOOM_144cc9d1|st_lib.c:244]] STlib_updateMultIcon
+- [[function_DOOM_cc22083a|r_bsp.c:245]] R_ClearClipSegs
+- [[function_DOOM_be3f6734|p_pspr.c:246]] P_FireWeapon
+- [[function_DOOM_005fb813|v_video.c:247]] while
+- [[function_DOOM_432e8c0a|f_wipe.c:248]] wipe_StartScreen
+- [[function_DOOM_e044292a|p_ceilng.c:251]] P_AddActiveCeiling
+- [[function_DOOM_68fa8cd8|p_inter.c:251]] P_GiveArmor
+- [[function_DOOM_e5efc5ea|p_mobj.c:251]] if
+- [[function_DOOM_5cbd7098|hu_lib.c:254]] HUlib_drawSText
+- [[function_DOOM_b1dc8700|s_sound.c:254]] S_Start
+- [[function_DOOM_a79718b5|p_sight.c:257]] P_CrossBSPNode
+- [[function_DOOM_6b40ac28|p_plats.c:258]] EV_DoPlat
+- [[function_DOOM_a9a94f37|r_bsp.c:259]] R_AddLine
+- [[function_DOOM_d1b371f9|f_finale.c:261]] F_TextWrite
+- [[function_DOOM_0e57ce42|f_wipe.c:261]] wipe_EndScreen
+- [[function_DOOM_7a052010|r_segs.c:261]] if
+- [[function_DOOM_48dff03d|p_doors.c:263]] EV_DoLockedDoor
+- [[function_DOOM_2f692ce8|st_lib.c:263]] STlib_initBinIcon
+- [[function_DOOM_e56a1ce4|p_setup.c:264]] P_LoadNodes
+- [[function_DOOM_d77c54fa|p_pspr.c:265]] P_DropWeapon
+- [[function_DOOM_d3e95227|hu_lib.c:269]] HUlib_eraseSText
+- [[function_DOOM_8c6a5174|p_ceilng.c:270]] P_RemoveActiveCeiling
+- [[function_DOOM_870edfa4|p_spec.c:270]] P_FindLowestFloorSurrounding
+- [[function_DOOM_79835347|p_enemy.c:272]] P_Move
+- [[function_DOOM_f7b047c6|p_inter.c:273]] P_GiveCard
+- [[function_DOOM_3608c817|p_plats.c:273]] P_ActivateInStasis
+- [[function_DOOM_91b214f0|p_map.c:274]] if
+- [[function_DOOM_9cb169db|p_switch.c:275]] P_UseSpecialLine
+- [[function_DOOM_42643424|r_segs.c:279]] if
+- [[function_DOOM_a45b5c50|i_video.c:281]] createnullcursor
+- [[function_DOOM_75b2b184|p_pspr.c:281]] A_WeaponReady
+- [[function_DOOM_f977b612|d_net.c:282]] if
+- [[function_DOOM_9d242e7b|p_mobj.c:283]] if
+- [[function_DOOM_951df508|hu_lib.c:285]] HUlib_initIText
+- [[function_DOOM_ac1163fc|r_draw.c:285]] R_DrawFuzzColumn
+- [[function_DOOM_ec01a880|p_plats.c:288]] EV_StopPlat
+- [[function_DOOM_068d1133|p_saveg.c:288]] while
+- [[function_DOOM_d3d56703|p_inter.c:289]] P_GivePower
+- [[function_DOOM_f41a8702|p_lights.c:289]] if
+- [[function_DOOM_b85f37eb|p_map.c:290]] if
+- [[function_DOOM_c2f73356|p_ceilng.c:291]] P_ActivateInStasisCeiling
+- [[function_DOOM_508fd59e|hu_lib.c:292]] HUlib_delCharFromIText
+- [[function_DOOM_9ee70396|w_wad.c:292]] W_InitMultipleFiles
+- [[function_DOOM_ddbcde80|r_segs.c:293]] if
+- [[function_DOOM_dfe1bdfb|z_zone.c:296]] Z_FreeTags
+- [[function_DOOM_21867a91|p_spec.c:297]] P_FindHighestFloorSurrounding
+- [[function_DOOM_1e2a5687|hu_lib.c:298]] HUlib_eraseLineFromIText
+- [[function_DOOM_d382b68a|p_sight.c:299]] P_CheckSight
+- [[function_DOOM_d10f6d1b|r_things.c:299]] R_InitSprites
+- [[function_DOOM_4d180fa0|p_maputl.c:300]] P_LineOpening
+- [[function_DOOM_d596d8e7|p_plats.c:301]] P_AddActivePlat
+- [[function_DOOM_74848a12|soundsrv.c:303]] mix
+- [[function_DOOM_54120919|r_main.c:304]] if
+- [[function_DOOM_13ca2b54|hu_lib.c:305]] HUlib_resetIText
+- [[function_DOOM_d7c161a6|am_map.c:308]] AM_getIslope
+- [[function_DOOM_476c556f|m_misc.c:308]] M_SaveDefaults
+- [[function_DOOM_bece71d0|i_video.c:309]] I_StartTic
+- [[function_DOOM_005fb813|v_video.c:312]] while
+- [[function_DOOM_695b9a7e|p_ceilng.c:314]] EV_CeilingCrushStop
+- [[function_DOOM_767a6e5c|p_lights.c:314]] T_Glow
+- [[function_DOOM_2bacc30d|hu_lib.c:316]] HUlib_keyInIText
+- [[function_DOOM_fb922495|p_setup.c:317]] if
+- [[function_DOOM_4170e559|r_things.c:317]] R_ClearSprites
+- [[function_DOOM_774e503d|p_user.c:321]] if
+- [[function_DOOM_79f5ddf9|w_wad.c:325]] W_InitFile
+- [[function_DOOM_45f48069|p_spec.c:326]] P_FindNextHighestFloor
+- [[function_DOOM_aa8785a6|z_zone.c:326]] Z_DumpHeap
+- [[function_DOOM_17b7a3b4|am_map.c:327]] AM_activateNewScale
+- [[function_DOOM_73b2e02d|d_net.c:328]] if
+- [[function_DOOM_b2228037|p_map.c:330]] if
+- [[function_DOOM_743bad62|r_plane.c:330]] R_MakeSpans
+- [[function_DOOM_60e4c89f|i_net.c:335]] I_InitNetwork
+- [[function_DOOM_35f2fb8f|hu_lib.c:336]] HUlib_keyInIText
+- [[function_DOOM_8a4c0a6e|p_inter.c:338]] P_TouchSpecialThing
+- [[function_DOOM_61923d89|w_wad.c:339]] W_NumLumps
+- [[function_DOOM_b299fc98|p_lights.c:341]] T_Glow
+- [[function_DOOM_cabafe97|am_map.c:342]] AM_saveScaleAndLoc
+- [[function_DOOM_245dd5d3|p_pspr.c:343]] A_ReFire
+- [[function_DOOM_ceb112d7|i_video.c:344]] I_UpdateNoBlit
+- [[function_DOOM_e4390e4e|r_main.c:344]] if
+- [[function_DOOM_277e0b9d|hu_lib.c:347]] HUlib_drawIText
+- [[function_DOOM_4896b704|p_enemy.c:349]] P_TryWalk
+- [[function_DOOM_ea29b059|r_things.c:351]] R_DrawMaskedColumn
+- [[function_DOOM_9cf738f1|w_wad.c:351]] W_CheckNumForName
+- [[function_DOOM_d990b2be|am_map.c:353]] AM_restoreScaleAndLoc
+- [[function_DOOM_1a9fd569|d_main.c:354]] D_DoomLoop
+- [[function_DOOM_f6f32dce|p_mobj.c:356]] P_NightmareRespawn
+- [[function_DOOM_15dbc653|p_setup.c:357]] P_LoadLineDefs
+- [[function_DOOM_1607bb17|i_video.c:360]] if
+- [[function_DOOM_3cc6c473|p_pspr.c:365]] A_ReFire
+- [[function_DOOM_45d7489b|z_zone.c:366]] Z_FileDumpHeap
+- [[function_DOOM_e8627d60|p_saveg.c:367]] for
+- [[function_DOOM_1ce10c7b|d_net.c:368]] NetUpdate
+- [[function_DOOM_6ee0ccbd|p_user.c:371]] if
+- [[function_DOOM_17fb7f2e|p_map.c:374]] P_CheckPosition
+- [[function_DOOM_33377be2|i_video.c:376]] if
+- [[function_DOOM_f5772019|am_map.c:377]] AM_addMark
+- [[function_DOOM_c828276a|f_finale.c:377]] F_StartCast
+- [[function_DOOM_d3af06f7|r_main.c:377]] R_PointToAngle2
+- [[function_DOOM_3e8689a8|v_video.c:377]] while
+- [[function_DOOM_cbc76880|p_spec.c:381]] P_FindLowestCeilingSurrounding
+- [[function_DOOM_8461bfb8|r_bsp.c:381]] R_CheckBBox
+- [[function_DOOM_847dc257|p_pspr.c:384]] A_Lower
+- [[function_DOOM_46830cdc|r_draw.c:385]] R_DrawTranslatedColumn
+- [[function_DOOM_b3d59ffe|hu_stuff.c:387]] ForeignTranslation
+- [[function_DOOM_c767c68a|am_map.c:389]] AM_findMinMaxBoundaries
+- [[function_DOOM_01aa4684|r_main.c:391]] R_PointToAngle2
+- [[function_DOOM_a6bc93d9|hu_stuff.c:392]] ForeignTranslation
+- [[function_DOOM_f521b1c4|f_finale.c:395]] F_CastTicker
+- [[function_DOOM_3e92983a|p_maputl.c:395]] P_SetThingPosition
+- [[function_DOOM_57b1570b|r_plane.c:395]] if
+- [[function_DOOM_402485f1|i_sound.c:396]] I_SetChannels
+- [[function_DOOM_53f97687|r_things.c:396]] R_DrawVisSprite
+- [[function_DOOM_2a2496d2|p_enemy.c:398]] if
+- [[function_DOOM_c3ea93a0|w_wad.c:399]] W_GetNumForName
+- [[function_DOOM_5bcd78ee|z_zone.c:399]] Z_CheckHeap
+- [[function_DOOM_ccf90158|v_video.c:404]] V_DrawBlock
+- [[function_DOOM_98aa2645|wi_stuff.c:406]] WI_slamBackground
+- [[function_DOOM_b419f7cd|p_spec.c:407]] P_FindHighestCeilingSurrounding
+- [[function_DOOM_d44f47fe|soundsrv.c:410]] updatesounds
+- [[function_DOOM_e5c67c99|hu_stuff.c:414]] HU_Init
+- [[function_DOOM_bf4ff92e|wi_stuff.c:414]] WI_Responder
+- [[function_DOOM_10b0f7ce|p_mobj.c:415]] P_MobjThinker
+- [[function_DOOM_821cc8a5|w_wad.c:416]] W_LumpLength
+- [[function_DOOM_858fb579|hu_stuff.c:419]] HU_Stop
+- [[function_DOOM_6eb72a09|i_video.c:420]] if
+- [[function_DOOM_54eccbec|wi_stuff.c:421]] WI_drawLF
+- [[function_DOOM_5f20319d|p_pspr.c:422]] A_Raise
+- [[function_DOOM_aba3af10|d_main.c:423]] D_PageTicker
+- [[function_DOOM_1b69cf0d|r_main.c:426]] R_InitPointToAngle
+- [[function_DOOM_61d714f4|i_sound.c:427]] I_SetChannels
+- [[function_DOOM_190590ee|z_zone.c:428]] Z_ChangeTag2
+- [[function_DOOM_73340214|am_map.c:429]] AM_changeWindowLoc
+- [[function_DOOM_b176b51c|r_segs.c:431]] if
+- [[function_DOOM_6ca0eb99|w_wad.c:431]] W_ReadLump
+- [[function_DOOM_0099153b|p_spec.c:433]] P_FindSectorFromLineTag
+- [[function_DOOM_a849ec7f|d_main.c:434]] D_PageDrawer
+- [[function_DOOM_828771aa|soundsrv.c:437]] if
+- [[function_DOOM_9b185588|i_sound.c:438]] I_SetMusicVolume
+- [[function_DOOM_7043d5e6|p_setup.c:438]] P_LoadSideDefs
+- [[function_DOOM_e4f54582|p_doors.c:439]] switch
+- [[function_DOOM_199a3844|wi_stuff.c:439]] WI_drawEL
+- [[function_DOOM_af5fe08f|m_misc.c:441]] WritePCXfile
+- [[function_DOOM_9cd3b618|d_main.c:444]] D_AdvanceDemo
+- [[function_DOOM_980595b3|v_video.c:444]] V_GetBlock
+- [[function_DOOM_01c1f085|g_game.c:445]] G_DoLoadLevel
+- [[function_DOOM_fde2e254|p_pspr.c:448]] A_GunFlash
+- [[function_DOOM_020000d2|i_sound.c:451]] I_GetSfxLumpNum
+- [[function_DOOM_e8000787|z_zone.c:451]] Z_FreeMemory
+- [[function_DOOM_c1840305|r_things.c:452]] R_ProjectSprite
+- [[function_DOOM_fa2704f7|d_net.c:453]] CheckAbort
+- [[function_DOOM_ed582f77|p_spec.c:453]] P_FindMinSurroundingLight
+- [[function_DOOM_865d1b9c|r_main.c:453]] R_ScaleFromGlobalAngle
+- [[function_DOOM_0ae72ea3|d_main.c:454]] D_DoAdvanceDemo
+- [[function_DOOM_3e410a5e|wi_stuff.c:455]] WI_drawEL
+- [[function_DOOM_e758d55d|am_map.c:458]] AM_initVariables
+- [[function_DOOM_8c0f1373|r_draw.c:459]] R_InitTranslationTables
+- [[function_DOOM_49f6e271|p_pspr.c:467]] A_Punch
+- [[function_DOOM_b7d7f884|p_setup.c:469]] P_LoadBlockMap
+- [[function_DOOM_1ec756b6|i_sound.c:470]] I_StartSound
+- [[function_DOOM_298a8ca0|s_sound.c:471]] S_StopSound
+- [[function_DOOM_47077a8e|p_saveg.c:475]] P_UnArchiveSpecials
+- [[function_DOOM_9c6eae82|i_video.c:476]] if
+- [[function_DOOM_1bc8ed6d|v_video.c:482]] V_Init
+- [[function_DOOM_7b8200b9|hu_stuff.c:486]] HU_Start
+- [[function_DOOM_e66d2d08|p_spec.c:491]] P_CrossSpecialLine
+- [[function_DOOM_6dc51563|r_segs.c:493]] if
+- [[function_DOOM_b2c091cc|hu_stuff.c:496]] HU_Drawer
+- [[function_DOOM_ae427796|r_bsp.c:497]] R_Subsector
+- [[function_DOOM_a6e2269c|s_sound.c:497]] S_PauseSound
+- [[function_DOOM_80f00b82|st_stuff.c:499]] ST_refreshBackground
+- [[function_DOOM_6af04761|p_pspr.c:501]] A_Saw
+- [[function_DOOM_4659f79a|am_map.c:502]] AM_loadPics
+- [[function_DOOM_7c546c58|f_finale.c:502]] F_CastResponder
+- [[function_DOOM_953c4d5c|m_misc.c:503]] M_ScreenShot
+- [[function_DOOM_2b2b7ede|wi_stuff.c:503]] WI_drawOnLnode
+- [[function_DOOM_f7d1044e|g_game.c:504]] G_Responder
+- [[function_DOOM_03dc2a4f|i_sound.c:505]] I_StartSound
+- [[function_DOOM_090957f2|p_doors.c:505]] P_SpawnDoorCloseIn30
+- [[function_DOOM_c5bb2b12|r_segs.c:505]] if
+- [[function_DOOM_b356a425|s_sound.c:506]] S_PauseSound
+- [[function_DOOM_b0690980|r_main.c:509]] R_InitTables
+- [[function_DOOM_97c11239|hu_stuff.c:511]] if
+- [[function_DOOM_b290d8d5|m_menu.c:511]] M_ReadSaveStrings
+- [[function_DOOM_95e1df83|soundsrv.c:512]] outputushort
+- [[function_DOOM_66bca228|am_map.c:515]] AM_loadPics
+- [[function_DOOM_cf54b023|i_sound.c:517]] I_StopSound
+- [[function_DOOM_60ff05ed|r_draw.c:520]] R_DrawSpan
+- [[function_DOOM_01587440|w_wad.c:522]] W_Profile
+- [[function_DOOM_4b8a77d4|f_finale.c:523]] F_CastResponder
+- [[function_DOOM_abb60ef5|am_map.c:524]] AM_unloadPics
+- [[function_DOOM_3b6eca70|d_main.c:525]] D_StartTitle
+- [[function_DOOM_cd960222|i_video.c:527]] I_ReadScreen
+- [[function_DOOM_ab896db8|p_doors.c:527]] P_SpawnDoorRaiseIn5Mins
+- [[function_DOOM_4ee5eab4|r_segs.c:529]] if
+- [[function_DOOM_fa5a85ee|p_map.c:530]] P_ThingHeightClip
+- [[function_DOOM_53e77981|p_enemy.c:533]] if
+- [[function_DOOM_3b7b86c8|am_map.c:537]] AM_LevelInit
+- [[function_DOOM_771488de|soundsrv.c:537]] outputushort
+- [[function_DOOM_63fc5d25|m_menu.c:542]] M_DrawLoad
+- [[function_DOOM_37d043ef|d_main.c:543]] D_AddFile
+- [[function_DOOM_2fc270e8|r_main.c:544]] R_InitTextureMapping
+- [[function_DOOM_f0ca104c|p_mobj.c:546]] P_RemoveMobj
+- [[function_DOOM_f21347a4|p_pspr.c:550]] A_FireMissile
+- [[function_DOOM_f39f108f|i_video.c:551]] if
+- [[function_DOOM_8733d78c|r_bsp.c:552]] R_RenderBSPNode
+- [[function_DOOM_47597e68|d_net.c:555]] D_CheckNetGame
+- [[function_DOOM_c44556d5|m_menu.c:559]] M_DrawSaveLoadBorder
+- [[function_DOOM_89c20595|am_map.c:560]] AM_Stop
+- [[function_DOOM_41ecc5b0|p_maputl.c:561]] PIT_AddLineIntercepts
+- [[function_DOOM_1e43fb95|i_video.c:562]] if
+- [[function_DOOM_f89e4e09|d_main.c:563]] IdentifyVersion
+- [[function_DOOM_c6033d66|p_pspr.c:563]] A_FireBFG
+- [[function_DOOM_2a88c198|p_doors.c:566]] P_InitSlidingDoorFrames
+- [[function_DOOM_0a169050|p_enemy.c:566]] A_KeenDie
+- [[function_DOOM_5dfcbf75|r_draw.c:569]] R_DrawSpan
+- [[function_DOOM_0301cad3|am_map.c:573]] AM_Start
+- [[function_DOOM_d1982ef4|soundsrv.c:573]] initdata
+- [[function_DOOM_b131b042|s_sound.c:576]] if
+- [[function_DOOM_b70f2d69|p_pspr.c:577]] A_FirePlasma
+- [[function_DOOM_b495ca14|p_mobj.c:578]] P_RespawnSpecials
+- [[function_DOOM_ee58efb3|f_finale.c:579]] F_CastDrawer
+- [[function_DOOM_df2f1354|m_menu.c:579]] M_LoadSelect
+- [[function_DOOM_e0dce84a|r_data.c:581]] R_InitFlats
+- [[function_DOOM_c13fc881|i_video.c:582]] I_SetPalette
+- [[function_DOOM_185e3494|p_setup.c:583]] P_SetupLevel
+- [[function_DOOM_e1f3a122|s_sound.c:583]] if
+- [[function_DOOM_8f22c33c|wi_stuff.c:583]] WI_drawAnimatedBack
+- [[function_DOOM_6e070bf1|p_map.c:584]] P_HitSlideLine
+- [[function_DOOM_b216838f|hu_stuff.c:587]] HU_queueChatChar
+- [[function_DOOM_33a22638|am_map.c:592]] AM_minOutWindowScale
+- [[function_DOOM_1001c014|m_menu.c:594]] M_LoadGame
+- [[function_DOOM_71a3b996|hu_stuff.c:600]] HU_queueChatChar
+- [[function_DOOM_1de16491|p_pspr.c:601]] P_BulletSlope
+- [[function_DOOM_e9a1992d|am_map.c:602]] AM_maxOutWindowScale
+- [[function_DOOM_d3c6cc27|d_net.c:602]] D_QuitNetGame
+- [[function_DOOM_622d8e11|r_data.c:603]] R_InitSpriteLumps
+- [[function_DOOM_f2640c5c|p_enemy.c:604]] A_Look
+- [[function_DOOM_8bd522d1|r_segs.c:606]] if
+- [[function_DOOM_5baa9106|f_finale.c:609]] F_DrawPatchCol
+- [[function_DOOM_b61c9eaf|m_menu.c:610]] M_DrawSave
+- [[function_DOOM_557c4688|p_doors.c:610]] P_FindSlidingDoorType
+- [[function_DOOM_ad45d064|i_video.c:612]] if
+- [[function_DOOM_c32b2fdf|r_main.c:612]] R_InitLightTables
+- [[function_DOOM_c71395bd|r_things.c:613]] R_AddSprites
+- [[function_DOOM_075ccf5d|g_game.c:616]] while
+- [[function_DOOM_f547f8ae|p_maputl.c:616]] PIT_AddThingIntercepts
+- [[function_DOOM_56b4778a|s_sound.c:616]] S_SetMusicVolume
+- [[function_DOOM_2155cdf7|p_pspr.c:625]] P_GunShot
+- [[function_DOOM_e504acc3|m_menu.c:631]] M_DoSave
+- [[function_DOOM_7d22f073|s_sound.c:631]] S_SetMusicVolume
+- [[function_DOOM_e077dfd4|r_data.c:633]] R_InitColormaps
+- [[function_DOOM_7d04800e|am_map.c:635]] if
+- [[function_DOOM_e195cb29|st_stuff.c:635]] for
+- [[function_DOOM_16aed66f|p_map.c:636]] PTR_SlideTraverse
+- [[function_DOOM_d1c9c208|r_segs.c:641]] if
+- [[function_DOOM_df2621fe|p_mobj.c:642]] P_SpawnPlayer
+- [[function_DOOM_291e5098|r_draw.c:643]] R_DrawSpanLow
+- [[function_DOOM_3ebe87ac|f_finale.c:644]] F_BunnyScroll
+- [[function_DOOM_55f79417|m_menu.c:644]] M_SaveSelect
+- [[function_DOOM_fbec8691|s_sound.c:644]] S_StartMusic
+- [[function_DOOM_52e6c54f|p_pspr.c:646]] A_FirePistol
+- [[function_DOOM_4881f800|r_things.c:646]] R_DrawPSprite
+- [[function_DOOM_3ecd9e61|hu_stuff.c:648]] if
+- [[function_DOOM_ce4a5bb0|s_sound.c:649]] S_StartMusic
+- [[function_DOOM_1c5669a8|wi_stuff.c:652]] while
+- [[function_DOOM_9e9e81e2|r_data.c:654]] R_InitData
+- [[function_DOOM_b9037092|r_main.c:657]] R_SetViewSize
+- [[function_DOOM_39362850|m_menu.c:659]] M_SaveGame
+- [[function_DOOM_7823ebc4|hu_stuff.c:665]] if
+- [[function_DOOM_cbd1b36c|i_sound.c:665]] I_SubmitSound
+- [[function_DOOM_6c7534d9|p_inter.c:667]] P_KillMobj
+- [[function_DOOM_d5db03d9|p_pspr.c:668]] A_FireShotgun
+- [[function_DOOM_3fe061c9|wi_stuff.c:668]] WI_drawPercent
+- [[function_DOOM_ec16c68b|r_main.c:671]] R_ExecuteSetViewSize
+- [[function_DOOM_6594af7e|p_enemy.c:672]] A_Chase
+- [[function_DOOM_b35ff976|r_data.c:672]] R_FlatNumForName
+- [[function_DOOM_4a73b58e|i_sound.c:674]] I_SubmitSound
+- [[function_DOOM_8aec9d3b|m_menu.c:681]] M_QuickSaveResponse
+- [[function_DOOM_92574efc|hu_stuff.c:684]] if
+- [[function_DOOM_b7513a9b|wi_stuff.c:687]] WI_drawTime
+- [[function_DOOM_c5b2b8b8|s_sound.c:689]] S_ChangeMusic
+- [[function_DOOM_05f21caf|m_menu.c:690]] M_QuickSaveResponse
+- [[function_DOOM_51d7dfcd|i_video.c:692]] I_InitGraphics
+- [[function_DOOM_2c00972f|i_sound.c:693]] I_UpdateSoundParams
+- [[function_DOOM_bca35862|p_maputl.c:694]] while
+- [[function_DOOM_c22a511b|p_map.c:695]] P_SlideMove
+- [[function_DOOM_0db85a12|p_pspr.c:695]] A_FireShotgun2
+- [[function_DOOM_9cf62990|r_draw.c:695]] R_InitBuffer
+- [[function_DOOM_ba093534|r_data.c:696]] R_CheckTextureNumForName
+- [[function_DOOM_87c73810|f_finale.c:700]] F_Drawer
+- [[function_DOOM_41c3f8cb|p_setup.c:700]] P_Init
+- [[function_DOOM_c415c029|hu_stuff.c:705]] if
+- [[function_DOOM_5b57d9c1|am_map.c:708]] if
+- [[function_DOOM_b26d7374|p_mobj.c:708]] P_SpawnMapThing
+- [[function_DOOM_9982fca8|p_doors.c:712]] EV_SlidingDoor
+- [[function_DOOM_b5e4fe08|d_net.c:714]] while
+- [[function_DOOM_5a759c3e|m_menu.c:718]] M_QuickLoadResponse
+- [[function_DOOM_0ec28238|r_data.c:718]] R_TextureNumForName
+- [[function_DOOM_f10ed54f|soundsrv.c:719]] if
+- [[function_DOOM_71153a16|d_main.c:722]] FindResponseFile
+- [[function_DOOM_5e1441bc|wi_stuff.c:724]] WI_drawTime
+- [[function_DOOM_e497dca2|g_game.c:726]] switch
+- [[function_DOOM_404a5f69|s_sound.c:727]] for
+- [[function_DOOM_5f43bb37|m_menu.c:728]] M_QuickLoadResponse
+- [[function_DOOM_5fb9e640|st_stuff.c:729]] ST_calcPainOffset
+- [[function_DOOM_8483e0a0|wi_stuff.c:730]] WI_End
+- [[function_DOOM_ebd557aa|r_draw.c:731]] R_FillBackScreen
+- [[function_DOOM_3fdf9cd7|p_pspr.c:732]] A_FireCGun
+- [[function_DOOM_5a3b718e|i_sound.c:737]] I_ShutdownSound
+- [[function_DOOM_26c809de|wi_stuff.c:737]] WI_initNoState
+- [[function_DOOM_95159c86|am_map.c:741]] AM_changeWindowScale
+- [[function_DOOM_d2bfe2af|r_things.c:746]] R_DrawPlayerSprites
+- [[function_DOOM_8157c850|d_net.c:748]] if
+- [[function_DOOM_bb2d328a|m_menu.c:752]] M_DrawReadThis1
+- [[function_DOOM_783c59d8|s_sound.c:752]] S_AdjustSoundParams
+- [[function_DOOM_411fb3e6|wi_stuff.c:752]] WI_initShowNextLoc
+- [[function_DOOM_49f02f2f|am_map.c:760]] AM_doFollowPlayer
+- [[function_DOOM_d4fe887e|g_game.c:761]] G_InitPlayer
+- [[function_DOOM_ee7e568f|p_pspr.c:761]] A_Light0
+- [[function_DOOM_bb9cc069|wi_stuff.c:761]] WI_initShowNextLoc
+- [[function_DOOM_9a853425|st_stuff.c:763]] if
+- [[function_DOOM_516e0fc2|p_pspr.c:766]] A_Light0
+- [[function_DOOM_fdfc0aef|p_pspr.c:771]] A_Light1
+- [[function_DOOM_e4e8b65b|wi_stuff.c:771]] WI_updateShowNextLoc
+- [[function_DOOM_01236f11|r_main.c:773]] R_Init
+- [[function_DOOM_867279ca|m_menu.c:776]] M_DrawReadThis2
+- [[function_DOOM_ee3aaa19|g_game.c:779]] G_PlayerFinishLevel
+- [[function_DOOM_ccd9947f|p_pspr.c:781]] A_BFGSpray
+- [[function_DOOM_9e2c1d20|p_enemy.c:782]] A_FaceTarget
+- [[function_DOOM_859c7814|am_map.c:784]] AM_updateLightLev
+- [[function_DOOM_4e42d017|d_main.c:796]] D_DoomMain
+- [[function_DOOM_ef623fc7|g_game.c:800]] G_PlayerReborn
+- [[function_DOOM_055668ba|m_menu.c:800]] M_DrawSound
+- [[function_DOOM_cdbf9e06|p_enemy.c:802]] A_PosAttack
+- [[function_DOOM_85ed3862|p_maputl.c:804]] if
+- [[function_DOOM_630dc630|am_map.c:805]] AM_Ticker
+- [[function_DOOM_401a7f95|m_menu.c:811]] M_DrawSound
+- [[function_DOOM_067eec76|p_mobj.c:811]] P_SpawnPuff
+- [[function_DOOM_dcfa863e|wi_stuff.c:812]] WI_drawShowNextLoc
+- [[function_DOOM_6051f074|p_map.c:815]] PTR_AimTraverse
+- [[function_DOOM_dab87b29|m_menu.c:816]] M_Sound
+- [[function_DOOM_1cfb59ba|p_pspr.c:817]] A_BFGsound
+- [[function_DOOM_2e5aee7a|r_draw.c:817]] R_VideoErase
+- [[function_DOOM_2a063f7e|wi_stuff.c:818]] WI_drawNoState
+- [[function_DOOM_097888ec|p_enemy.c:821]] A_PosAttack
+- [[function_DOOM_9b7cb76f|p_maputl.c:826]] if
+- [[function_DOOM_1628be6f|s_sound.c:827]] S_getChannel
+- [[function_DOOM_ee7e35d6|r_main.c:830]] R_SetupFrame
+- [[function_DOOM_d742c860|p_pspr.c:831]] P_SetupPsprites
+- [[function_DOOM_ae0051de|am_map.c:833]] AM_clearFB
+- [[function_DOOM_d7303e8f|m_menu.c:833]] M_SfxVol
+- [[function_DOOM_324cfad6|p_inter.c:834]] if
+- [[function_DOOM_e90215df|i_sound.c:835]] I_InitMusic
+- [[function_DOOM_a995a972|i_sound.c:836]] I_InitMusic
+- [[function_DOOM_2086d201|p_mobj.c:838]] P_SpawnBlood
+- [[function_DOOM_66bdf6af|i_sound.c:841]] I_PlaySong
+- [[function_DOOM_b8ad6d38|st_stuff.c:841]] if
+- [[function_DOOM_4939a271|g_game.c:843]] G_CheckSpot
+- [[function_DOOM_f21fb181|r_draw.c:843]] R_DrawViewBorder
+- [[function_DOOM_fcf1841b|p_enemy.c:845]] A_SPosAttack
+- [[function_DOOM_a15b82b4|am_map.c:846]] AM_clipMline
+- [[function_DOOM_99fadae8|i_sound.c:848]] I_PlaySong
+- [[function_DOOM_370ac700|wi_stuff.c:849]] WI_initDeathmatchStats
+- [[function_DOOM_01aa43bf|i_sound.c:854]] I_PauseSong
+- [[function_DOOM_f787b60b|m_menu.c:856]] M_DrawMainMenu
+- [[function_DOOM_f1295888|st_stuff.c:857]] if
+- [[function_DOOM_b1c33f91|i_sound.c:860]] I_ResumeSong
+- [[function_DOOM_bab911a3|p_enemy.c:865]] A_CPosAttack
+- [[function_DOOM_29091ef1|p_pspr.c:865]] if
+- [[function_DOOM_28c880f1|m_menu.c:867]] M_DrawNewGame
+- [[function_DOOM_f4ca772c|p_mobj.c:868]] P_CheckMissileSpawn
+- [[function_DOOM_b9be3a0a|i_sound.c:869]] I_StopSong
+- [[function_DOOM_755d553e|r_main.c:870]] R_RenderPlayerView
+- [[function_DOOM_83e88bae|m_menu.c:873]] M_DrawNewGame
+- [[function_DOOM_f03954c4|i_sound.c:875]] I_UnRegisterSong
+- [[function_DOOM_69c6707b|st_stuff.c:879]] if
+- [[function_DOOM_226c5d1a|p_enemy.c:882]] A_CPosRefire
+- [[function_DOOM_63b8a8c1|i_sound.c:884]] I_QrySongPlaying
+- [[function_DOOM_64bcb6e0|m_menu.c:893]] M_DrawEpisode
+- [[function_DOOM_b1b3654e|g_game.c:897]] G_DeathMatchSpawnPlayer
+- [[function_DOOM_23ea1b79|m_menu.c:898]] M_DrawEpisode
+- [[function_DOOM_3b2dcd44|p_enemy.c:898]] A_SpidRefire
+- [[function_DOOM_8ad7e108|p_map.c:899]] PTR_ShootTraverse
+- [[function_DOOM_486e9255|m_menu.c:907]] M_VerifyNightmare
+- [[function_DOOM_f3ff94fd|st_stuff.c:912]] if
+- [[function_DOOM_256bad96|p_enemy.c:913]] A_TroopAttack
+- [[function_DOOM_acae4164|r_things.c:914]] if
+- [[function_DOOM_8acbb7de|i_sound.c:917]] I_HandleSoundTimer
+- [[function_DOOM_adeab5a7|m_menu.c:919]] M_ChooseSkill
+- [[function_DOOM_14810497|i_video.c:920]] InitExpand
+- [[function_DOOM_6350f8f6|r_things.c:921]] if
+- [[function_DOOM_84b949e8|st_stuff.c:924]] ST_updateWidgets
+- [[function_DOOM_c34377e0|i_video.c:930]] InitExpand2
+- [[function_DOOM_dc452185|p_mobj.c:934]] P_SpawnPlayerMissile
+- [[function_DOOM_3868f26f|p_enemy.c:935]] A_TroopAttack
+- [[function_DOOM_76321e29|r_things.c:937]] for
+- [[function_DOOM_3267b034|g_game.c:940]] if
+- [[function_DOOM_39fd76ad|i_sound.c:941]] I_SoundSetTimer
+- [[function_DOOM_7f0ab50f|p_enemy.c:950]] A_SargAttack
+- [[function_DOOM_67d7a05c|m_menu.c:951]] M_DrawOptions
+- [[function_DOOM_8d44493f|g_game.c:953]] for
+- [[function_DOOM_eafa45a9|wi_stuff.c:957]] if
+- [[function_DOOM_5af9e579|i_video.c:958]] Expand4
+- [[function_DOOM_9c4a0871|p_spec.c:958]] P_ShootSpecialLine
+- [[function_DOOM_a70d12fd|r_things.c:958]] R_DrawMasked
+- [[function_DOOM_c2cec26b|m_menu.c:968]] M_DrawOptions
+- [[function_DOOM_4c840a03|p_enemy.c:969]] A_HeadAttack
+- [[function_DOOM_55a8b31e|wi_stuff.c:969]] if
+- [[function_DOOM_e9e48d11|g_game.c:970]] G_ScreenShot
+- [[function_DOOM_5442199e|m_menu.c:978]] M_ChangeMessages
+- [[function_DOOM_4bfd7751|p_enemy.c:979]] A_CyberAttack
+- [[function_DOOM_aa4c5e44|i_sound.c:980]] I_SoundDelTimer
+- [[function_DOOM_874d1cf3|st_stuff.c:988]] ST_updateWidgets
+- [[function_DOOM_ec4102c8|am_map.c:994]] if
+- [[function_DOOM_2701c662|m_menu.c:996]] M_EndGameResponse
+- [[function_DOOM_8352d435|st_stuff.c:1000]] ST_doPaletteStuff
+- [[function_DOOM_da9ef563|g_game.c:1002]] G_ExitLevel
+- [[function_DOOM_eb1374e7|p_enemy.c:1002]] A_SkelMissile
+- [[function_DOOM_74fe9795|m_menu.c:1006]] M_EndGameResponse
+- [[function_DOOM_d5661885|g_game.c:1009]] G_SecretExitLevel
+- [[function_DOOM_d7a2abfb|p_spec.c:1009]] P_PlayerInSpecialSector
+- [[function_DOOM_14bf1da2|p_enemy.c:1021]] A_Tracer
+- [[function_DOOM_574227e5|p_map.c:1022]] P_AimLineAttack
+- [[function_DOOM_755d61e1|m_menu.c:1030]] M_ReadThis
+- [[function_DOOM_58855311|m_menu.c:1036]] M_ReadThis
+- [[function_DOOM_dbbafca0|m_menu.c:1042]] M_ReadThis2
+- [[function_DOOM_b25a17ea|st_stuff.c:1054]] ST_doPaletteStuff
+- [[function_DOOM_a733c8e2|am_map.c:1055]] AM_drawMline
+- [[function_DOOM_a366cf68|p_map.c:1062]] P_LineAttack
+- [[function_DOOM_519cf59e|g_game.c:1068]] if
+- [[function_DOOM_6c7edb92|am_map.c:1071]] AM_drawGrid
+- [[function_DOOM_903a4ca2|wi_stuff.c:1078]] WI_initNetgameStats
+- [[function_DOOM_d9a7b708|m_menu.c:1080]] M_QuitResponse
+- [[function_DOOM_38783a02|g_game.c:1088]] if
+- [[function_DOOM_8839ad97|st_stuff.c:1089]] ST_drawWidgets
+- [[function_DOOM_573255cf|p_spec.c:1091]] if
+- [[function_DOOM_951e8a0b|p_enemy.c:1093]] A_Tracer
+- [[function_DOOM_2cc4f9e5|p_map.c:1095]] PTR_UseTraverse
+- [[function_DOOM_b61a6ca4|m_menu.c:1098]] M_QuitResponse
+- [[function_DOOM_0c3251ca|p_spec.c:1099]] if
+- [[function_DOOM_85056b29|p_enemy.c:1101]] A_SkelWhoosh
+- [[function_DOOM_eec811e3|st_stuff.c:1102]] ST_doRefresh
+- [[function_DOOM_20794a66|wi_stuff.c:1106]] WI_initNetgameStats
+- [[function_DOOM_77180e0c|st_stuff.c:1108]] ST_diffDraw
+- [[function_DOOM_e25b0d76|m_menu.c:1113]] M_QuitDOOM
+- [[function_DOOM_b51888a6|p_spec.c:1113]] for
+- [[function_DOOM_f1ae68d5|st_stuff.c:1124]] ST_Drawer
+- [[function_DOOM_101c6b31|p_enemy.c:1129]] PIT_VileCheck
+- [[function_DOOM_98b50223|p_map.c:1130]] P_UseLines
+- [[function_DOOM_d2f663f4|m_menu.c:1131]] M_ChangeSensitivity
+- [[function_DOOM_337dbfe2|am_map.c:1147]] if
+- [[function_DOOM_17784c8d|g_game.c:1147]] G_WorldDone
+- [[function_DOOM_84338b55|am_map.c:1151]] if
+- [[function_DOOM_f6c6bb2e|m_menu.c:1152]] M_ChangeDetail
+- [[function_DOOM_3e833b91|am_map.c:1155]] if
+- [[function_DOOM_6a2938da|am_map.c:1160]] if
+- [[function_DOOM_1e8a149b|p_spec.c:1163]] EV_DoDonut
+- [[function_DOOM_dd33f544|p_map.c:1164]] PIT_RadiusAttack
+- [[function_DOOM_18607339|am_map.c:1172]] AM_rotate
+- [[function_DOOM_77db4ff5|g_game.c:1172]] G_WorldDone
+- [[function_DOOM_297c2eed|m_menu.c:1182]] M_DrawThermo
+- [[function_DOOM_951fb294|am_map.c:1191]] AM_rotate
+- [[function_DOOM_b891a9e5|g_game.c:1192]] G_LoadGame
+- [[function_DOOM_eb04bc06|g_game.c:1198]] G_LoadGame
+- [[function_DOOM_dd1618be|st_stuff.c:1201]] ST_loadGraphics
+- [[function_DOOM_04845cc6|p_map.c:1205]] P_RadiusAttack
+- [[function_DOOM_6337c920|st_stuff.c:1207]] ST_loadData
+- [[function_DOOM_f516dbcd|m_menu.c:1208]] M_DrawThermo
+- [[function_DOOM_d9b4914f|m_menu.c:1217]] M_DrawEmptyCell
+- [[function_DOOM_3e2841b5|m_menu.c:1227]] M_DrawSelCell
+- [[function_DOOM_cc2a2ac6|p_enemy.c:1233]] A_VileStart
+- [[function_DOOM_ba3224d6|p_spec.c:1239]] P_SpawnSpecials
+- [[function_DOOM_f657e148|am_map.c:1240]] AM_drawLineCharacter
+- [[function_DOOM_110a40af|m_menu.c:1244]] M_StartMessage
+- [[function_DOOM_e47de4ba|st_stuff.c:1244]] ST_unloadGraphics
+- [[function_DOOM_d7f0c0c3|p_enemy.c:1245]] A_StartFire
+- [[function_DOOM_756d8bab|st_stuff.c:1249]] ST_unloadData
+- [[function_DOOM_84521aad|p_enemy.c:1251]] A_StartFire
+- [[function_DOOM_fc117c6c|m_menu.c:1255]] M_StringWidth
+- [[function_DOOM_f1dad0d7|p_enemy.c:1257]] A_FireCrackle
+- [[function_DOOM_59436a72|p_map.c:1257]] PIT_ChangeSector
+- [[function_DOOM_6ab892ef|g_game.c:1260]] G_SaveGame
+- [[function_DOOM_87f49dab|wi_stuff.c:1261]] WI_updateNetgameStats
+- [[function_DOOM_71233192|g_game.c:1270]] G_SaveGame
+- [[function_DOOM_978b551e|m_menu.c:1278]] M_StringHeight
+- [[function_DOOM_3645d931|st_stuff.c:1282]] ST_initData
+- [[function_DOOM_865a49b5|am_map.c:1284]] AM_drawPlayers
+- [[function_DOOM_22a71950|p_enemy.c:1285]] A_VileTarget
+- [[function_DOOM_b377f2e5|m_menu.c:1296]] M_WriteText
+- [[function_DOOM_430dc80a|am_map.c:1305]] AM_drawThings
+- [[function_DOOM_abf7897e|p_enemy.c:1310]] A_VileAttack
+- [[function_DOOM_34692ec7|wi_stuff.c:1318]] WI_initStats
+- [[function_DOOM_191d74fe|p_map.c:1320]] P_ChangeSector
+- [[function_DOOM_403b9cd7|am_map.c:1326]] AM_drawMarks
+- [[function_DOOM_ea3959d1|am_map.c:1332]] AM_drawCrosshair
+- [[function_DOOM_e7926cc0|g_game.c:1332]] G_DeferedInitNew
+- [[function_DOOM_8e6b433f|g_game.c:1345]] G_DeferedInitNew
+- [[function_DOOM_817b949d|p_enemy.c:1351]] A_FatRaise
+- [[function_DOOM_f4cb7efa|p_enemy.c:1358]] A_FatRaise
+- [[function_DOOM_7d931789|wi_stuff.c:1361]] if
+- [[function_DOOM_0d6ea89b|g_game.c:1364]] G_InitNew
+- [[function_DOOM_b034eeb3|m_menu.c:1369]] if
+- [[function_DOOM_df790738|p_enemy.c:1375]] A_FatAttack1
+- [[function_DOOM_51314616|wi_stuff.c:1375]] if
+- [[function_DOOM_0964d322|m_menu.c:1380]] if
+- [[function_DOOM_7fd552a7|wi_stuff.c:1390]] if
+- [[function_DOOM_47afcc77|p_enemy.c:1392]] A_FatAttack2
+- [[function_DOOM_e922548a|m_menu.c:1408]] if
+- [[function_DOOM_48f007b3|wi_stuff.c:1413]] if
+- [[function_DOOM_e1b9f69a|p_enemy.c:1419]] A_SkullAttack
+- [[function_DOOM_e15326fb|m_menu.c:1422]] if
+- [[function_DOOM_479ed833|wi_stuff.c:1425]] if
+- [[function_DOOM_2f7023b3|wi_stuff.c:1436]] WI_drawStats
+- [[function_DOOM_0193dc76|m_menu.c:1441]] if
+- [[function_DOOM_c6b39ca9|st_stuff.c:1444]] ST_Start
+- [[function_DOOM_454cc809|p_enemy.c:1449]] A_PainShootSkull
+- [[function_DOOM_c79895d4|m_menu.c:1452]] if
+- [[function_DOOM_a3e75cac|st_stuff.c:1456]] ST_Start
+- [[function_DOOM_09282a9f|st_stuff.c:1466]] ST_Stop
+- [[function_DOOM_77a4736d|wi_stuff.c:1475]] for
+- [[function_DOOM_ade405f7|g_game.c:1488]] G_ReadDemoTiccmd
+- [[function_DOOM_ef109997|m_menu.c:1494]] if
+- [[function_DOOM_f5d1dec1|wi_stuff.c:1502]] WI_Ticker
+- [[function_DOOM_583f20e2|g_game.c:1506]] G_ReadDemoTiccmd
+- [[function_DOOM_6a8d1c93|p_enemy.c:1512]] A_PainAttack
+- [[function_DOOM_c362cae3|p_enemy.c:1522]] A_PainAttack
+- [[function_DOOM_b5188426|g_game.c:1530]] G_RecordDemo
+- [[function_DOOM_7adcc276|p_enemy.c:1535]] A_PainDie
+- [[function_DOOM_f3a20b0b|g_game.c:1549]] G_RecordDemo
+- [[function_DOOM_f1b25503|p_enemy.c:1572]] A_Scream
+- [[function_DOOM_4c470d37|g_game.c:1576]] G_DeferedPlayDemo
+- [[function_DOOM_614c8dfb|p_enemy.c:1577]] A_XScream
+- [[function_DOOM_b6f89dd1|g_game.c:1582]] G_DeferedPlayDemo
+- [[function_DOOM_46cf90c9|p_enemy.c:1585]] A_Pain
+- [[function_DOOM_a451a76c|p_enemy.c:1598]] A_Explode
+- [[function_DOOM_f50ee16f|m_menu.c:1621]] switch
+- [[function_DOOM_99791b95|g_game.c:1625]] G_TimeDemo
+- [[function_DOOM_27854a36|g_game.c:1647]] G_CheckDemoStatus
+- [[function_DOOM_91f12e51|p_enemy.c:1691]] for
+- [[function_DOOM_42c04228|m_menu.c:1723]] M_StartControlPanel
+- [[function_DOOM_bda28b6a|p_enemy.c:1759]] A_Hoof
+- [[function_DOOM_0d827cc9|p_enemy.c:1765]] A_Hoof
+- [[function_DOOM_bc8d31c7|p_enemy.c:1771]] A_Metal
+- [[function_DOOM_9b862cc7|wi_stuff.c:1772]] WI_Drawer
+- [[function_DOOM_53969b55|p_enemy.c:1777]] A_BabyMetal
+- [[function_DOOM_94694599|p_enemy.c:1785]] A_OpenShotgun2
+- [[function_DOOM_f02c5654|wi_stuff.c:1796]] WI_Drawer
+- [[function_DOOM_265db6dd|p_enemy.c:1798]] A_CloseShotgun2
+- [[function_DOOM_b415fb48|m_menu.c:1811]] M_ClearMenus
+- [[function_DOOM_c6a1cfb9|p_enemy.c:1813]] A_BrainAwake
+- [[function_DOOM_327cbc57|m_menu.c:1824]] M_SetupNextMenu
+- [[function_DOOM_5d4bd28f|m_menu.c:1834]] M_Ticker
+- [[function_DOOM_a29ccaef|wi_stuff.c:1838]] WI_initVariables
+- [[function_DOOM_9b4c893e|p_enemy.c:1843]] A_BrainAwake
+- [[function_DOOM_b5c6ae8d|m_menu.c:1847]] M_Init
+- [[function_DOOM_8814c1e2|p_enemy.c:1849]] A_BrainPain
+- [[function_DOOM_e940d88c|p_enemy.c:1875]] A_BrainScream
+- [[function_DOOM_af0c88c8|p_enemy.c:1896]] A_BrainExplode
+- [[function_DOOM_76b674b7|p_enemy.c:1901]] A_BrainDie
+- [[function_DOOM_21487a3a|p_enemy.c:1929]] A_SpawnSound
+- [[function_DOOM_cda0e7c8|p_enemy.c:1936]] A_SpawnSound
+- [[function_DOOM_a1cf4516|p_enemy.c:1994]] A_SpawnFly
+
+### 🔍 Capteur logique (IF)
+
+- [[if_DOOM_91fb56a1|m_cheat.c:50]] cht_CheckCheat
+- [[if_DOOM_51665d88|linux.c:59]] myioctl
+- [[if_DOOM_a5a0e6ce|p_mobj.c:62]] P_SetMobjState
+- [[if_DOOM_e02b3ab2|p_plats.c:64]] 
+- [[if_DOOM_7e2ab24a|p_saveg.c:65]] 
+- [[if_DOOM_aa98c2ec|p_sight.c:65]] P_DivlineSide
+- [[if_DOOM_07236f6f|p_ceilng.c:68]] 
+- [[if_DOOM_b4fea94e|p_floor.c:68]] switch
+- [[if_DOOM_7b5ff15c|p_doors.c:71]] if
+- [[if_DOOM_60ca88d8|p_pspr.c:71]] P_SetPsprite
+- [[if_DOOM_fb3769ee|p_plats.c:73]] 
+- [[if_DOOM_cfb1a660|p_maputl.c:76]] P_PointOnLineSide
+- [[if_DOOM_5b362360|p_sight.c:76]] P_DivlineSide
+- [[if_DOOM_a6e4205e|p_telept.c:77]] 
+- [[if_DOOM_89fa9621|p_ceilng.c:82]] 
+- [[if_DOOM_1e5bf383|p_plats.c:82]] 
+- [[if_DOOM_e41490ff|p_pspr.c:82]] P_SetPsprite
+- [[if_DOOM_c005e3fa|m_misc.c:83]] M_DrawText
+- [[if_DOOM_728e3779|p_maputl.c:83]] P_PointOnLineSide
+- [[if_DOOM_913f9d37|p_floor.c:86]] switch
+- [[if_DOOM_493c379c|p_map.c:90]] PIT_StompThing
+- [[if_DOOM_8659a923|p_pspr.c:91]] P_SetPsprite
+- [[if_DOOM_5369f2ef|p_inter.c:95]] P_GiveAmmo
+- [[if_DOOM_4e26a331|p_floor.c:97]] switch
+- [[if_DOOM_ee2b4796|p_user.c:97]] P_CalcHeight
+- [[if_DOOM_9a8f4bf2|f_wipe.c:99]] 
+- [[if_DOOM_2a6007e0|p_doors.c:101]] if
+- [[if_DOOM_4919d2a1|p_saveg.c:101]] 
+- [[if_DOOM_62f8714a|p_lights.c:103]] T_LightFlash
+- [[if_DOOM_ca7adfd4|p_tick.c:108]] P_RunThinkers
+- [[if_DOOM_cedf8580|st_lib.c:109]] STlib_drawNum
+- [[if_DOOM_e5e2fb94|p_plats.c:111]] 
+- [[if_DOOM_f070b6a5|p_ceilng.c:112]] 
+- [[if_DOOM_137997e4|p_user.c:113]] P_CalcHeight
+- [[if_DOOM_43f8d031|hu_lib.c:115]] HUlib_drawTextLine
+- [[if_DOOM_502e89e5|p_enemy.c:115]] P_RecursiveSound
+- [[if_DOOM_dc2234f9|p_floor.c:116]] switch
+- [[if_DOOM_12c8b5be|r_bsp.c:117]] 
+- [[if_DOOM_323b09f7|p_plats.c:120]] 
+- [[if_DOOM_6bdceaf3|r_things.c:121]] R_InstallSpriteLump
+- [[if_DOOM_93a134f3|p_inter.c:122]] P_GiveAmmo
+- [[if_DOOM_f156349f|p_maputl.c:122]] P_BoxOnLineSide
+- [[if_DOOM_1d46e1f6|p_mobj.c:122]] 
+- [[if_DOOM_8cb3cb65|p_ceilng.c:123]] 
+- [[if_DOOM_468fcdff|p_switch.c:123]] 
+- [[if_DOOM_04e04f08|p_doors.c:124]] 
+- [[if_DOOM_b50cc8a3|p_switch.c:130]] 
+- [[if_DOOM_ef091023|p_inter.c:132]] P_GiveAmmo
+- [[if_DOOM_cba7b343|p_maputl.c:132]] P_BoxOnLineSide
+- [[if_DOOM_90b1494d|r_plane.c:132]] R_MapPlane
+- [[if_DOOM_c84dbbe0|z_zone.c:132]] Z_Free
+- [[if_DOOM_6a4d8f9c|hu_lib.c:134]] HUlib_drawTextLine
+- [[if_DOOM_24785a84|p_floor.c:135]] switch
+- [[if_DOOM_06092f15|p_tick.c:139]] P_Ticker
+- [[if_DOOM_e3aa80e7|p_enemy.c:141]] P_RecursiveSound
+- [[if_DOOM_2faf5fb1|p_inter.c:141]] P_GiveAmmo
+- [[if_DOOM_eba6573b|r_plane.c:141]] R_MapPlane
+- [[if_DOOM_b65e1554|r_segs.c:144]] if
+- [[if_DOOM_dfe37225|p_ceilng.c:147]] 
+- [[if_DOOM_4daaa6f9|z_zone.c:148]] Z_Free
+- [[if_DOOM_3ebe3ff9|d_net.c:149]] HSendPacket
+- [[if_DOOM_4fd06f23|p_inter.c:150]] P_GiveAmmo
+- [[if_DOOM_9879970b|p_doors.c:151]] if
+- [[if_DOOM_71f443e8|p_mobj.c:152]] 
+- [[if_DOOM_15a32985|hu_lib.c:154]] 
+- [[if_DOOM_35ba9529|r_bsp.c:154]] 
+- [[if_DOOM_749caa6c|p_floor.c:156]] switch
+- [[if_DOOM_2bcd45ad|w_wad.c:156]] 
+- [[if_DOOM_8e0165e1|p_spec.c:157]] P_InitPicAnims
+- [[if_DOOM_1e71a1a1|p_lights.c:160]] T_StrobeFlash
+- [[if_DOOM_db24dc0b|z_zone.c:162]] Z_Free
+- [[if_DOOM_bc0cd3bc|w_wad.c:163]] 
+- [[if_DOOM_98c3e41c|r_segs.c:165]] for
+- [[if_DOOM_daeb8119|d_net.c:166]] HSendPacket
+- [[if_DOOM_88102cb4|p_mobj.c:166]] 
+- [[if_DOOM_5acfba47|p_switch.c:166]] P_StartButton
+- [[if_DOOM_89b1e855|p_user.c:166]] P_MovePlayer
+- [[if_DOOM_21793529|soundsrv.c:168]] mix
+- [[if_DOOM_51665d88|i_sound.c:169]] myioctl
+- [[if_DOOM_4d19322e|p_floor.c:169]] switch
+- [[if_DOOM_de2b3c09|p_maputl.c:171]] P_PointOnDivlineSide
+- [[if_DOOM_3a3196cd|r_bsp.c:171]] 
+- [[if_DOOM_63042c62|i_net.c:172]] PacketGet
+- [[if_DOOM_4395eefb|r_main.c:172]] R_PointOnSide
+- [[if_DOOM_5f8283a8|v_video.c:172]] V_CopyRect
+- [[if_DOOM_5762d6c4|w_wad.c:172]] 
+- [[if_DOOM_70d7ca77|p_doors.c:175]] 
+- [[if_DOOM_c55f30f5|p_inter.c:176]] P_GiveWeapon
+- [[if_DOOM_c7f79618|p_maputl.c:178]] P_PointOnDivlineSide
+- [[if_DOOM_50618c64|p_switch.c:178]] P_StartButton
+- [[if_DOOM_d4bc5b55|r_main.c:179]] R_PointOnSide
+- [[if_DOOM_66880060|soundsrv.c:181]] mix
+- [[if_DOOM_eb7334bd|p_pspr.c:185]] P_CheckAmmo
+- [[if_DOOM_8a6d1e10|w_wad.c:185]] 
+- [[if_DOOM_1b32fed9|p_floor.c:189]] switch
+- [[if_DOOM_89ad9fc2|p_maputl.c:190]] P_PointOnDivlineSide
+- [[if_DOOM_5a09a59a|p_pspr.c:191]] P_CheckAmmo
+- [[if_DOOM_47331311|r_main.c:191]] R_PointOnSide
+- [[if_DOOM_217abd88|f_wipe.c:192]] 
+- [[if_DOOM_df683ce1|i_net.c:192]] PacketGet
+- [[if_DOOM_bb661f3d|d_net.c:194]] HGetPacket
+- [[if_DOOM_6613c4e7|p_mobj.c:194]] if
+- [[if_DOOM_bfd666b7|soundsrv.c:194]] mix
+- [[if_DOOM_5c4227a4|f_wipe.c:196]] if
+- [[if_DOOM_0c18d8bd|p_pspr.c:197]] P_CheckAmmo
+- [[if_DOOM_07f067c7|p_inter.c:198]] P_GiveWeapon
+- [[if_DOOM_89a42201|p_user.c:200]] P_DeathThink
+- [[if_DOOM_72627fb9|p_pspr.c:202]] P_CheckAmmo
+- [[if_DOOM_2af6e604|p_enemy.c:204]] P_CheckMissileRange
+- [[if_DOOM_8f76177d|r_data.c:204]] R_DrawColumnInCache
+- [[if_DOOM_5edc4af9|r_main.c:204]] R_PointOnSide
+- [[if_DOOM_56510448|p_mobj.c:207]] if
+- [[if_DOOM_ac149cf8|p_pspr.c:207]] P_CheckAmmo
+- [[if_DOOM_905743ca|soundsrv.c:207]] mix
+- [[if_DOOM_1873e5dd|r_bsp.c:209]] R_ClipPassWallSegment
+- [[if_DOOM_a0c5d766|p_pspr.c:211]] P_CheckAmmo
+- [[if_DOOM_22f1c719|f_finale.c:212]] F_Ticker
+- [[if_DOOM_65a3d09a|wadread.c:212]] 
+- [[if_DOOM_c99a55c1|d_net.c:214]] HGetPacket
+- [[if_DOOM_a685a56c|p_map.c:214]] PIT_CheckLine
+- [[if_DOOM_f441840b|d_main.c:215]] D_Display
+- [[if_DOOM_e486c618|p_pspr.c:215]] P_CheckAmmo
+- [[if_DOOM_51564bc8|z_zone.c:217]] 
+- [[if_DOOM_86b5dc83|r_things.c:219]] for
+- [[if_DOOM_bda35ffd|p_pspr.c:220]] P_CheckAmmo
+- [[if_DOOM_5387931f|soundsrv.c:220]] mix
+- [[if_DOOM_39c2a221|d_net.c:221]] HGetPacket
+- [[if_DOOM_e29567c9|p_mobj.c:221]] if
+- [[if_DOOM_e97794db|st_lib.c:221]] STlib_updateMultIcon
+- [[if_DOOM_311a5928|p_floor.c:222]] 
+- [[if_DOOM_18ac6e87|v_video.c:222]] 
+- [[if_DOOM_1c7aa03f|d_main.c:223]] D_Display
+- [[if_DOOM_51b430e8|z_zone.c:223]] 
+- [[if_DOOM_c26506cd|p_enemy.c:224]] P_CheckMissileRange
+- [[if_DOOM_174035fb|p_doors.c:225]] EV_DoLockedDoor
+- [[if_DOOM_c59fb716|r_plane.c:225]] 
+- [[if_DOOM_6d22da1d|p_switch.c:226]] 
+- [[if_DOOM_2c52449f|r_draw.c:226]] R_DrawColumnLow
+- [[if_DOOM_0b1467c1|p_map.c:227]] PIT_CheckLine
+- [[if_DOOM_1c85ae25|d_net.c:228]] HGetPacket
+- [[if_DOOM_575aa0f5|r_segs.c:228]] 
+- [[if_DOOM_be4dac3e|p_sight.c:229]] P_CrossSubsector
+- [[if_DOOM_31c1ce51|p_enemy.c:231]] P_CheckMissileRange
+- [[if_DOOM_ec425cdf|f_finale.c:232]] F_Ticker
+- [[if_DOOM_cc4b8f09|r_plane.c:233]] 
+- [[if_DOOM_fe3d51b6|soundsrv.c:233]] mix
+- [[if_DOOM_d8247e07|r_main.c:235]] R_PointOnSegSide
+- [[if_DOOM_5aa12150|p_sight.c:236]] P_CrossSubsector
+- [[if_DOOM_77f87de4|p_doors.c:237]] EV_DoLockedDoor
+- [[if_DOOM_87724ed7|p_switch.c:238]] 
+- [[if_DOOM_0504b344|p_enemy.c:239]] P_CheckMissileRange
+- [[if_DOOM_4feb1f0e|p_map.c:240]] PIT_CheckLine
+- [[if_DOOM_ad889f9b|p_saveg.c:240]] P_ArchiveThinkers
+- [[if_DOOM_0dc451b3|f_finale.c:241]] F_Ticker
+- [[if_DOOM_9d3ce446|r_things.c:241]] if
+- [[if_DOOM_34dc7afe|r_main.c:242]] R_PointOnSegSide
+- [[if_DOOM_a4884b2e|soundsrv.c:246]] mix
+- [[if_DOOM_4502c00d|r_segs.c:248]] 
+- [[if_DOOM_ce215291|p_doors.c:249]] EV_DoLockedDoor
+- [[if_DOOM_69e29138|p_lights.c:249]] 
+- [[if_DOOM_9f0f5376|p_user.c:249]] 
+- [[if_DOOM_7b60b600|p_switch.c:250]] 
+- [[if_DOOM_f9fade65|z_zone.c:250]] 
+- [[if_DOOM_431c6013|p_mobj.c:252]] if
+- [[if_DOOM_9e5e89d5|i_video.c:253]] 
+- [[if_DOOM_eb4ef503|r_main.c:254]] R_PointOnSegSide
+- [[if_DOOM_6489499b|i_net.c:256]] I_InitNetwork
+- [[if_DOOM_66d63c4f|p_ceilng.c:257]] P_AddActiveCeiling
+- [[if_DOOM_1eeafd90|p_user.c:258]] 
+- [[if_DOOM_1ee28ca8|soundsrv.c:258]] mix
+- [[if_DOOM_920e42c7|p_sight.c:262]] P_CrossBSPNode
+- [[if_DOOM_9bf05e5f|r_segs.c:262]] if
+- [[if_DOOM_493c379c|p_map.c:263]] 
+- [[if_DOOM_15f4438e|p_mobj.c:263]] 
+- [[if_DOOM_37bee4db|p_plats.c:263]] P_ActivateInStasis
+- [[if_DOOM_5edc4af9|r_main.c:267]] R_PointOnSegSide
+- [[if_DOOM_3b8f24b8|z_zone.c:267]] 
+- [[if_DOOM_865849df|i_net.c:273]] I_InitNetwork
+- [[if_DOOM_3eff4452|st_lib.c:273]] STlib_updateBinIcon
+- [[if_DOOM_7b8afff2|p_map.c:275]] if
+- [[if_DOOM_e9a1f703|p_ceilng.c:276]] P_RemoveActiveCeiling
+- [[if_DOOM_280599d7|r_plane.c:277]] 
+- [[if_DOOM_719390b6|d_main.c:278]] D_Display
+- [[if_DOOM_6d63405a|g_game.c:278]] G_BuildTiccmd
+- [[if_DOOM_fb4cdc74|p_plats.c:278]] EV_StopPlat
+- [[if_DOOM_8f6843fb|f_wipe.c:280]] wipe_ScreenWipe
+- [[if_DOOM_025e0ddd|r_segs.c:280]] if
+- [[if_DOOM_3331ba0e|i_net.c:282]] I_InitNetwork
+- [[if_DOOM_fa9ea199|p_sight.c:282]] P_CrossBSPNode
+- [[if_DOOM_3e57da40|d_net.c:283]] if
+- [[if_DOOM_a8f5c4e0|p_user.c:283]] 
+- [[if_DOOM_373806ba|s_sound.c:283]] S_StartSoundAtVolume
+- [[if_DOOM_7abc03cc|f_finale.c:284]] F_TextWrite
+- [[if_DOOM_6f71f3ec|p_mobj.c:284]] if
+- [[if_DOOM_c0802a70|p_switch.c:284]] P_UseSpecialLine
+- [[if_DOOM_0d1b72df|d_main.c:285]] D_Display
+- [[if_DOOM_68c4e412|i_sound.c:285]] 
+- [[if_DOOM_25259474|p_lights.c:285]] 
+- [[if_DOOM_91c8af4a|r_bsp.c:288]] R_AddLine
+- [[if_DOOM_ff2be117|r_plane.c:288]] 
+- [[if_DOOM_0f41cd74|v_video.c:289]] 
+- [[if_DOOM_dc7ebaa9|p_pspr.c:290]] A_WeaponReady
+- [[if_DOOM_2c2afaa0|p_map.c:291]] if
+- [[if_DOOM_7cc91c82|p_plats.c:293]] P_AddActivePlat
+- [[if_DOOM_2fdbd71f|f_wipe.c:294]] wipe_ScreenWipe
+- [[if_DOOM_c6754ed1|p_inter.c:294]] P_GivePower
+- [[if_DOOM_d73ddcf3|r_segs.c:294]] if
+- [[if_DOOM_9f401027|p_enemy.c:295]] P_Move
+- [[if_DOOM_20026c56|p_pspr.c:296]] A_WeaponReady
+- [[if_DOOM_6d0b505e|p_ceilng.c:297]] P_ActivateInStasisCeiling
+- [[if_DOOM_3a8bf3ba|r_bsp.c:299]] R_AddLine
+- [[if_DOOM_6bc78d72|p_inter.c:300]] P_GivePower
+- [[if_DOOM_7aaa1881|p_switch.c:301]] P_UseSpecialLine
+- [[if_DOOM_2afc5311|r_main.c:302]] 
+- [[if_DOOM_7fe97354|d_main.c:303]] D_Display
+- [[if_DOOM_fec45838|r_plane.c:303]] 
+- [[if_DOOM_da9b9274|d_net.c:304]] 
+- [[if_DOOM_1bfe78a9|p_pspr.c:304]] A_WeaponReady
+- [[if_DOOM_d90afd65|p_saveg.c:304]] while
+- [[if_DOOM_6d6fc26d|s_sound.c:304]] S_StartSoundAtVolume
+- [[if_DOOM_6a34b790|p_maputl.c:305]] P_LineOpening
+- [[if_DOOM_13e3c20d|p_plats.c:305]] P_RemoveActivePlat
+- [[if_DOOM_77d3b11a|f_finale.c:306]] F_TextWrite
+- [[if_DOOM_bc82cc64|i_net.c:307]] I_InitNetwork
+- [[if_DOOM_4f12db28|p_inter.c:307]] P_GivePower
+- [[if_DOOM_ffb7323a|g_game.c:308]] G_BuildTiccmd
+- [[if_DOOM_1b14e77d|r_draw.c:308]] R_DrawFuzzColumn
+- [[if_DOOM_95fce05b|i_sound.c:311]] 
+- [[if_DOOM_2cf80637|g_game.c:313]] G_BuildTiccmd
+- [[if_DOOM_840dc68f|p_inter.c:313]] P_GivePower
+- [[if_DOOM_700ace26|f_finale.c:314]] F_TextWrite
+- [[if_DOOM_67b32506|p_pspr.c:315]] A_WeaponReady
+- [[if_DOOM_d2a150dd|p_setup.c:318]] if
+- [[if_DOOM_42b926bb|d_net.c:319]] 
+- [[if_DOOM_9164b5fe|p_inter.c:319]] P_GivePower
+- [[if_DOOM_d8d8f2d6|d_main.c:320]] D_Display
+- [[if_DOOM_5a03784d|m_misc.c:320]] M_SaveDefaults
+- [[if_DOOM_8d075e33|p_maputl.c:320]] P_LineOpening
+- [[if_DOOM_19a2e6fe|p_mobj.c:320]] if
+- [[if_DOOM_d5170521|p_sight.c:320]] P_CheckSight
+- [[if_DOOM_02e868a7|r_draw.c:320]] R_DrawFuzzColumn
+- [[if_DOOM_f946d103|i_video.c:321]] I_StartTic
+- [[if_DOOM_36c1f0b0|p_lights.c:321]] T_Glow
+- [[if_DOOM_70691ead|p_ceilng.c:322]] EV_CeilingCrushStop
+- [[if_DOOM_90043a54|p_user.c:322]] if
+- [[if_DOOM_b1d2188f|r_segs.c:322]] 
+- [[if_DOOM_56c10089|s_sound.c:327]] S_StartSoundAtVolume
+- [[if_DOOM_69ebb8ce|p_mobj.c:328]] 
+- [[if_DOOM_fb170ba3|d_net.c:329]] if
+- [[if_DOOM_464aff9d|p_lights.c:331]] T_Glow
+- [[if_DOOM_80c085c8|p_map.c:331]] if
+- [[if_DOOM_fb6e1ec8|g_game.c:334]] G_BuildTiccmd
+- [[if_DOOM_4672a2e6|i_net.c:337]] I_NetCmd
+- [[if_DOOM_9898992d|s_sound.c:337]] S_StartSoundAtVolume
+- [[if_DOOM_e3cef55b|i_net.c:341]] I_NetCmd
+- [[if_DOOM_c6e5637d|r_bsp.c:341]] R_AddLine
+- [[if_DOOM_f52fba47|r_main.c:342]] 
+- [[if_DOOM_5f4a49ea|g_game.c:343]] G_BuildTiccmd
+- [[if_DOOM_8d732ad0|z_zone.c:345]] Z_DumpHeap
+- [[if_DOOM_269b5962|soundsrv.c:348]] grabdata
+- [[if_DOOM_b9b1cc31|p_inter.c:350]] P_TouchSpecialThing
+- [[if_DOOM_17dbd883|p_pspr.c:350]] A_ReFire
+- [[if_DOOM_3b894540|p_enemy.c:351]] P_TryWalk
+- [[if_DOOM_0c65e9c9|r_data.c:351]] 
+- [[if_DOOM_fa9301e6|p_maputl.c:352]] 
+- [[if_DOOM_29ecb2ce|r_segs.c:352]] 
+- [[if_DOOM_4de141f5|g_game.c:355]] G_BuildTiccmd
+- [[if_DOOM_3f0ee316|p_spec.c:355]] P_FindNextHighestFloor
+- [[if_DOOM_243776b2|am_map.c:358]] AM_restoreScaleAndLoc
+- [[if_DOOM_091dc8e5|m_misc.c:358]] 
+- [[if_DOOM_41e6d971|v_video.c:358]] 
+- [[if_DOOM_a01b5174|d_main.c:359]] D_DoomLoop
+- [[if_DOOM_152def17|r_data.c:359]] 
+- [[if_DOOM_d4f5b5b3|i_video.c:361]] if
+- [[if_DOOM_0e60a6bb|r_main.c:361]] 
+- [[if_DOOM_011d9563|p_user.c:363]] 
+- [[if_DOOM_c9d3aa09|p_maputl.c:365]] 
+- [[if_DOOM_06d9b7d9|s_sound.c:369]] S_StartSoundAtVolume
+- [[if_DOOM_e3d4e937|p_saveg.c:370]] for
+- [[if_DOOM_07b0cb7b|g_game.c:371]] G_BuildTiccmd
+- [[if_DOOM_69159f57|p_user.c:371]] if
+- [[if_DOOM_5601cc41|m_misc.c:373]] 
+- [[if_DOOM_b06d5f93|r_things.c:374]] R_DrawMaskedColumn
+- [[if_DOOM_a370a002|d_main.c:375]] D_DoomLoop
+- [[if_DOOM_1c5c43a1|p_doors.c:376]] 
+- [[if_DOOM_3148e165|i_video.c:377]] if
+- [[if_DOOM_8d732ad0|z_zone.c:377]] Z_FileDumpHeap
+- [[if_DOOM_4b6b4eae|w_wad.c:381]] W_CheckNumForName
+- [[if_DOOM_1fa8e5f0|g_game.c:382]] G_BuildTiccmd
+- [[if_DOOM_0076a6fa|p_floor.c:382]] 
+- [[if_DOOM_ab7badac|d_net.c:384]] NetUpdate
+- [[if_DOOM_d9719a43|soundsrv.c:384]] grabdata
+- [[if_DOOM_00bd83ff|p_saveg.c:388]] for
+- [[if_DOOM_05dd842e|p_doors.c:389]] 
+- [[if_DOOM_e351ab72|p_setup.c:395]] P_LoadLineDefs
+- [[if_DOOM_6d7581b9|p_pspr.c:396]] A_Lower
+- [[if_DOOM_a5c1dd95|r_plane.c:396]] if
+- [[if_DOOM_b9536133|r_draw.c:397]] R_DrawTranslatedColumn
+- [[if_DOOM_b37b84ac|g_game.c:398]] G_BuildTiccmd
+- [[if_DOOM_2e1c1b84|p_enemy.c:399]] if
+- [[if_DOOM_b38a2ce9|p_saveg.c:399]] for
+- [[if_DOOM_20d7ac82|f_finale.c:403]] F_CastTicker
+- [[if_DOOM_73933830|p_doors.c:403]] 
+- [[if_DOOM_f30743bb|r_main.c:405]] R_PointToDist
+- [[if_DOOM_8d732ad0|z_zone.c:405]] Z_CheckHeap
+- [[if_DOOM_11f5fbb9|p_pspr.c:406]] A_Lower
+- [[if_DOOM_f4bcc644|p_setup.c:406]] P_LoadLineDefs
+- [[if_DOOM_e275168c|p_enemy.c:408]] 
+- [[if_DOOM_5b4dc63c|p_maputl.c:409]] P_SetThingPosition
+- [[if_DOOM_4b347a27|p_saveg.c:410]] for
+- [[if_DOOM_4fe2b2b8|r_draw.c:410]] R_DrawTranslatedColumn
+- [[if_DOOM_11a49119|r_things.c:412]] R_DrawVisSprite
+- [[if_DOOM_ca6c610a|p_floor.c:413]] 
+- [[if_DOOM_070d40d1|p_doors.c:416]] 
+- [[if_DOOM_9e18f1d3|v_video.c:416]] V_DrawBlock
+- [[if_DOOM_e284f00d|r_things.c:417]] R_DrawVisSprite
+- [[if_DOOM_66c751a1|d_net.c:418]] NetUpdate
+- [[if_DOOM_b14ddc4c|p_mobj.c:418]] P_MobjThinker
+- [[if_DOOM_8e57b13e|i_video.c:420]] if
+- [[if_DOOM_c126d164|p_enemy.c:421]] 
+- [[if_DOOM_395765f0|p_saveg.c:421]] for
+- [[if_DOOM_d93c190b|r_segs.c:422]] 
+- [[if_DOOM_11473fa3|p_maputl.c:425]] P_SetThingPosition
+- [[if_DOOM_68daa3b6|g_game.c:426]] G_BuildTiccmd
+- [[if_DOOM_29dd3e00|p_mobj.c:428]] P_MobjThinker
+- [[if_DOOM_e95e8e34|am_map.c:431]] AM_changeWindowLoc
+- [[if_DOOM_66ef3221|p_enemy.c:431]] 
+- [[if_DOOM_f26da215|g_game.c:432]] G_BuildTiccmd
+- [[if_DOOM_76a2fcb1|p_saveg.c:432]] for
+- [[if_DOOM_9cb43f97|r_segs.c:432]] if
+- [[if_DOOM_c8abe405|soundsrv.c:438]] if
+- [[if_DOOM_3534687e|r_bsp.c:439]] R_CheckBBox
+- [[if_DOOM_5d69116b|p_enemy.c:441]] 
+- [[if_DOOM_a0523757|p_mobj.c:441]] P_MobjThinker
+- [[if_DOOM_49469210|p_saveg.c:443]] for
+- [[if_DOOM_39f9e41e|s_sound.c:444]] 
+- [[if_DOOM_fbd295c0|w_wad.c:447]] W_ReadLump
+- [[if_DOOM_0f552989|p_enemy.c:450]] 
+- [[if_DOOM_70af38e2|r_bsp.c:450]] R_CheckBBox
+- [[if_DOOM_769ba293|p_saveg.c:454]] for
+- [[if_DOOM_473ea493|r_segs.c:456]] 
+- [[if_DOOM_9e18f1d3|v_video.c:456]] V_GetBlock
+- [[if_DOOM_95fce05b|soundsrv.c:457]] 
+- [[if_DOOM_543e6f29|g_game.c:458]] G_DoLoadLevel
+- [[if_DOOM_7ddba81b|f_finale.c:460]] F_CastTicker
+- [[if_DOOM_91ffbf6f|p_map.c:466]] 
+- [[if_DOOM_e149620b|r_data.c:468]] 
+- [[if_DOOM_7eca3b3a|r_draw.c:469]] R_InitTranslationTables
+- [[if_DOOM_584ae396|p_enemy.c:471]] 
+- [[if_DOOM_93e37980|i_video.c:476]] if
+- [[if_DOOM_ebd9a9e0|wi_stuff.c:476]] WI_drawOnLnode
+- [[if_DOOM_46037931|s_sound.c:478]] S_StopSound
+- [[if_DOOM_3c065b16|r_bsp.c:479]] R_CheckBBox
+- [[if_DOOM_7a202cdb|f_finale.c:480]] F_CastTicker
+- [[if_DOOM_bbc50152|p_enemy.c:481]] 
+- [[if_DOOM_1a0e3b0a|p_maputl.c:481]] 
+- [[if_DOOM_d297afeb|i_sound.c:483]] I_StartSound
+- [[if_DOOM_b7695811|i_video.c:483]] if
+- [[if_DOOM_3a799ec2|d_net.c:484]] 
+- [[if_DOOM_7a0261e4|w_wad.c:485]] 
+- [[if_DOOM_ff8ede46|p_pspr.c:487]] A_Punch
+- [[if_DOOM_c1b02bb1|r_segs.c:488]] 
+- [[if_DOOM_bdcae927|r_main.c:489]] R_ScaleFromGlobalAngle
+- [[if_DOOM_37209e36|wi_stuff.c:489]] WI_drawOnLnode
+- [[if_DOOM_f93bb9be|r_segs.c:493]] if
+- [[if_DOOM_259f08ef|d_main.c:494]] D_DoAdvanceDemo
+- [[if_DOOM_5bab7c51|s_sound.c:499]] S_PauseSound
+- [[if_DOOM_e91de9ff|p_map.c:500]] 
+- [[if_DOOM_88b6a16d|r_segs.c:500]] if
+- [[if_DOOM_c1284926|st_stuff.c:502]] ST_refreshBackground
+- [[if_DOOM_1fb2e2f1|p_spec.c:503]] P_CrossSpecialLine
+- [[if_DOOM_9ce6d98f|r_segs.c:505]] if
+- [[if_DOOM_09bfffeb|g_game.c:507]] G_Responder
+- [[if_DOOM_f0a2154e|s_sound.c:508]] S_ResumeSound
+- [[if_DOOM_de6663ac|r_data.c:509]] 
+- [[if_DOOM_604b7e76|hu_stuff.c:512]] if
+- [[if_DOOM_c3ccf355|r_segs.c:512]] if
+- [[if_DOOM_d39047a1|r_bsp.c:516]] R_Subsector
+- [[if_DOOM_665f52ef|hu_stuff.c:518]] if
+- [[if_DOOM_c6cac175|p_pspr.c:518]] A_Saw
+- [[if_DOOM_09194d55|r_segs.c:519]] 
+- [[if_DOOM_4f0353f3|r_things.c:519]] R_ProjectSprite
+- [[if_DOOM_cd605342|soundsrv.c:519]] outputushort
+- [[if_DOOM_cccb9437|p_enemy.c:520]] 
+- [[if_DOOM_460f4b24|p_maputl.c:520]] 
+- [[if_DOOM_ee414f30|g_game.c:521]] G_Responder
+- [[if_DOOM_de520e61|st_stuff.c:523]] 
+- [[if_DOOM_f3342b1d|r_bsp.c:525]] R_Subsector
+- [[if_DOOM_4a60e1ba|m_menu.c:526]] M_ReadSaveStrings
+- [[if_DOOM_b7a8a8cb|p_pspr.c:528]] A_Saw
+- [[if_DOOM_f43b6d94|p_setup.c:528]] 
+- [[if_DOOM_b9408fdf|r_draw.c:529]] R_DrawSpan
+- [[if_DOOM_884c2aca|r_segs.c:530]] if
+- [[if_DOOM_7825369a|p_inter.c:534]] P_TouchSpecialThing
+- [[if_DOOM_b3a76586|g_game.c:535]] G_Responder
+- [[if_DOOM_7d7fc04f|p_enemy.c:535]] if
+- [[if_DOOM_b5a3f4c6|w_wad.c:536]] W_Profile
+- [[if_DOOM_45cfe531|r_segs.c:537]] if
+- [[if_DOOM_f9034a04|s_sound.c:540]] 
+- [[if_DOOM_7b895a45|f_finale.c:541]] F_CastPrint
+- [[if_DOOM_47610a92|p_map.c:542]] P_ThingHeightClip
+- [[if_DOOM_3778eff3|r_data.c:542]] 
+- [[if_DOOM_bc0d34ef|p_setup.c:545]] 
+- [[if_DOOM_141fff83|st_stuff.c:546]] 
+- [[if_DOOM_9386c966|wi_stuff.c:547]] 
+- [[if_DOOM_d2e5bd4a|p_mobj.c:548]] P_RemoveMobj
+- [[if_DOOM_54327a80|r_segs.c:550]] 
+- [[if_DOOM_7a27b9b6|g_game.c:552]] G_Responder
+- [[if_DOOM_2da2fdf5|hu_stuff.c:552]] 
+- [[if_DOOM_f9c64a54|i_video.c:552]] if
+- [[if_DOOM_a15ee510|r_bsp.c:558]] R_RenderBSPNode
+- [[if_DOOM_700ace26|f_finale.c:560]] F_CastPrint
+- [[if_DOOM_0e9422fa|s_sound.c:560]] 
+- [[if_DOOM_c9cfcdb2|g_game.c:561]] G_Responder
+- [[if_DOOM_5b1f3ff5|r_segs.c:562]] 
+- [[if_DOOM_3ee34f49|r_things.c:562]] R_ProjectSprite
+- [[if_DOOM_00fa40d4|p_maputl.c:570]] PIT_AddLineIntercepts
+- [[if_DOOM_3b550222|r_segs.c:570]] 
+- [[if_DOOM_923c18b8|r_things.c:578]] R_ProjectSprite
+- [[if_DOOM_e74900f0|am_map.c:579]] AM_Start
+- [[if_DOOM_47053d31|p_enemy.c:582]] A_KeenDie
+- [[if_DOOM_a1f7dd04|r_things.c:583]] R_ProjectSprite
+- [[if_DOOM_8b9a7328|i_sound.c:588]] 
+- [[if_DOOM_b01f717e|r_things.c:588]] R_ProjectSprite
+- [[if_DOOM_c991711c|hu_stuff.c:589]] HU_queueChatChar
+- [[if_DOOM_efea181a|r_segs.c:589]] 
+- [[if_DOOM_83970e42|p_inter.c:590]] P_TouchSpecialThing
+- [[if_DOOM_1c08d980|p_maputl.c:595]] PIT_AddLineIntercepts
+- [[if_DOOM_5a3f9b3d|m_menu.c:596]] M_LoadGame
+- [[if_DOOM_ea8f4090|p_map.c:596]] P_HitSlideLine
+- [[if_DOOM_27a6c02d|p_map.c:602]] P_HitSlideLine
+- [[if_DOOM_d2710b73|hu_stuff.c:604]] HU_dequeueChatChar
+- [[if_DOOM_caecf553|r_segs.c:607]] if
+- [[if_DOOM_eb4bee2a|p_pspr.c:609]] P_BulletSlope
+- [[if_DOOM_72d799e8|p_enemy.c:611]] A_Look
+- [[if_DOOM_106fdeea|p_setup.c:611]] P_SetupLevel
+- [[if_DOOM_6c586c44|i_video.c:613]] if
+- [[if_DOOM_116a3c92|d_main.c:617]] IdentifyVersion
+- [[if_DOOM_3cd97ff3|s_sound.c:618]] S_SetMusicVolume
+- [[if_DOOM_9bfc8139|r_segs.c:619]] 
+- [[if_DOOM_8115b925|m_menu.c:621]] M_DrawSave
+- [[if_DOOM_738b16f1|wi_stuff.c:623]] 
+- [[if_DOOM_162ff915|am_map.c:625]] 
+- [[if_DOOM_df256f9c|d_main.c:628]] IdentifyVersion
+- [[if_DOOM_6cc1eafc|p_setup.c:628]] P_SetupLevel
+- [[if_DOOM_83b55eef|p_doors.c:630]] 
+- [[if_DOOM_d9ef69ee|p_enemy.c:631]] A_Look
+- [[if_DOOM_e2eff137|am_map.c:635]] if
+- [[if_DOOM_33b9b466|p_maputl.c:635]] PIT_AddThingIntercepts
+- [[if_DOOM_f1bea5c6|i_sound.c:639]] 
+- [[if_DOOM_b34e77f0|d_main.c:640]] IdentifyVersion
+- [[if_DOOM_ed9de53b|hu_stuff.c:643]] 
+- [[if_DOOM_46afdff2|soundsrv.c:643]] 
+- [[if_DOOM_1d9cdac1|i_sound.c:645]] 
+- [[if_DOOM_b95f976c|p_map.c:645]] PTR_SlideTraverse
+- [[if_DOOM_7f4201ff|hu_stuff.c:648]] if
+- [[if_DOOM_b9408fdf|r_draw.c:652]] R_DrawSpanLow
+- [[if_DOOM_73c165b5|s_sound.c:657]] S_ChangeMusic
+- [[if_DOOM_be8a3ba5|d_main.c:658]] IdentifyVersion
+- [[if_DOOM_58259f2a|d_net.c:659]] 
+- [[if_DOOM_e43a887b|hu_stuff.c:659]] 
+- [[if_DOOM_2b0440e0|soundsrv.c:659]] 
+- [[if_DOOM_b9f14a9b|g_game.c:660]] 
+- [[if_DOOM_1bd8d0bc|m_menu.c:661]] M_SaveGame
+- [[if_DOOM_2e871e9d|hu_stuff.c:665]] if
+- [[if_DOOM_2fd708e6|r_segs.c:665]] 
+- [[if_DOOM_241e58f8|p_doors.c:666]] 
+- [[if_DOOM_4e7f5b4b|i_video.c:667]] 
+- [[if_DOOM_73e7210b|p_setup.c:667]] P_SetupLevel
+- [[if_DOOM_7dcb5e0e|d_main.c:669]] IdentifyVersion
+- [[if_DOOM_16ec5584|r_segs.c:671]] 
+- [[if_DOOM_a49f51c5|s_sound.c:672]] S_ChangeMusic
+- [[if_DOOM_70c89f67|p_map.c:673]] PTR_SlideTraverse
+- [[if_DOOM_f43dee06|f_finale.c:675]] F_BunnyScroll
+- [[if_DOOM_93210716|hu_stuff.c:675]] 
+- [[if_DOOM_e3b28ddd|d_main.c:676]] IdentifyVersion
+- [[if_DOOM_f64aeec9|st_stuff.c:676]] 
+- [[if_DOOM_e828d48d|i_video.c:677]] 
+- [[if_DOOM_1e727015|r_data.c:679]] R_FlatNumForName
+- [[if_DOOM_a057ed73|p_enemy.c:681]] A_Chase
+- [[if_DOOM_c909c1b3|r_main.c:682]] R_ExecuteSetViewSize
+- [[if_DOOM_553c4fef|d_main.c:683]] IdentifyVersion
+- [[if_DOOM_d5b315f0|m_menu.c:683]] M_QuickSaveResponse
+- [[if_DOOM_b1926ecb|p_doors.c:683]] 
+- [[if_DOOM_b885d8e3|p_inter.c:683]] P_KillMobj
+- [[if_DOOM_d7169ad3|d_net.c:686]] 
+- [[if_DOOM_e795e313|f_finale.c:686]] F_BunnyScroll
+- [[if_DOOM_776d5264|r_segs.c:689]] 
+- [[if_DOOM_baa760a7|d_main.c:690]] IdentifyVersion
+- [[if_DOOM_9a61fa4f|s_sound.c:691]] S_StopMusic
+- [[if_DOOM_8a512295|m_menu.c:692]] M_QuickSave
+- [[if_DOOM_1e0f68f9|p_inter.c:692]] P_KillMobj
+- [[if_DOOM_29aa1d16|p_enemy.c:693]] A_Chase
+- [[if_DOOM_23831a97|p_mobj.c:693]] P_SpawnPlayer
+- [[if_DOOM_11207a0d|i_sound.c:696]] I_ShutdownSound
+- [[if_DOOM_9d65cb46|d_main.c:697]] IdentifyVersion
+- [[if_DOOM_8c22e307|p_inter.c:699]] P_KillMobj
+- [[if_DOOM_dbb07dba|g_game.c:700]] 
+- [[if_DOOM_c85d13bc|r_things.c:700]] R_DrawPSprite
+- [[if_DOOM_9b210396|wi_stuff.c:700]] WI_drawTime
+- [[if_DOOM_1cf1d336|m_menu.c:701]] M_QuickSave
+- [[if_DOOM_b1e485a0|p_maputl.c:701]] while
+- [[if_DOOM_aa8276da|f_finale.c:702]] F_Drawer
+- [[if_DOOM_d7eaaa8b|r_main.c:702]] R_ExecuteSetViewSize
+- [[if_DOOM_580f9839|d_main.c:704]] IdentifyVersion
+- [[if_DOOM_68ac6015|p_enemy.c:704]] A_Chase
+- [[if_DOOM_11476f82|hu_stuff.c:706]] if
+- [[if_DOOM_b2aeccef|am_map.c:708]] if
+- [[if_DOOM_361c2d37|p_map.c:714]] P_SlideMove
+- [[if_DOOM_e1d940cf|s_sound.c:714]] 
+- [[if_DOOM_abe1f672|p_enemy.c:716]] A_Chase
+- [[if_DOOM_39152367|r_things.c:716]] R_DrawPSprite
+- [[if_DOOM_09f22b04|p_mobj.c:718]] P_SpawnMapThing
+- [[if_DOOM_78bcffc9|r_segs.c:718]] 
+- [[if_DOOM_3a301702|p_inter.c:719]] P_KillMobj
+- [[if_DOOM_3a44687d|soundsrv.c:719]] if
+- [[if_DOOM_04e5a42d|m_menu.c:720]] M_QuickLoadResponse
+- [[if_DOOM_35be7421|r_things.c:722]] R_DrawPSprite
+- [[if_DOOM_a4baba51|r_data.c:724]] R_TextureNumForName
+- [[if_DOOM_a957c65d|p_enemy.c:725]] A_Chase
+- [[if_DOOM_bd14ffec|p_map.c:725]] P_SlideMove
+- [[if_DOOM_8171a74c|r_segs.c:726]] 
+- [[if_DOOM_5ae2ede6|p_doors.c:727]] EV_SlidingDoor
+- [[if_DOOM_6b62efbf|r_things.c:727]] R_DrawPSprite
+- [[if_DOOM_dc70c932|d_main.c:728]] FindResponseFile
+- [[if_DOOM_18f2a699|d_net.c:728]] while
+- [[if_DOOM_5d548224|soundsrv.c:728]] 
+- [[if_DOOM_f2d806c0|p_mobj.c:729]] P_SpawnMapThing
+- [[if_DOOM_38ed5fea|m_menu.c:730]] M_QuickLoad
+- [[if_DOOM_9a37db4a|r_segs.c:734]] 
+- [[if_DOOM_df3a8fff|hu_stuff.c:735]] 
+- [[if_DOOM_6fa66499|m_menu.c:736]] M_QuickLoad
+- [[if_DOOM_21e7da1a|p_enemy.c:736]] A_Chase
+- [[if_DOOM_a93fe7a7|st_stuff.c:737]] ST_calcPainOffset
+- [[if_DOOM_03d4a190|r_segs.c:739]] 
+- [[if_DOOM_946870d2|wi_stuff.c:741]] WI_updateNoState
+- [[if_DOOM_ed64552d|hu_stuff.c:743]] 
+- [[if_DOOM_de6aa28f|p_doors.c:743]] EV_SlidingDoor
+- [[if_DOOM_bc9aa047|p_map.c:746]] P_SlideMove
+- [[if_DOOM_6b845de6|i_video.c:748]] I_InitGraphics
+- [[if_DOOM_b9132e78|d_net.c:749]] if
+- [[if_DOOM_d9a15d16|i_sound.c:751]] I_InitSound
+- [[if_DOOM_feaaeea7|p_enemy.c:755]] A_Chase
+- [[if_DOOM_19817173|p_map.c:757]] P_SlideMove
+- [[if_DOOM_cc57f33d|i_video.c:761]] I_InitGraphics
+- [[if_DOOM_143ab716|st_stuff.c:761]] 
+- [[if_DOOM_08d81cba|am_map.c:763]] AM_doFollowPlayer
+- [[if_DOOM_bfd99cc3|p_enemy.c:764]] A_Chase
+- [[if_DOOM_7abc03cc|r_draw.c:766]] R_FillBackScreen
+- [[if_DOOM_6ada2fa7|p_spec.c:767]] P_CrossSpecialLine
+- [[if_DOOM_7eac8339|p_mobj.c:768]] P_SpawnMapThing
+- [[if_DOOM_ee70cfbb|p_enemy.c:771]] A_Chase
+- [[if_DOOM_448885b1|s_sound.c:773]] S_AdjustSoundParams
+- [[if_DOOM_ed247639|st_stuff.c:774]] 
+- [[if_DOOM_46b94b40|r_data.c:775]] 
+- [[if_DOOM_0930fe02|i_video.c:779]] I_InitGraphics
+- [[if_DOOM_5434cb71|wi_stuff.c:782]] WI_drawShowNextLoc
+- [[if_DOOM_8a8fd0ea|p_map.c:784]] P_SlideMove
+- [[if_DOOM_d266a44c|am_map.c:792]] AM_updateLightLev
+- [[if_DOOM_b507558e|p_inter.c:793]] 
+- [[if_DOOM_a7682b91|s_sound.c:796]] S_AdjustSoundParams
+- [[if_DOOM_5fb35cc3|p_maputl.c:798]] 
+- [[if_DOOM_453e3d83|s_sound.c:800]] S_AdjustSoundParams
+- [[if_DOOM_39bd1736|st_stuff.c:800]] 
+- [[if_DOOM_800178b9|i_sound.c:802]] I_InitSound
+- [[if_DOOM_48462357|p_maputl.c:804]] if
+- [[if_DOOM_da744b5c|p_inter.c:806]] 
+- [[if_DOOM_c7f86cba|p_maputl.c:820]] 
+- [[if_DOOM_cf5f91b5|r_things.c:822]] 
+- [[if_DOOM_41b75c18|p_map.c:825]] PTR_AimTraverse
+- [[if_DOOM_71d5d434|wi_stuff.c:825]] WI_fragSum
+- [[if_DOOM_ff191f58|p_maputl.c:826]] if
+- [[if_DOOM_4d1cb5d5|p_inter.c:835]] if
+- [[if_DOOM_af86d358|i_video.c:839]] I_InitGraphics
+- [[if_DOOM_5d291c1e|s_sound.c:842]] S_getChannel
+- [[if_DOOM_60ccf8ef|r_main.c:847]] R_SetupFrame
+- [[if_DOOM_47949768|p_maputl.c:848]] 
+- [[if_DOOM_4f35d26b|s_sound.c:850]] S_getChannel
+- [[if_DOOM_67b70baf|i_video.c:853]] I_InitGraphics
+- [[if_DOOM_4447c497|p_maputl.c:854]] 
+- [[if_DOOM_f900903b|g_game.c:855]] G_CheckSpot
+- [[if_DOOM_52483d31|st_stuff.c:855]] 
+- [[if_DOOM_ae01be54|p_maputl.c:860]] 
+- [[if_DOOM_800b361e|p_pspr.c:861]] 
+- [[if_DOOM_1e77f009|r_things.c:863]] 
+- [[if_DOOM_97dbe3aa|wi_stuff.c:863]] WI_initDeathmatchStats
+- [[if_DOOM_10ba34c8|p_maputl.c:866]] 
+- [[if_DOOM_54dfaf7f|p_maputl.c:871]] 
+- [[if_DOOM_493d8c4b|p_enemy.c:873]] A_CPosRefire
+- [[if_DOOM_c9fad38b|m_menu.c:875]] M_NewGame
+- [[if_DOOM_1a6abbd0|r_things.c:875]] 
+- [[if_DOOM_a0071fb9|d_main.c:877]] D_DoomMain
+- [[if_DOOM_4a292e3b|st_stuff.c:877]] 
+- [[if_DOOM_866acaa3|d_main.c:885]] D_DoomMain
+- [[if_DOOM_1998872e|r_things.c:886]] 
+- [[if_DOOM_b4eed218|p_inter.c:888]] 
+- [[if_DOOM_a74b210b|wi_stuff.c:888]] 
+- [[if_DOOM_493d8c4b|p_enemy.c:890]] A_SpidRefire
+- [[if_DOOM_3c1e036b|p_inter.c:894]] 
+- [[if_DOOM_43eb19c7|st_stuff.c:897]] 
+- [[if_DOOM_5e49c3d5|p_inter.c:904]] 
+- [[if_DOOM_74696692|r_things.c:907]] 
+- [[if_DOOM_7d84a0cf|g_game.c:909]] G_DeathMatchSpawnPlayer
+- [[if_DOOM_ff957a2d|m_menu.c:909]] M_ChooseSkill
+- [[if_DOOM_828bcaec|d_main.c:910]] D_DoomMain
+- [[if_DOOM_9b8348de|st_stuff.c:913]] if
+- [[if_DOOM_21efbdfc|r_things.c:914]] if
+- [[if_DOOM_6fb58287|p_map.c:915]] PTR_ShootTraverse
+- [[if_DOOM_229e7dfd|wi_stuff.c:919]] 
+- [[if_DOOM_bb0bb68c|m_menu.c:921]] M_Episode
+- [[if_DOOM_fda3674e|p_enemy.c:921]] A_TroopAttack
+- [[if_DOOM_1d36974a|r_things.c:921]] if
+- [[if_DOOM_dde738ba|i_sound.c:923]] I_HandleSoundTimer
+- [[if_DOOM_caebfc3c|am_map.c:925]] AM_clipMline
+- [[if_DOOM_21dfba63|g_game.c:928]] 
+- [[if_DOOM_1fbcc042|m_menu.c:930]] M_Episode
+- [[if_DOOM_7ca0f71f|am_map.c:932]] AM_clipMline
+- [[if_DOOM_b31ca3a3|am_map.c:939]] AM_clipMline
+- [[if_DOOM_770c7235|d_main.c:939]] D_DoomMain
+- [[if_DOOM_53f3808c|g_game.c:941]] if
+- [[if_DOOM_0b361e8d|p_enemy.c:943]] A_SargAttack
+- [[if_DOOM_1b4b8e1c|am_map.c:946]] AM_clipMline
+- [[if_DOOM_60735d49|g_game.c:947]] if
+- [[if_DOOM_bba77f60|wi_stuff.c:950]] 
+- [[if_DOOM_201f874d|p_mobj.c:951]] P_SpawnPlayerMissile
+- [[if_DOOM_72382c6d|d_main.c:953]] D_DoomMain
+- [[if_DOOM_94d5f0cc|am_map.c:954]] AM_clipMline
+- [[if_DOOM_77901fd7|g_game.c:956]] for
+- [[if_DOOM_bf821694|wi_stuff.c:957]] if
+- [[if_DOOM_60a3a064|p_enemy.c:958]] A_HeadAttack
+- [[if_DOOM_ac50281b|r_things.c:965]] R_DrawMasked
+- [[if_DOOM_fe24fe6e|p_spec.c:966]] P_ShootSpecialLine
+- [[if_DOOM_329364b2|d_main.c:968]] D_DoomMain
+- [[if_DOOM_e69e02f6|wi_stuff.c:969]] if
+- [[if_DOOM_296a82a2|i_video.c:971]] Expand4
+- [[if_DOOM_931096a1|d_main.c:975]] D_DoomMain
+- [[if_DOOM_e0222c1c|d_main.c:983]] D_DoomMain
+- [[if_DOOM_2c4d0633|p_enemy.c:986]] A_BruisAttack
+- [[if_DOOM_be351f02|am_map.c:995]] if
+- [[if_DOOM_83710bb4|d_main.c:998]] D_DoomMain
+- [[if_DOOM_8a512295|m_menu.c:1009]] M_EndGame
+- [[if_DOOM_8f7c2241|st_stuff.c:1010]] ST_doPaletteStuff
+- [[if_DOOM_6198c85b|m_menu.c:1015]] M_EndGame
+- [[if_DOOM_b9cd64e2|wi_stuff.c:1015]] 
+- [[if_DOOM_2dfd4f66|am_map.c:1017]] 
+- [[if_DOOM_dd307965|st_stuff.c:1019]] ST_doPaletteStuff
+- [[if_DOOM_bf5a4f52|d_main.c:1025]] D_DoomMain
+- [[if_DOOM_b1e12aa4|st_stuff.c:1029]] ST_doPaletteStuff
+- [[if_DOOM_ade4a329|g_game.c:1033]] 
+- [[if_DOOM_bd1926c4|am_map.c:1040]] 
+- [[if_DOOM_1a1f040c|p_spec.c:1040]] P_PlayerInSpecialSector
+- [[if_DOOM_3d2ad9d9|st_stuff.c:1045]] ST_doPaletteStuff
+- [[if_DOOM_68890091|g_game.c:1046]] 
+- [[if_DOOM_1d7bd5a0|d_main.c:1050]] D_DoomMain
+- [[if_DOOM_ffc3d15f|g_game.c:1054]] 
+- [[if_DOOM_0a1e9b01|p_enemy.c:1056]] A_Tracer
+- [[if_DOOM_617bb39b|wi_stuff.c:1059]] 
+- [[if_DOOM_a3bb1a2d|g_game.c:1069]] if
+- [[if_DOOM_34770903|m_menu.c:1084]] M_QuitResponse
+- [[if_DOOM_70a7146b|g_game.c:1089]] if
+- [[if_DOOM_850c97e2|p_spec.c:1092]] if
+- [[if_DOOM_edf5d816|p_map.c:1099]] PTR_UseTraverse
+- [[if_DOOM_970cdb62|p_enemy.c:1110]] A_SkelFist
+- [[if_DOOM_4edbd381|wi_stuff.c:1116]] WI_updateNetgameStats
+- [[if_DOOM_22ba157c|d_main.c:1117]] D_DoomMain
+- [[if_DOOM_73c36587|am_map.c:1128]] 
+- [[if_DOOM_b9ced835|d_main.c:1129]] D_DoomMain
+- [[if_DOOM_5dd7993f|p_spec.c:1129]] 
+- [[if_DOOM_35702da4|d_main.c:1136]] D_DoomMain
+- [[if_DOOM_a6935830|wi_stuff.c:1136]] WI_updateNetgameStats
+- [[if_DOOM_d06162c2|d_main.c:1144]] D_DoomMain
+- [[if_DOOM_e821f748|d_main.c:1151]] D_DoomMain
+- [[if_DOOM_4a857525|g_game.c:1154]] G_WorldDone
+- [[if_DOOM_1a63fc54|m_menu.c:1157]] M_SizeDisplay
+- [[if_DOOM_4f3edb4a|am_map.c:1160]] if
+- [[if_DOOM_48433adc|d_main.c:1161]] D_DoomMain
+- [[if_DOOM_73df37b8|wi_stuff.c:1162]] WI_updateNetgameStats
+- [[if_DOOM_7851c9d1|m_menu.c:1164]] M_SizeDisplay
+- [[if_DOOM_426fe81f|wi_stuff.c:1186]] WI_updateNetgameStats
+- [[if_DOOM_376ad686|p_map.c:1191]] PIT_RadiusAttack
+- [[if_DOOM_41295e0b|p_enemy.c:1201]] 
+- [[if_DOOM_435dde4e|am_map.c:1209]] AM_drawLineCharacter
+- [[if_DOOM_7343a15f|wi_stuff.c:1212]] WI_updateNetgameStats
+- [[if_DOOM_af6c3536|am_map.c:1224]] AM_drawLineCharacter
+- [[if_DOOM_de4a99e6|wi_stuff.c:1238]] WI_updateNetgameStats
+- [[if_DOOM_be44c468|am_map.c:1248]] AM_drawPlayers
+- [[if_DOOM_cc25ca21|wi_stuff.c:1249]] WI_updateNetgameStats
+- [[if_DOOM_c15f0dc5|p_spec.c:1254]] P_SpawnSpecials
+- [[if_DOOM_e5616bb2|p_map.c:1261]] PIT_ChangeSector
+- [[if_DOOM_d05af31e|p_spec.c:1261]] P_SpawnSpecials
+- [[if_DOOM_fcbe5ccd|p_map.c:1269]] PIT_ChangeSector
+- [[if_DOOM_63941ace|p_map.c:1282]] PIT_ChangeSector
+- [[if_DOOM_37812d50|p_map.c:1290]] PIT_ChangeSector
+- [[if_DOOM_62cd14b9|p_map.c:1298]] PIT_ChangeSector
+- [[if_DOOM_78a309f3|am_map.c:1311]] AM_drawMarks
+- [[if_DOOM_dfb7d94a|m_menu.c:1318]] M_WriteText
+- [[if_DOOM_90a0cc34|m_menu.c:1326]] M_WriteText
+- [[if_DOOM_563e138f|wi_stuff.c:1335]] 
+- [[if_DOOM_70d98334|wi_stuff.c:1347]] 
+- [[if_DOOM_f0c126cc|wi_stuff.c:1361]] if
+- [[if_DOOM_86c7f1d7|m_menu.c:1362]] 
+- [[if_DOOM_df9fe83d|g_game.c:1372]] G_InitNew
+- [[if_DOOM_0825b1a9|wi_stuff.c:1375]] if
+- [[if_DOOM_5361b562|g_game.c:1389]] G_InitNew
+- [[if_DOOM_9aa7e997|wi_stuff.c:1390]] if
+- [[if_DOOM_1b4bfc3f|g_game.c:1394]] G_InitNew
+- [[if_DOOM_cad58c1a|m_menu.c:1399]] 
+- [[if_DOOM_60baa08c|wi_stuff.c:1413]] if
+- [[if_DOOM_b26f4600|g_game.c:1421]] G_InitNew
+- [[if_DOOM_d60cfb44|wi_stuff.c:1425]] if
+- [[if_DOOM_050c62c2|g_game.c:1429]] G_InitNew
+- [[if_DOOM_df1f3a56|m_menu.c:1442]] if
+- [[if_DOOM_e1ca4162|m_menu.c:1453]] if
+- [[if_DOOM_211ce7b5|g_game.c:1455]] G_InitNew
+- [[if_DOOM_d0e4d823|wi_stuff.c:1462]] WI_drawStats
+- [[if_DOOM_0c9c1b7f|wi_stuff.c:1478]] for
+- [[if_DOOM_7c73bfd2|g_game.c:1493]] G_ReadDemoTiccmd
+- [[if_DOOM_bff2b951|m_menu.c:1495]] if
+- [[if_DOOM_a37d4e7f|p_enemy.c:1496]] A_PainShootSkull
+- [[if_DOOM_ad63a29a|wi_stuff.c:1508]] WI_Ticker
+- [[if_DOOM_da04e257|m_menu.c:1511]] if
+- [[if_DOOM_0339a707|g_game.c:1515]] G_WriteDemoTiccmd
+- [[if_DOOM_e80aaa11|m_menu.c:1519]] 
+- [[if_DOOM_56a555a9|wi_stuff.c:1550]] 
+- [[if_DOOM_d5f28c6b|p_enemy.c:1561]] A_Scream
+- [[if_DOOM_7d89c17f|wi_stuff.c:1572]] 
+- [[if_DOOM_b462b2ab|g_game.c:1589]] G_DoPlayDemo
+- [[if_DOOM_fb9adeec|g_game.c:1607]] G_DoPlayDemo
+- [[if_DOOM_82144515|m_menu.c:1609]] 
+- [[if_DOOM_24290f8e|wi_stuff.c:1610]] 
+- [[if_DOOM_49ee2d74|p_enemy.c:1616]] 
+- [[if_DOOM_a851f84d|m_menu.c:1645]] switch
+- [[if_DOOM_520dcf15|g_game.c:1651]] G_CheckDemoStatus
+- [[if_DOOM_ccbeaac2|m_menu.c:1654]] switch
+- [[if_DOOM_9b8493df|wi_stuff.c:1655]] 
+- [[if_DOOM_286243c0|g_game.c:1658]] G_CheckDemoStatus
+- [[if_DOOM_96342cfb|m_menu.c:1663]] switch
+- [[if_DOOM_4cf2e41a|g_game.c:1677]] G_CheckDemoStatus
+- [[if_DOOM_b90ba693|m_menu.c:1688]] switch
+- [[if_DOOM_45408d03|m_menu.c:1698]] switch
+- [[if_DOOM_14e7892e|p_enemy.c:1698]] for
+- [[if_DOOM_45408d03|m_menu.c:1705]] switch
+- [[if_DOOM_a7956df3|p_enemy.c:1708]] 
+- [[if_DOOM_816e75ca|wi_stuff.c:1718]] 
+- [[if_DOOM_44927f65|wi_stuff.c:1733]] 
+- [[if_DOOM_f082bd05|m_menu.c:1753]] 
+- [[if_DOOM_5a4db573|wi_stuff.c:1802]] WI_initVariables
+- [[if_DOOM_b66a1759|p_enemy.c:1832]] A_BrainAwake
+- [[if_DOOM_a5ba07de|m_menu.c:1836]] M_Ticker
+- [[if_DOOM_efab5bb4|p_enemy.c:1999]] A_PlayerScream
+
+### 🚚 Convoyeur de sortie (RETURN)
+
+- [[return_DOOM_fe3e67b8|m_swap.c:41]] SwapSHORT
+- [[return_DOOM_650ccd10|i_main.c:44]] main
+- [[return_DOOM_051794fc|m_swap.c:47]] SwapLONG
+- [[return_DOOM_1d8c17f4|m_argv.c:48]] M_CheckParm
+- [[return_DOOM_97b05bec|m_fixed.c:48]] FixedMul
+- [[return_DOOM_650ccd10|m_argv.c:51]] M_CheckParm
+- [[return_DOOM_571e7a36|p_maputl.c:56]] P_AproxDistance
+- [[return_DOOM_39b526a1|p_maputl.c:57]] P_AproxDistance
+- [[return_DOOM_e9d38631|tables.c:57]] SlopeDiv
+- [[return_DOOM_2d097498|m_random.c:60]] P_Random
+- [[return_DOOM_aae9c7e4|tables.c:61]] SlopeDiv
+- [[return_DOOM_be034cb8|m_fixed.c:63]] FixedDiv
+- [[return_DOOM_8cc5cde0|m_fixed.c:64]] FixedDiv
+- [[return_DOOM_e0b72c7e|m_random.c:66]] M_Random
+- [[return_DOOM_e198b61b|p_mobj.c:66]] P_SetMobjState
+- [[return_DOOM_650ccd10|p_telept.c:66]] 
+- [[return_DOOM_40f14346|i_system.c:67]] 
+- [[return_DOOM_ff676d5e|p_sight.c:68]] P_DivlineSide
+- [[return_DOOM_8aa4c41d|p_sight.c:71]] P_DivlineSide
+- [[return_DOOM_650ccd10|p_telept.c:71]] 
+- [[return_DOOM_d921d52e|i_system.c:73]] I_GetHeapSize
+- [[return_DOOM_c2e04842|p_sight.c:73]] P_DivlineSide
+- [[return_DOOM_3e1b4f0f|m_cheat.c:74]] cht_CheckCheat
+- [[return_DOOM_e198b61b|hu_lib.c:75]] HUlib_addCharToTextLine
+- [[return_DOOM_90acaa54|m_fixed.c:77]] FixedDiv2
+- [[return_DOOM_48817b6b|p_floor.c:77]] switch
+- [[return_DOOM_650ccd10|f_wipe.c:79]] wipe_initColorXForm
+- [[return_DOOM_98126d72|i_system.c:79]] 
+- [[return_DOOM_a49a5682|p_floor.c:79]] switch
+- [[return_DOOM_7bcb9552|p_maputl.c:79]] P_PointOnLineSide
+- [[return_DOOM_ff676d5e|p_sight.c:79]] P_DivlineSide
+- [[return_DOOM_2037a59d|hu_lib.c:81]] HUlib_addCharToTextLine
+- [[return_DOOM_7c6c3b3a|p_maputl.c:81]] P_PointOnLineSide
+- [[return_DOOM_27ef6d44|w_wad.c:81]] filelength
+- [[return_DOOM_e198b61b|p_inter.c:82]] P_GiveAmmo
+- [[return_DOOM_5921bf95|p_sight.c:82]] P_DivlineSide
+- [[return_DOOM_2037a59d|p_mobj.c:83]] P_SetMobjState
+- [[return_DOOM_788a5ccc|p_sight.c:84]] P_DivlineSide
+- [[return_DOOM_90acaa54|m_fixed.c:86]] FixedDiv2
+- [[return_DOOM_2037a59d|p_map.c:86]] PIT_StompThing
+- [[return_DOOM_bb6d37e4|p_maputl.c:86]] P_PointOnLineSide
+- [[return_DOOM_e198b61b|p_inter.c:88]] P_GiveAmmo
+- [[return_DOOM_92c37bd9|p_maputl.c:88]] P_PointOnLineSide
+- [[return_DOOM_e198b61b|hu_lib.c:89]] HUlib_delCharFromTextLine
+- [[return_DOOM_48817b6b|p_floor.c:90]] switch
+- [[return_DOOM_88a86bae|d_net.c:92]] NetbufferSize
+- [[return_DOOM_2037a59d|hu_lib.c:94]] HUlib_delCharFromTextLine
+- [[return_DOOM_2037a59d|p_map.c:94]] PIT_StompThing
+- [[return_DOOM_650ccd10|p_sight.c:94]] P_DivlineSide
+- [[return_DOOM_ff676d5e|p_sight.c:97]] P_DivlineSide
+- [[return_DOOM_650ccd10|p_maputl.c:98]] P_PointOnLineSide
+- [[return_DOOM_244a1085|p_sight.c:98]] P_DivlineSide
+- [[return_DOOM_7e67236a|i_net.c:99]] UDPsocket
+- [[return_DOOM_47c3f950|i_system.c:99]] I_GetTime
+- [[return_DOOM_c5db40cc|m_misc.c:99]] M_DrawText
+- [[return_DOOM_2037a59d|p_map.c:99]] PIT_StompThing
+- [[return_DOOM_244a1085|p_maputl.c:99]] P_PointOnLineSide
+- [[return_DOOM_e198b61b|p_map.c:103]] PIT_StompThing
+- [[return_DOOM_650ccd10|p_telept.c:104]] 
+- [[return_DOOM_48817b6b|p_floor.c:106]] switch
+- [[return_DOOM_650ccd10|d_net.c:107]] NetbufferChecksum
+- [[return_DOOM_2037a59d|p_map.c:107]] PIT_StompThing
+- [[return_DOOM_a49a5682|p_floor.c:108]] switch
+- [[return_DOOM_051794fc|wadread.c:109]] SwapLONG
+- [[return_DOOM_f4d2864d|d_net.c:114]] NetbufferChecksum
+- [[return_DOOM_2037a59d|p_inter.c:114]] P_GiveAmmo
+- [[return_DOOM_fe3e67b8|wadread.c:118]] SwapSHORT
+- [[return_DOOM_48817b6b|p_floor.c:119]] switch
+- [[return_DOOM_650ccd10|p_sight.c:120]] P_InterceptVector2
+- [[return_DOOM_48817b6b|p_floor.c:122]] switch
+- [[return_DOOM_9d18483d|f_wipe.c:124]] 
+- [[return_DOOM_e198b61b|m_misc.c:124]] M_WriteFile
+- [[return_DOOM_244a1085|p_telept.c:126]] 
+- [[return_DOOM_64562f6c|d_net.c:127]] ExpandTics
+- [[return_DOOM_0d9cd206|p_sight.c:127]] P_InterceptVector2
+- [[return_DOOM_16bee9cb|d_net.c:129]] ExpandTics
+- [[return_DOOM_e198b61b|m_misc.c:130]] M_WriteFile
+- [[return_DOOM_650ccd10|p_telept.c:130]] 
+- [[return_DOOM_135472a9|d_net.c:131]] ExpandTics
+- [[return_DOOM_2037a59d|m_misc.c:132]] M_WriteFile
+- [[return_DOOM_650ccd10|d_net.c:134]] ExpandTics
+- [[return_DOOM_650ccd10|f_wipe.c:134]] wipe_exitColorXForm
+- [[return_DOOM_48817b6b|p_floor.c:145]] switch
+- [[return_DOOM_a49a5682|p_floor.c:147]] switch
+- [[return_DOOM_27ef6d44|wadread.c:147]] filelength
+- [[return_DOOM_761c5f9d|p_maputl.c:151]] P_BoxOnLineSide
+- [[return_DOOM_a270a5ce|p_maputl.c:152]] P_BoxOnLineSide
+- [[return_DOOM_365f7c0c|i_system.c:153]] 
+- [[return_DOOM_48817b6b|p_floor.c:159]] switch
+- [[return_DOOM_2037a59d|p_inter.c:159]] P_GiveAmmo
+- [[return_DOOM_3e1b4f0f|i_video.c:160]] xlatekey
+- [[return_DOOM_b30afc68|m_misc.c:162]] M_ReadFile
+- [[return_DOOM_48817b6b|p_floor.c:162]] switch
+- [[return_DOOM_e198b61b|p_map.c:163]] P_TeleportMove
+- [[return_DOOM_650ccd10|f_wipe.c:168]] wipe_initMelt
+- [[return_DOOM_7bcb9552|p_maputl.c:174]] P_PointOnDivlineSide
+- [[return_DOOM_8aa4c41d|r_main.c:175]] R_PointOnSide
+- [[return_DOOM_2037a59d|p_map.c:176]] P_TeleportMove
+- [[return_DOOM_7c6c3b3a|p_maputl.c:176]] P_PointOnDivlineSide
+- [[return_DOOM_c2e04842|r_main.c:177]] R_PointOnSide
+- [[return_DOOM_48817b6b|p_floor.c:178]] switch
+- [[return_DOOM_2037a59d|p_pspr.c:179]] P_CheckAmmo
+- [[return_DOOM_e198b61b|p_enemy.c:180]] P_CheckMeleeRange
+- [[return_DOOM_a49a5682|p_floor.c:180]] switch
+- [[return_DOOM_bb6d37e4|p_maputl.c:181]] P_PointOnDivlineSide
+- [[return_DOOM_e198b61b|p_inter.c:182]] P_GiveWeapon
+- [[return_DOOM_5921bf95|r_main.c:182]] R_PointOnSide
+- [[return_DOOM_92c37bd9|p_maputl.c:183]] P_PointOnDivlineSide
+- [[return_DOOM_c2f11fb3|d_player.h:183]] 
+- [[return_DOOM_788a5ccc|r_main.c:184]] R_PointOnSide
+- [[return_DOOM_e198b61b|p_enemy.c:186]] P_CheckMeleeRange
+- [[return_DOOM_e198b61b|p_enemy.c:189]] P_CheckMeleeRange
+- [[return_DOOM_2037a59d|p_enemy.c:191]] P_CheckMeleeRange
+- [[return_DOOM_48817b6b|p_floor.c:193]] switch
+- [[return_DOOM_244a1085|p_maputl.c:193]] P_PointOnDivlineSide
+- [[return_DOOM_650ccd10|p_maputl.c:194]] P_PointOnDivlineSide
+- [[return_DOOM_e198b61b|p_inter.c:195]] P_GiveWeapon
+- [[return_DOOM_2037a59d|p_map.c:195]] PIT_CheckLine
+- [[return_DOOM_244a1085|r_main.c:196]] R_PointOnSide
+- [[return_DOOM_eb65de33|f_finale.c:198]] F_Responder
+- [[return_DOOM_2037a59d|p_map.c:198]] PIT_CheckLine
+- [[return_DOOM_650ccd10|r_main.c:198]] R_PointOnSide
+- [[return_DOOM_2037a59d|d_net.c:199]] HGetPacket
+- [[return_DOOM_e198b61b|p_sight.c:199]] P_CrossSubsector
+- [[return_DOOM_855c859b|p_spec.c:199]] 
+- [[return_DOOM_e198b61b|f_finale.c:200]] F_Responder
+- [[return_DOOM_650ccd10|p_maputl.c:201]] P_PointOnDivlineSide
+- [[return_DOOM_e198b61b|p_enemy.c:202]] P_CheckMissileRange
+- [[return_DOOM_a341b1f3|p_floor.c:202]] 
+- [[return_DOOM_244a1085|p_maputl.c:202]] P_PointOnDivlineSide
+- [[return_DOOM_e198b61b|d_net.c:203]] HGetPacket
+- [[return_DOOM_bd0807a2|p_map.c:204]] PIT_CheckLine
+- [[return_DOOM_e198b61b|d_net.c:206]] HGetPacket
+- [[return_DOOM_650ccd10|r_main.c:207]] R_PointOnSide
+- [[return_DOOM_2037a59d|p_enemy.c:209]] P_CheckMissileRange
+- [[return_DOOM_244a1085|r_main.c:210]] R_PointOnSide
+- [[return_DOOM_e198b61b|d_net.c:212]] HGetPacket
+- [[return_DOOM_e198b61b|p_enemy.c:213]] P_CheckMissileRange
+- [[return_DOOM_be97aca9|p_spec.c:215]] 
+- [[return_DOOM_650ccd10|p_doors.c:217]] EV_DoLockedDoor
+- [[return_DOOM_e198b61b|p_map.c:217]] PIT_CheckLine
+- [[return_DOOM_e198b61b|d_net.c:218]] HGetPacket
+- [[return_DOOM_60924221|p_inter.c:219]] P_GiveWeapon
+- [[return_DOOM_e198b61b|p_map.c:220]] PIT_CheckLine
+- [[return_DOOM_6be8aa1c|f_wipe.c:222]] 
+- [[return_DOOM_650ccd10|p_doors.c:224]] EV_DoLockedDoor
+- [[return_DOOM_e198b61b|d_net.c:225]] HGetPacket
+- [[return_DOOM_e198b61b|p_sight.c:225]] P_CrossSubsector
+- [[return_DOOM_de427666|wadread.c:226]] 
+- [[return_DOOM_e091f6f2|g_game.c:227]] G_CmdChecksum
+- [[return_DOOM_e198b61b|p_enemy.c:227]] P_CheckMissileRange
+- [[return_DOOM_650ccd10|p_doors.c:229]] EV_DoLockedDoor
+- [[return_DOOM_650ccd10|f_wipe.c:233]] wipe_exitMelt
+- [[return_DOOM_e198b61b|p_enemy.c:234]] P_CheckMissileRange
+- [[return_DOOM_e198b61b|p_inter.c:234]] P_GiveBody
+- [[return_DOOM_650ccd10|p_doors.c:236]] EV_DoLockedDoor
+- [[return_DOOM_066b7b26|i_net.c:237]] GetLocalAddress
+- [[return_DOOM_53521360|r_main.c:238]] R_PointOnSegSide
+- [[return_DOOM_e198b61b|p_pspr.c:239]] P_CheckAmmo
+- [[return_DOOM_4f298adb|p_spec.c:239]] twoSided
+- [[return_DOOM_e534cc99|r_main.c:240]] R_PointOnSegSide
+- [[return_DOOM_650ccd10|p_doors.c:241]] EV_DoLockedDoor
+- [[return_DOOM_2037a59d|p_inter.c:241]] P_GiveBody
+- [[return_DOOM_650ccd10|p_maputl.c:243]] P_InterceptVector
+- [[return_DOOM_2eb7def3|r_plane.c:243]] 
+- [[return_DOOM_4e8bfdac|p_ceilng.c:244]] EV_DoCeiling
+- [[return_DOOM_e198b61b|p_sight.c:244]] P_CrossSubsector
+- [[return_DOOM_650ccd10|f_wipe.c:245]] wipe_StartScreen
+- [[return_DOOM_9ac98090|r_main.c:245]] R_PointOnSegSide
+- [[return_DOOM_2037a59d|p_map.c:246]] PIT_CheckLine
+- [[return_DOOM_2037a59d|p_sight.c:247]] P_CrossSubsector
+- [[return_DOOM_b945d8f8|r_main.c:247]] R_PointOnSegSide
+- [[return_DOOM_650ccd10|p_doors.c:248]] EV_DoLockedDoor
+- [[return_DOOM_86facc1b|i_sound.c:250]] 
+- [[return_DOOM_2037a59d|d_net.c:252]] HGetPacket
+- [[return_DOOM_0d9cd206|p_maputl.c:252]] P_InterceptVector
+- [[return_DOOM_e198b61b|p_enemy.c:253]] P_CheckMissileRange
+- [[return_DOOM_4e8bfdac|p_plats.c:253]] EV_DoPlat
+- [[return_DOOM_650ccd10|p_doors.c:254]] EV_DoLockedDoor
+- [[return_DOOM_86facc1b|wadread.c:254]] 
+- [[return_DOOM_2037a59d|p_enemy.c:255]] P_CheckMissileRange
+- [[return_DOOM_6feee6d0|p_spec.c:256]] 
+- [[return_DOOM_650ccd10|f_wipe.c:258]] wipe_EndScreen
+- [[return_DOOM_2eb7def3|r_plane.c:258]] 
+- [[return_DOOM_cbb30389|p_doors.c:259]] EV_DoLockedDoor
+- [[return_DOOM_2037a59d|p_map.c:259]] 
+- [[return_DOOM_fa35eba0|p_spec.c:259]] 
+- [[return_DOOM_244a1085|r_main.c:259]] R_PointOnSegSide
+- [[return_DOOM_e198b61b|p_inter.c:260]] P_GiveArmor
+- [[return_DOOM_86424039|p_spec.c:261]] 
+- [[return_DOOM_650ccd10|r_main.c:261]] R_PointOnSegSide
+- [[return_DOOM_2037a59d|p_inter.c:265]] P_GiveArmor
+- [[return_DOOM_d38e810b|p_sight.c:265]] P_CrossBSPNode
+- [[return_DOOM_2037a59d|p_map.c:267]] 
+- [[return_DOOM_7c445340|p_sight.c:267]] P_CrossBSPNode
+- [[return_DOOM_650ccd10|r_main.c:270]] R_PointOnSegSide
+- [[return_DOOM_2037a59d|p_map.c:272]] 
+- [[return_DOOM_244a1085|r_main.c:273]] R_PointOnSegSide
+- [[return_DOOM_650ccd10|p_maputl.c:278]] P_InterceptVector
+- [[return_DOOM_e198b61b|p_sight.c:279]] P_CrossBSPNode
+- [[return_DOOM_d04ce48f|p_maputl.c:283]] P_InterceptVector
+- [[return_DOOM_e198b61b|p_enemy.c:285]] P_Move
+- [[return_DOOM_2037a59d|p_sight.c:285]] P_CrossBSPNode
+- [[return_DOOM_e198b61b|p_map.c:286]] if
+- [[return_DOOM_c16f5075|p_spec.c:288]] P_FindLowestFloorSurrounding
+- [[return_DOOM_abd79c3b|z_zone.c:288]] 
+- [[return_DOOM_1b2d0f1f|p_sight.c:289]] P_CrossBSPNode
+- [[return_DOOM_e198b61b|p_switch.c:294]] P_UseSpecialLine
+- [[return_DOOM_2037a59d|p_map.c:295]] if
+- [[return_DOOM_2037a59d|p_inter.c:297]] P_GivePower
+- [[return_DOOM_2037a59d|p_map.c:297]] if
+- [[return_DOOM_244a1085|soundsrv.c:298]] mix
+- [[return_DOOM_45a12bcc|f_wipe.c:300]] wipe_ScreenWipe
+- [[return_DOOM_650ccd10|r_main.c:300]] 
+- [[return_DOOM_084e25b2|i_video.c:303]] createnullcursor
+- [[return_DOOM_2037a59d|p_inter.c:304]] P_GivePower
+- [[return_DOOM_e198b61b|p_switch.c:305]] P_UseSpecialLine
+- [[return_DOOM_2037a59d|p_map.c:306]] if
+- [[return_DOOM_2037a59d|p_enemy.c:307]] P_Move
+- [[return_DOOM_7a2f9c44|r_plane.c:309]] 
+- [[return_DOOM_2037a59d|p_inter.c:310]] P_GivePower
+- [[return_DOOM_e198b61b|p_enemy.c:311]] P_Move
+- [[return_DOOM_e198b61b|p_map.c:312]] if
+- [[return_DOOM_5a6d7b9f|r_main.c:312]] if
+- [[return_DOOM_c16f5075|p_spec.c:315]] P_FindHighestFloorSurrounding
+- [[return_DOOM_2037a59d|p_inter.c:316]] P_GivePower
+- [[return_DOOM_e198b61b|p_switch.c:316]] P_UseSpecialLine
+- [[return_DOOM_8a4aa734|r_main.c:317]] if
+- [[return_DOOM_968069ab|p_map.c:319]] if
+- [[return_DOOM_3cd6e41d|p_enemy.c:320]] P_Move
+- [[return_DOOM_2037a59d|p_inter.c:323]] P_GivePower
+- [[return_DOOM_7a2f9c44|r_plane.c:323]] 
+- [[return_DOOM_ed4484a8|p_enemy.c:324]] P_Move
+- [[return_DOOM_e198b61b|p_sight.c:325]] P_CheckSight
+- [[return_DOOM_e198b61b|p_inter.c:327]] P_GivePower
+- [[return_DOOM_e198b61b|p_map.c:327]] if
+- [[return_DOOM_d5b5788d|r_main.c:328]] 
+- [[return_DOOM_e198b61b|hu_lib.c:330]] HUlib_keyInIText
+- [[return_DOOM_2037a59d|p_inter.c:330]] P_GivePower
+- [[return_DOOM_e7853d2c|r_things.c:331]] 
+- [[return_DOOM_2037a59d|hu_lib.c:332]] HUlib_keyInIText
+- [[return_DOOM_a6f3c088|r_main.c:333]] 
+- [[return_DOOM_4e8bfdac|p_ceilng.c:334]] EV_CeilingCrushStop
+- [[return_DOOM_2037a59d|p_enemy.c:334]] P_Move
+- [[return_DOOM_35ed313a|r_things.c:334]] 
+- [[return_DOOM_4c68d558|p_map.c:339]] if
+- [[return_DOOM_16a89dd4|w_wad.c:341]] W_NumLumps
+- [[return_DOOM_968069ab|p_map.c:342]] if
+- [[return_DOOM_4e8bfdac|p_doors.c:346]] EV_DoDoor
+- [[return_DOOM_f140fe9c|p_sight.c:346]] P_CheckSight
+- [[return_DOOM_d9c5f15a|r_main.c:348]] if
+- [[return_DOOM_e198b61b|p_enemy.c:353]] P_TryWalk
+- [[return_DOOM_aafd6923|r_main.c:353]] 
+- [[return_DOOM_2037a59d|p_enemy.c:357]] P_TryWalk
+- [[return_DOOM_893a77e6|r_main.c:364]] 
+- [[return_DOOM_9d7c6dc1|p_spec.c:365]] P_FindNextHighestFloor
+- [[return_DOOM_a1b4bd3c|r_main.c:369]] 
+- [[return_DOOM_650ccd10|r_main.c:373]] 
+- [[return_DOOM_498ada47|p_spec.c:374]] P_FindNextHighestFloor
+- [[return_DOOM_3e1b4f0f|i_sound.c:380]] 
+- [[return_DOOM_1d3c5c45|w_wad.c:384]] W_CheckNumForName
+- [[return_DOOM_313ae000|r_main.c:387]] R_PointToAngle2
+- [[return_DOOM_b29b9e02|hu_stuff.c:389]] ForeignTranslation
+- [[return_DOOM_a270a5ce|w_wad.c:389]] W_CheckNumForName
+- [[return_DOOM_65b5cd21|r_data.c:395]] 
+- [[return_DOOM_6b9cd51a|p_spec.c:400]] P_FindLowestCeilingSurrounding
+- [[return_DOOM_3626c1dc|r_data.c:400]] 
+- [[return_DOOM_1d8c17f4|w_wad.c:408]] W_GetNumForName
+- [[return_DOOM_2037a59d|p_map.c:413]] P_CheckPosition
+- [[return_DOOM_e198b61b|wi_stuff.c:416]] WI_Responder
+- [[return_DOOM_97e34f47|r_main.c:417]] R_PointToDist
+- [[return_DOOM_2037a59d|r_bsp.c:420]] R_CheckBBox
+- [[return_DOOM_64cfe9f5|w_wad.c:421]] W_LumpLength
+- [[return_DOOM_6b9cd51a|p_spec.c:425]] P_FindHighestCeilingSurrounding
+- [[return_DOOM_e198b61b|p_map.c:428]] P_CheckPosition
+- [[return_DOOM_2037a59d|r_bsp.c:435]] R_CheckBBox
+- [[return_DOOM_e198b61b|p_map.c:439]] P_CheckPosition
+- [[return_DOOM_2037a59d|p_map.c:441]] P_CheckPosition
+- [[return_DOOM_1d8c17f4|p_spec.c:442]] P_FindSectorFromLineTag
+- [[return_DOOM_4e8bfdac|p_floor.c:443]] 
+- [[return_DOOM_a270a5ce|p_spec.c:444]] P_FindSectorFromLineTag
+- [[return_DOOM_e198b61b|r_bsp.c:445]] R_CheckBBox
+- [[return_DOOM_db7052ed|i_sound.c:455]] I_GetSfxLumpNum
+- [[return_DOOM_e198b61b|r_bsp.c:456]] R_CheckBBox
+- [[return_DOOM_e198b61b|p_map.c:464]] 
+- [[return_DOOM_35ab95f2|z_zone.c:465]] Z_FreeMemory
+- [[return_DOOM_e198b61b|p_map.c:469]] 
+- [[return_DOOM_e198b61b|r_bsp.c:472]] R_CheckBBox
+- [[return_DOOM_e198b61b|p_map.c:475]] 
+- [[return_DOOM_498ada47|p_spec.c:475]] P_FindMinSurroundingLight
+- [[return_DOOM_44e7c4a7|r_main.c:476]] R_ScaleFromGlobalAngle
+- [[return_DOOM_e198b61b|p_map.c:479]] 
+- [[return_DOOM_e198b61b|p_map.c:483]] 
+- [[return_DOOM_e198b61b|r_bsp.c:483]] R_CheckBBox
+- [[return_DOOM_2037a59d|p_maputl.c:486]] 
+- [[return_DOOM_2037a59d|r_bsp.c:486]] R_CheckBBox
+- [[return_DOOM_01d473b3|i_sound.c:489]] I_StartSound
+- [[return_DOOM_01d473b3|i_sound.c:499]] I_StartSound
+- [[return_DOOM_12454018|w_wad.c:499]] 
+- [[return_DOOM_44e7c4a7|r_main.c:501]] R_ScaleFromGlobalAngle
+- [[return_DOOM_e198b61b|p_maputl.c:503]] 
+- [[return_DOOM_e198b61b|f_finale.c:505]] F_CastResponder
+- [[return_DOOM_2037a59d|p_maputl.c:505]] 
+- [[return_DOOM_3e1b4f0f|soundsrv.c:507]] 
+- [[return_DOOM_2037a59d|f_finale.c:508]] F_CastResponder
+- [[return_DOOM_8ea3d2e4|w_wad.c:512]] 
+- [[return_DOOM_2037a59d|p_map.c:516]] 
+- [[return_DOOM_2037a59d|g_game.c:517]] G_Responder
+- [[return_DOOM_2037a59d|f_finale.c:519]] F_CastResponder
+- [[return_DOOM_34f6299f|i_sound.c:520]] I_SoundIsPlaying
+- [[return_DOOM_e198b61b|p_enemy.c:524]] 
+- [[return_DOOM_2037a59d|p_maputl.c:525]] 
+- [[return_DOOM_2037a59d|g_game.c:530]] G_Responder
+- [[return_DOOM_e198b61b|g_game.c:532]] G_Responder
+- [[return_DOOM_f274ffc1|p_mobj.c:533]] 
+- [[return_DOOM_e198b61b|p_maputl.c:534]] 
+- [[return_DOOM_2037a59d|p_maputl.c:536]] 
+- [[return_DOOM_2037a59d|g_game.c:541]] G_Responder
+- [[return_DOOM_2037a59d|g_game.c:545]] G_Responder
+- [[return_DOOM_2037a59d|g_game.c:547]] G_Responder
+- [[return_DOOM_2037a59d|g_game.c:549]] G_Responder
+- [[return_DOOM_4e8bfdac|p_floor.c:553]] 
+- [[return_DOOM_2037a59d|p_enemy.c:554]] 
+- [[return_DOOM_2037a59d|g_game.c:555]] G_Responder
+- [[return_DOOM_e198b61b|p_map.c:555]] P_ThingHeightClip
+- [[return_DOOM_e198b61b|p_enemy.c:557]] 
+- [[return_DOOM_2037a59d|p_map.c:557]] P_ThingHeightClip
+- [[return_DOOM_2037a59d|g_game.c:564]] G_Responder
+- [[return_DOOM_2037a59d|g_game.c:568]] G_Responder
+- [[return_DOOM_e198b61b|g_game.c:573]] G_Responder
+- [[return_DOOM_2037a59d|g_game.c:581]] G_Responder
+- [[return_DOOM_2037a59d|p_maputl.c:585]] PIT_AddLineIntercepts
+- [[return_DOOM_2037a59d|g_game.c:590]] G_Responder
+- [[return_DOOM_2037a59d|p_maputl.c:592]] PIT_AddLineIntercepts
+- [[return_DOOM_e198b61b|g_game.c:596]] G_Responder
+- [[return_DOOM_e198b61b|p_maputl.c:599]] PIT_AddLineIntercepts
+- [[return_DOOM_2037a59d|p_maputl.c:608]] PIT_AddLineIntercepts
+- [[return_DOOM_2dc70453|hu_stuff.c:614]] HU_dequeueChatChar
+- [[return_DOOM_1d8c17f4|p_doors.c:619]] P_FindSlidingDoorType
+- [[return_DOOM_a270a5ce|p_doors.c:622]] P_FindSlidingDoorType
+- [[return_DOOM_e198b61b|hu_stuff.c:646]] 
+- [[return_DOOM_2037a59d|p_map.c:650]] PTR_SlideTraverse
+- [[return_DOOM_650ccd10|wi_stuff.c:650]] 
+- [[return_DOOM_e198b61b|hu_stuff.c:651]] if
+- [[return_DOOM_2037a59d|p_switch.c:652]] P_UseSpecialLine
+- [[return_DOOM_e198b61b|hu_stuff.c:655]] 
+- [[return_DOOM_2037a59d|p_maputl.c:656]] PIT_AddThingIntercepts
+- [[return_DOOM_c5db40cc|wi_stuff.c:664]] 
+- [[return_DOOM_2037a59d|p_maputl.c:666]] PIT_AddThingIntercepts
+- [[return_DOOM_2037a59d|p_map.c:668]] PTR_SlideTraverse
+- [[return_DOOM_2037a59d|p_maputl.c:673]] PIT_AddThingIntercepts
+- [[return_DOOM_e198b61b|p_map.c:681]] PTR_SlideTraverse
+- [[return_DOOM_8aff4baa|r_data.c:685]] R_FlatNumForName
+- [[return_DOOM_e198b61b|st_stuff.c:697]] 
+- [[return_DOOM_e198b61b|st_stuff.c:700]] 
+- [[return_DOOM_650ccd10|r_data.c:702]] R_CheckTextureNumForName
+- [[return_DOOM_e198b61b|st_stuff.c:705]] 
+- [[return_DOOM_1d8c17f4|r_data.c:706]] R_CheckTextureNumForName
+- [[return_DOOM_a270a5ce|r_data.c:708]] R_CheckTextureNumForName
+- [[return_DOOM_2037a59d|p_maputl.c:709]] while
+- [[return_DOOM_e198b61b|st_stuff.c:709]] 
+- [[return_DOOM_e198b61b|hu_stuff.c:710]] if
+- [[return_DOOM_e198b61b|st_stuff.c:713]] 
+- [[return_DOOM_e198b61b|st_stuff.c:717]] 
+- [[return_DOOM_e198b61b|p_maputl.c:719]] while
+- [[return_DOOM_e198b61b|p_maputl.c:724]] while
+- [[return_DOOM_e198b61b|st_stuff.c:724]] 
+- [[return_DOOM_2037a59d|p_maputl.c:729]] while
+- [[return_DOOM_1d8c17f4|r_data.c:729]] R_TextureNumForName
+- [[return_DOOM_3e1b4f0f|am_map.c:733]] if
+- [[return_DOOM_650ccd10|soundsrv.c:739]] 
+- [[return_DOOM_c6e4c377|st_stuff.c:742]] ST_calcPainOffset
+- [[return_DOOM_c374bd65|hu_stuff.c:757]] 
+- [[return_DOOM_650ccd10|s_sound.c:776]] S_AdjustSoundParams
+- [[return_DOOM_6208659e|r_main.c:811]] 
+- [[return_DOOM_e5285c53|s_sound.c:817]] S_AdjustSoundParams
+- [[return_DOOM_e144cb7c|r_main.c:822]] 
+- [[return_DOOM_16d44525|s_sound.c:825]] 
+- [[return_DOOM_e198b61b|p_map.c:830]] PTR_AimTraverse
+- [[return_DOOM_e198b61b|p_map.c:838]] PTR_AimTraverse
+- [[return_DOOM_59075862|wi_stuff.c:838]] WI_fragSum
+- [[return_DOOM_e198b61b|p_maputl.c:851]] 
+- [[return_DOOM_e198b61b|p_map.c:857]] PTR_AimTraverse
+- [[return_DOOM_e198b61b|p_maputl.c:857]] 
+- [[return_DOOM_2037a59d|p_map.c:859]] PTR_AimTraverse
+- [[return_DOOM_a270a5ce|s_sound.c:859]] S_getChannel
+- [[return_DOOM_e198b61b|g_game.c:861]] G_CheckSpot
+- [[return_DOOM_2037a59d|g_game.c:862]] G_CheckSpot
+- [[return_DOOM_2037a59d|p_map.c:865]] PTR_AimTraverse
+- [[return_DOOM_2037a59d|p_map.c:868]] PTR_AimTraverse
+- [[return_DOOM_e198b61b|g_game.c:869]] G_CheckSpot
+- [[return_DOOM_de35de37|s_sound.c:874]] S_getChannel
+- [[return_DOOM_2037a59d|p_map.c:875]] PTR_AimTraverse
+- [[return_DOOM_c548760d|p_maputl.c:879]] 
+- [[return_DOOM_244a1085|i_sound.c:880]] I_RegisterSong
+- [[return_DOOM_2037a59d|p_map.c:880]] PTR_AimTraverse
+- [[return_DOOM_e198b61b|am_map.c:888]] AM_clipMline
+- [[return_DOOM_2037a59d|g_game.c:888]] G_CheckSpot
+- [[return_DOOM_f0414bb9|i_sound.c:888]] I_QrySongPlaying
+- [[return_DOOM_e198b61b|p_map.c:892]] PTR_AimTraverse
+- [[return_DOOM_e198b61b|am_map.c:901]] AM_clipMline
+- [[return_DOOM_e198b61b|am_map.c:913]] AM_clipMline
+- [[return_DOOM_aab90766|p_mobj.c:926]] 
+- [[return_DOOM_2037a59d|p_map.c:945]] PTR_ShootTraverse
+- [[return_DOOM_e198b61b|p_map.c:960]] PTR_ShootTraverse
+- [[return_DOOM_e198b61b|p_map.c:964]] PTR_ShootTraverse
+- [[return_DOOM_e198b61b|am_map.c:966]] AM_clipMline
+- [[return_DOOM_2037a59d|am_map.c:969]] AM_clipMline
+- [[return_DOOM_e198b61b|p_map.c:971]] PTR_ShootTraverse
+- [[return_DOOM_b6ab7745|i_sound.c:975]] I_SoundSetTimer
+- [[return_DOOM_2037a59d|p_map.c:977]] PTR_ShootTraverse
+- [[return_DOOM_2037a59d|p_map.c:980]] PTR_ShootTraverse
+- [[return_DOOM_2037a59d|p_map.c:987]] PTR_ShootTraverse
+- [[return_DOOM_2037a59d|p_map.c:992]] PTR_ShootTraverse
+- [[return_DOOM_e198b61b|p_map.c:1014]] PTR_ShootTraverse
+- [[return_DOOM_d409c18d|p_map.c:1051]] P_AimLineAttack
+- [[return_DOOM_650ccd10|p_map.c:1053]] P_AimLineAttack
+- [[return_DOOM_e198b61b|p_map.c:1107]] PTR_UseTraverse
+- [[return_DOOM_4ac3e7a3|p_map.c:1110]] PTR_UseTraverse
+- [[return_DOOM_e198b61b|p_map.c:1117]] PTR_UseTraverse
+- [[return_DOOM_e198b61b|p_map.c:1122]] PTR_UseTraverse
+- [[return_DOOM_2037a59d|p_enemy.c:1135]] PIT_VileCheck
+- [[return_DOOM_2037a59d|p_enemy.c:1138]] PIT_VileCheck
+- [[return_DOOM_2037a59d|p_enemy.c:1141]] PIT_VileCheck
+- [[return_DOOM_2037a59d|p_enemy.c:1147]] PIT_VileCheck
+- [[return_DOOM_2037a59d|p_enemy.c:1156]] PIT_VileCheck
+- [[return_DOOM_e198b61b|p_enemy.c:1158]] PIT_VileCheck
+- [[return_DOOM_2037a59d|p_map.c:1171]] PIT_RadiusAttack
+- [[return_DOOM_2037a59d|p_map.c:1177]] PIT_RadiusAttack
+- [[return_DOOM_2037a59d|p_map.c:1189]] PIT_RadiusAttack
+- [[return_DOOM_2037a59d|p_map.c:1197]] PIT_RadiusAttack
+- [[return_DOOM_4e8bfdac|p_spec.c:1220]] EV_DoDonut
+- [[return_DOOM_2037a59d|p_map.c:1264]] PIT_ChangeSector
+- [[return_DOOM_16ddb649|m_menu.c:1270]] M_StringWidth
+- [[return_DOOM_2037a59d|p_map.c:1278]] PIT_ChangeSector
+- [[return_DOOM_2037a59d|p_map.c:1287]] PIT_ChangeSector
+- [[return_DOOM_1bc5bac1|m_menu.c:1289]] M_StringHeight
+- [[return_DOOM_2037a59d|p_map.c:1293]] PIT_ChangeSector
+- [[return_DOOM_2037a59d|p_map.c:1312]] PIT_ChangeSector
+- [[return_DOOM_49ed4bfe|p_map.c:1337]] P_ChangeSector
+- [[return_DOOM_e198b61b|m_menu.c:1449]] 
+- [[return_DOOM_2037a59d|m_menu.c:1491]] if
+- [[return_DOOM_e198b61b|m_menu.c:1499]] if
+- [[return_DOOM_2037a59d|m_menu.c:1508]] if
+- [[return_DOOM_2037a59d|m_menu.c:1514]] 
+- [[return_DOOM_e198b61b|m_menu.c:1524]] 
+- [[return_DOOM_2037a59d|m_menu.c:1527]] 
+- [[return_DOOM_e198b61b|m_menu.c:1531]] 
+- [[return_DOOM_2037a59d|m_menu.c:1534]] 
+- [[return_DOOM_2037a59d|m_menu.c:1546]] 
+- [[return_DOOM_2037a59d|m_menu.c:1552]] 
+- [[return_DOOM_2037a59d|m_menu.c:1558]] 
+- [[return_DOOM_2037a59d|m_menu.c:1565]] 
+- [[return_DOOM_2037a59d|m_menu.c:1570]] 
+- [[return_DOOM_2037a59d|m_menu.c:1575]] 
+- [[return_DOOM_2037a59d|m_menu.c:1580]] 
+- [[return_DOOM_2037a59d|m_menu.c:1585]] 
+- [[return_DOOM_2037a59d|m_menu.c:1590]] 
+- [[return_DOOM_2037a59d|m_menu.c:1595]] 
+- [[return_DOOM_2037a59d|m_menu.c:1603]] 
+- [[return_DOOM_2037a59d|m_menu.c:1615]] 
+- [[return_DOOM_e198b61b|m_menu.c:1617]] 
+- [[return_DOOM_2037a59d|m_menu.c:1632]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1642]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1651]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1660]] switch
+- [[return_DOOM_2037a59d|g_game.c:1674]] G_CheckDemoStatus
+- [[return_DOOM_2037a59d|m_menu.c:1678]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1684]] switch
+- [[return_DOOM_e198b61b|g_game.c:1686]] G_CheckDemoStatus
+- [[return_DOOM_2037a59d|m_menu.c:1694]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1702]] switch
+- [[return_DOOM_2037a59d|m_menu.c:1709]] switch
+- [[return_DOOM_e198b61b|m_menu.c:1715]] switch
+
+### 📐 Plan d'assemblage (STRUCT)
+
+- [[struct_DOOM_37286661|sounds.h:32]] 
+- [[struct_DOOM_99300ba3|wadread.c:57]] 
+- [[struct_DOOM_e4d39736|z_zone.h:58]] 
+- [[struct_DOOM_254a931c|soundsrv.c:63]] 
+- [[struct_DOOM_9cb6c5bc|d_think.h:64]] 
+- [[struct_DOOM_7c474208|wadread.c:65]] 
+- [[struct_DOOM_7c474208|soundsrv.c:73]] 
+- [[struct_DOOM_254c583f|wadread.c:73]] 
+- [[struct_DOOM_07b5ee02|d_player.h:83]] 
+- [[struct_DOOM_ae08dc42|soundst.h:94]] 
+- [[struct_DOOM_41900233|m_menu.c:158]] 
+- [[struct_DOOM_0e5ca5aa|r_defs.h:179]] 
+- [[struct_DOOM_db7dcab1|p_mobj.h:207]] 
+- [[struct_DOOM_c000e641|r_defs.h:227]] 
+- [[struct_DOOM_b9704668|r_defs.h:322]] 
+- [[struct_DOOM_3f2b0824|r_defs.h:375]] 
+
+### 🔀 Aiguillage multiple (SWITCH)
+
+- [[switch_DOOM_c17ea736|p_floor.c:64]] switch
+- [[switch_DOOM_177a2a6a|p_doors.c:67]] 
+- [[switch_DOOM_8f178fd2|p_ceilng.c:70]] 
+- [[switch_DOOM_3af4908a|p_ceilng.c:84]] 
+- [[switch_DOOM_ac51d8ca|p_plats.c:89]] 
+- [[switch_DOOM_70134d51|i_video.c:102]] xlatekey
+- [[switch_DOOM_a2d93724|f_finale.c:106]] 
+- [[switch_DOOM_47be9e93|p_ceilng.c:114]] 
+- [[switch_DOOM_2c3d3f4d|p_maputl.c:117]] P_BoxOnLineSide
+- [[switch_DOOM_36c0e5f4|p_inter.c:119]] P_GiveAmmo
+- [[switch_DOOM_f0f39b22|p_ceilng.c:125]] 
+- [[switch_DOOM_a6dcfac8|p_floor.c:131]] switch
+- [[switch_DOOM_bd5ca9a4|p_ceilng.c:149]] 
+- [[switch_DOOM_ffa690ec|p_plats.c:154]] EV_DoPlat
+- [[switch_DOOM_1e4899a0|p_plats.c:183]] EV_DoPlat
+- [[switch_DOOM_6cde57d1|p_ceilng.c:185]] EV_DoCeiling
+- [[switch_DOOM_dfa7b614|i_video.c:201]] 
+- [[switch_DOOM_e74a2f88|p_ceilng.c:210]] EV_DoCeiling
+- [[switch_DOOM_5825efc2|p_doors.c:219]] EV_DoLockedDoor
+- [[switch_DOOM_f9e4d3e4|p_floor.c:228]] 
+- [[switch_DOOM_b47d2988|d_main.c:235]] D_Display
+- [[switch_DOOM_f4d365ba|p_floor.c:239]] if
+- [[switch_DOOM_dfcd23fe|r_things.c:251]] 
+- [[switch_DOOM_4ff28abc|p_switch.c:286]] P_UseSpecialLine
+- [[switch_DOOM_bb766c4e|p_saveg.c:292]] while
+- [[switch_DOOM_7d1f8513|p_doors.c:294]] EV_DoDoor
+- [[switch_DOOM_d959a95d|p_switch.c:307]] P_UseSpecialLine
+- [[switch_DOOM_b4134f01|p_lights.c:316]] T_Glow
+- [[switch_DOOM_ea1cba39|p_setup.c:320]] if
+- [[switch_DOOM_e2387c9c|p_switch.c:323]] P_UseSpecialLine
+- [[switch_DOOM_b54cd232|p_inter.c:367]] P_TouchSpecialThing
+- [[switch_DOOM_657a236e|p_doors.c:369]] 
+- [[switch_DOOM_b61b77c6|p_doors.c:419]] 
+- [[switch_DOOM_40b1d057|f_finale.c:425]] F_CastTicker
+- [[switch_DOOM_ba1c01c9|p_doors.c:440]] switch
+- [[switch_DOOM_2ec8e515|hu_stuff.c:446]] HU_Start
+- [[switch_DOOM_8397b9eb|d_main.c:467]] D_DoAdvanceDemo
+- [[switch_DOOM_45eade6d|p_doors.c:468]] 
+- [[switch_DOOM_b3e75857|p_floor.c:491]] 
+- [[switch_DOOM_13ef8106|p_saveg.c:491]] P_UnArchiveSpecials
+- [[switch_DOOM_9bdd0354|p_spec.c:506]] P_CrossSpecialLine
+- [[switch_DOOM_9fc52a8b|p_spec.c:521]] P_CrossSpecialLine
+- [[switch_DOOM_97a37583|st_stuff.c:526]] 
+- [[switch_DOOM_708042b9|p_spec.c:539]] P_CrossSpecialLine
+- [[switch_DOOM_78c9dd63|wi_stuff.c:549]] 
+- [[switch_DOOM_9a1a0baa|g_game.c:558]] G_Responder
+- [[switch_DOOM_c4917a9d|g_game.c:619]] while
+- [[switch_DOOM_1ed3a493|p_enemy.c:635]] A_Look
+- [[switch_DOOM_83fe174e|am_map.c:639]] if
+- [[switch_DOOM_c14099ef|soundsrv.c:653]] 
+- [[switch_DOOM_692b6d13|g_game.c:704]] 
+- [[switch_DOOM_17419957|am_map.c:711]] if
+- [[switch_DOOM_33331e61|f_finale.c:712]] F_Drawer
+- [[switch_DOOM_2b39d97d|g_game.c:727]] switch
+- [[switch_DOOM_b71c6369|p_inter.c:737]] P_KillMobj
+- [[switch_DOOM_826f593e|m_menu.c:755]] M_DrawReadThis1
+- [[switch_DOOM_bd72bb46|m_menu.c:779]] M_DrawReadThis2
+- [[switch_DOOM_be307a9d|d_main.c:817]] D_DoomMain
+- [[switch_DOOM_dd13e3ec|m_menu.c:818]] M_SfxVol
+- [[switch_DOOM_e89df783|m_menu.c:835]] M_MusicVol
+- [[switch_DOOM_a8cc12a7|d_main.c:915]] D_DoomMain
+- [[switch_DOOM_e361038b|p_spec.c:969]] P_ShootSpecialLine
+- [[switch_DOOM_e23d2ed6|p_spec.c:980]] P_ShootSpecialLine
+- [[switch_DOOM_06435d32|p_spec.c:1020]] P_PlayerInSpecialSector
+- [[switch_DOOM_f5298847|g_game.c:1034]] 
+- [[switch_DOOM_b0356327|d_main.c:1065]] D_DoomMain
+- [[switch_DOOM_b30c4920|g_game.c:1072]] if
+- [[switch_DOOM_146d21e6|g_game.c:1078]] if
+- [[switch_DOOM_6d064a79|g_game.c:1092]] if
+- [[switch_DOOM_09585584|m_menu.c:1115]] M_ChangeSensitivity
+- [[switch_DOOM_3cfd7bf5|p_spec.c:1117]] for
+- [[switch_DOOM_116cd6d9|p_spec.c:1134]] 
+- [[switch_DOOM_467bdc7f|m_menu.c:1154]] M_SizeDisplay
+- [[switch_DOOM_058d1b17|g_game.c:1156]] G_WorldDone
+- [[switch_DOOM_8b4f7b34|p_spec.c:1276]] P_SpawnSpecials
+- [[switch_DOOM_9b1200fe|p_spec.c:1339]] P_SpawnSpecials
+- [[switch_DOOM_791d87b9|m_menu.c:1455]] if
+- [[switch_DOOM_ce129304|g_game.c:1465]] G_InitNew
+- [[switch_DOOM_0ae816fc|wi_stuff.c:1519]] WI_Ticker
+- [[switch_DOOM_3eb065c7|m_menu.c:1520]] 
+- [[switch_DOOM_cb1b101a|p_enemy.c:1539]] A_Scream
+- [[switch_DOOM_04b31417|m_menu.c:1622]] switch
+- [[switch_DOOM_28303d79|p_enemy.c:1627]] 
+- [[switch_DOOM_fe827a4b|p_enemy.c:1729]] 
+- [[switch_DOOM_f71b89e3|wi_stuff.c:1774]] WI_Drawer
+- [[switch_DOOM_bddb90de|m_menu.c:1864]] M_Init
+
+### 🔧 Typedef struct (TYPEDEF STRUCT)
+
+- [[typedef_struct_DOOM_1e94cc9c|d_items.h:34]] 
+- [[typedef_struct_DOOM_cf643540|m_cheat.h:34]] 
+- [[typedef_struct_DOOM_03714639|w_wad.h:35]] 
+- [[typedef_struct_DOOM_75edbd53|d_textur.h:36]] 
+- [[typedef_struct_DOOM_9a5370bc|d_ticcmd.h:36]] 
+- [[typedef_struct_DOOM_95ab75fc|d_event.h:44]] 
+- [[typedef_struct_DOOM_8ef6b57d|st_lib.h:44]] 
+- [[typedef_struct_DOOM_d77fa678|hu_lib.h:45]] 
+- [[typedef_struct_DOOM_eabe932a|w_wad.h:45]] 
+- [[typedef_struct_DOOM_2da90e74|z_zone.c:46]] 
+- [[typedef_struct_DOOM_6430851d|r_things.c:54]] 
+- [[typedef_struct_DOOM_5d44f821|w_wad.h:56]] 
+- [[typedef_struct_DOOM_66f6716c|wadread.c:57]] 
+- [[typedef_struct_DOOM_693f5e99|z_zone.h:58]] 
+- [[typedef_struct_DOOM_ac21d740|p_spec.c:60]] 
+- [[typedef_struct_DOOM_1acd7270|doomdata.h:60]] 
+- [[typedef_struct_DOOM_34c874f7|d_net.h:62]] 
+- [[typedef_struct_DOOM_88ec2c1a|soundsrv.c:63]] 
+- [[typedef_struct_DOOM_6c69af59|d_think.h:64]] 
+- [[typedef_struct_DOOM_2b38308f|wadread.c:65]] 
+- [[typedef_struct_DOOM_f1f5d6a9|hu_lib.h:65]] 
+- [[typedef_struct_DOOM_20449c1d|p_pspr.h:68]] 
+- [[typedef_struct_DOOM_0e0762fb|r_data.c:69]] 
+- [[typedef_struct_DOOM_6c5f2f88|doomdata.h:69]] 
+- [[typedef_struct_DOOM_71c33e79|sounds.h:70]] 
+- [[typedef_struct_DOOM_4ec99fe9|r_defs.h:71]] 
+- [[typedef_struct_DOOM_71c33e79|soundst.h:71]] 
+- [[typedef_struct_DOOM_178510d3|p_spec.c:73]] 
+- [[typedef_struct_DOOM_2b38308f|soundsrv.c:73]] 
+- [[typedef_struct_DOOM_bfc60874|wadread.c:73]] 
+- [[typedef_struct_DOOM_c4c28f58|st_lib.h:76]] 
+- [[typedef_struct_DOOM_2da3f00c|d_net.h:79]] 
+- [[typedef_struct_DOOM_2dc1de75|r_bsp.c:80]] 
+- [[typedef_struct_DOOM_1bb5316c|hu_lib.h:81]] 
+- [[typedef_struct_DOOM_7f20d4c4|d_player.h:83]] 
+- [[typedef_struct_DOOM_45861f57|r_data.c:84]] 
+- [[typedef_struct_DOOM_72be4ebb|doomdata.h:84]] 
+- [[typedef_struct_DOOM_89e38f3e|r_defs.h:88]] 
+- [[typedef_struct_DOOM_7a777db2|st_lib.h:89]] 
+- [[typedef_struct_DOOM_fcc255a6|s_sound.c:93]] 
+- [[typedef_struct_DOOM_36d666d0|r_data.c:99]] 
+- [[typedef_struct_DOOM_3f9f16af|r_defs.h:101]] 
+- [[typedef_struct_DOOM_43a05cbe|r_data.c:113]] 
+- [[typedef_struct_DOOM_6d929cd3|st_lib.h:118]] 
+- [[typedef_struct_DOOM_113c08d5|wi_stuff.c:122]] 
+- [[typedef_struct_DOOM_06bf16e7|p_spec.h:124]] 
+- [[typedef_struct_DOOM_c028bb9b|am_map.c:128]] 
+- [[typedef_struct_DOOM_fcc255a6|soundst.h:128]] 
+- [[typedef_struct_DOOM_b4017103|am_map.c:133]] 
+- [[typedef_struct_DOOM_57ba9303|wi_stuff.c:134]] 
+- [[typedef_struct_DOOM_cef6a44b|p_local.h:135]] 
+- [[typedef_struct_DOOM_d2201af9|p_spec.h:136]] 
+- [[typedef_struct_DOOM_14e71eba|am_map.c:138]] 
+- [[typedef_struct_DOOM_954865b5|m_menu.c:140]] 
+- [[typedef_struct_DOOM_47d404c8|doomdata.h:141]] 
+- [[typedef_struct_DOOM_a6958bef|am_map.c:143]] 
+- [[typedef_struct_DOOM_2018ae91|p_local.h:144]] 
+- [[typedef_struct_DOOM_367f22af|r_defs.h:144]] 
+- [[typedef_struct_DOOM_ca139b7e|am_map.c:148]] 
+- [[typedef_struct_DOOM_cb57c4cd|p_spec.h:150]] 
+- [[typedef_struct_DOOM_4a68f128|doomdata.h:153]] 
+- [[typedef_struct_DOOM_4cda82ca|m_menu.c:158]] 
+- [[typedef_struct_DOOM_4827db4b|doomdata.h:163]] 
+- [[typedef_struct_DOOM_bc23c694|p_spec.h:165]] 
+- [[typedef_struct_DOOM_6dfdc2d9|d_player.h:173]] 
+- [[typedef_struct_DOOM_aaf3655f|r_defs.h:179]] 
+- [[typedef_struct_DOOM_ed927055|doomdata.h:180]] 
+- [[typedef_struct_DOOM_6526082d|d_player.h:187]] 
+- [[typedef_struct_DOOM_f0cf4b59|doomdata.h:203]] 
+- [[typedef_struct_DOOM_e083b644|p_mobj.h:207]] 
+- [[typedef_struct_DOOM_2bee525a|p_spec.h:209]] 
+- [[typedef_struct_DOOM_9ef0e8be|m_misc.c:225]] 
+- [[typedef_struct_DOOM_ae5d1b0e|p_spec.h:227]] 
+- [[typedef_struct_DOOM_4dc53b08|r_defs.h:227]] 
+- [[typedef_struct_DOOM_da66a8d2|r_defs.h:240]] 
+- [[typedef_struct_DOOM_2070202f|r_defs.h:265]] 
+- [[typedef_struct_DOOM_d1d6b929|p_spec.h:285]] 
+- [[typedef_struct_DOOM_091decb1|r_defs.h:285]] 
+- [[typedef_struct_DOOM_1824427f|r_defs.h:322]] 
+- [[typedef_struct_DOOM_1252a98b|f_finale.c:334]] 
+- [[typedef_struct_DOOM_e4fea1fa|p_spec.h:343]] 
+- [[typedef_struct_DOOM_a84704a0|r_defs.h:356]] 
+- [[typedef_struct_DOOM_9a4cee38|r_defs.h:375]] 
+- [[typedef_struct_DOOM_bce4547b|m_misc.c:411]] 
+- [[typedef_struct_DOOM_5f29e372|p_spec.h:418]] 
+- [[typedef_struct_DOOM_d9e7a297|r_defs.h:427]] 
+- [[typedef_struct_DOOM_29dd0bf9|p_spec.h:434]] 
+- [[typedef_struct_DOOM_33b6d6e1|r_defs.h:448]] 
+- [[typedef_struct_DOOM_b30e454f|p_spec.h:449]] 
+- [[typedef_struct_DOOM_360d96a9|r_defs.h:460]] 
+- [[typedef_struct_DOOM_74692a37|p_spec.h:493]] 
+- [[typedef_struct_DOOM_db330ac5|p_spec.h:584]] 
+- [[typedef_struct_DOOM_cc1f6834|info.h:1147]] 
+- [[typedef_struct_DOOM_d5a660b7|info.h:1305]] 
+
+### ⭕ Tapis roulant surveillé (WHILE)
+
+- [[while_DOOM_2cf536ce|w_wad.c:71]] strupr
+- [[while_DOOM_a1e61cdf|m_misc.c:79]] M_DrawText
+- [[while_DOOM_bc6ecb71|w_wad.c:96]] ExtractFileBase
+- [[while_DOOM_1b51733f|f_wipe.c:97]] 
+- [[while_DOOM_d0f198ee|p_tick.c:106]] P_RunThinkers
+- [[while_DOOM_de98b5fc|w_wad.c:107]] ExtractFileBase
+- [[while_DOOM_65cd2ef1|r_bsp.c:127]] 
+- [[while_DOOM_bbfbeebb|st_lib.c:138]] STlib_drawNum
+- [[while_DOOM_92be43bf|r_bsp.c:148]] 
+- [[while_DOOM_cb261d67|soundsrv.c:162]] mix
+- [[while_DOOM_37375724|p_plats.c:164]] EV_DoPlat
+- [[while_DOOM_ff7c76ca|r_bsp.c:178]] 
+- [[while_DOOM_817753fd|r_draw.c:181]] R_DrawColumn
+- [[while_DOOM_b869ee60|p_ceilng.c:195]] EV_DoCeiling
+- [[while_DOOM_8e562e1a|r_data.c:198]] R_DrawColumnInCache
+- [[while_DOOM_da487c81|r_draw.c:200]] R_DrawColumn
+- [[while_DOOM_a7d179a2|p_lights.c:221]] EV_StartLightStrobing
+- [[while_DOOM_feef25dd|r_bsp.c:226]] R_ClipPassWallSegment
+- [[while_DOOM_6b20da95|v_video.c:248]] while
+- [[while_DOOM_acf5449d|d_net.c:269]] 
+- [[while_DOOM_66bc4a13|p_doors.c:275]] EV_DoDoor
+- [[while_DOOM_ebafbb96|p_saveg.c:275]] 
+- [[while_DOOM_652429a5|p_saveg.c:289]] while
+- [[while_DOOM_a1aa73ff|i_net.c:303]] I_InitNetwork
+- [[while_DOOM_6b20da95|v_video.c:313]] while
+- [[while_DOOM_694f7700|p_enemy.c:315]] P_Move
+- [[while_DOOM_0440c3d6|r_plane.c:338]] R_MakeSpans
+- [[while_DOOM_21d360a5|r_plane.c:343]] R_MakeSpans
+- [[while_DOOM_d0d97d67|r_plane.c:349]] R_MakeSpans
+- [[while_DOOM_0fd1dffe|r_plane.c:354]] R_MakeSpans
+- [[while_DOOM_dfe5f146|d_main.c:369]] D_DoomLoop
+- [[while_DOOM_e6a364c5|m_misc.c:370]] 
+- [[while_DOOM_c92a7f99|v_video.c:379]] while
+- [[while_DOOM_9929c68b|w_wad.c:379]] W_CheckNumForName
+- [[while_DOOM_1dd5e377|i_video.c:391]] if
+- [[while_DOOM_2b4998e8|v_video.c:430]] V_DrawBlock
+- [[while_DOOM_8a082d16|i_video.c:433]] if
+- [[while_DOOM_84a4eac2|v_video.c:468]] V_GetBlock
+- [[while_DOOM_32ba607d|p_floor.c:475]] 
+- [[while_DOOM_dc4578a1|d_net.c:488]] 
+- [[while_DOOM_bfb8d3bb|p_saveg.c:488]] P_UnArchiveSpecials
+- [[while_DOOM_44efc9ff|p_map.c:502]] 
+- [[while_DOOM_e40819b6|f_finale.c:535]] F_CastPrint
+- [[while_DOOM_d8387845|d_net.c:536]] 
+- [[while_DOOM_cf4cb6a3|r_bsp.c:537]] R_Subsector
+- [[while_DOOM_cd50a1cf|f_finale.c:554]] F_CastPrint
+- [[while_DOOM_cf7a2653|i_sound.c:576]] 
+- [[while_DOOM_c09b4feb|r_draw.c:593]] R_DrawSpan
+- [[while_DOOM_b06a04de|g_game.c:617]] while
+- [[while_DOOM_6b20da95|f_finale.c:625]] F_DrawPatchCol
+- [[while_DOOM_6d00c9df|r_draw.c:626]] R_DrawSpan
+- [[while_DOOM_9f452ece|wi_stuff.c:636]] 
+- [[while_DOOM_07fb3089|wi_stuff.c:653]] while
+- [[while_DOOM_77d309e4|p_maputl.c:696]] while
+- [[while_DOOM_9a63455b|i_sound.c:712]] I_ShutdownSound
+- [[while_DOOM_fc3f5a42|d_net.c:715]] while
+- [[while_DOOM_16bed26b|r_main.c:815]] 
+- [[while_DOOM_768f723d|i_video.c:836]] I_InitGraphics
+- [[while_DOOM_669fd485|am_map.c:915]] AM_clipMline
+- [[while_DOOM_589dde27|am_map.c:1020]] 
+- [[while_DOOM_135bd103|am_map.c:1036]] 
+- [[while_DOOM_35f910cf|p_spec.c:1175]] EV_DoDonut
+- [[while_DOOM_eaf6060f|am_map.c:1295]] AM_drawThings
+- [[while_DOOM_975bf492|m_menu.c:1313]] M_WriteText
+- [[while_DOOM_ba2d5fad|p_enemy.c:1468]] A_PainShootSkull
+- [[while_DOOM_bbda2480|m_menu.c:1757]] 
+
+
+## Statistiques
+
+- **Total de patterns extraits**: 2786
+- **Types de patterns**: 12
+- **Date de génération**: 2025-04-25 19:56:08
+
+## Retour à l'index général
+[[index|Retour à l'index général des patterns]]
+
+## Graphe de patterns
+
+Pour visualiser les connexions entre les patterns de ce projet, ouvrez la [Vue graphique](obsidian://graph) dans Obsidian 
+et filtrez par le tag `project/DOOM`.

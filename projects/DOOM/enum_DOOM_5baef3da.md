@@ -1,0 +1,56 @@
+---
+tags: pattern, pattern/enum, factorio, code-logic, project/DOOM, pattern/variant/simple
+date: 2025-04-25
+pattern_type: enum
+pattern_variant: simple
+source_file: soundst.h
+line: 158
+project: DOOM
+first_seen: 2025-04-25
+occurrences: 1
+ai_analyzed: non
+optimizable: non
+---
+
+# 🔢 Palette de ressources (ENUM) (Simple)
+
+## Contexte
+- **Fichier**: `soundst.h`
+- **Ligne**: 158
+- **Fonction**: Aucune (niveau global)
+- **Projet**: DOOM
+- **Variante**: Simple
+- **Complexité**: standard
+
+## Métaphore Factorio
+🔢 **Palette de ressources**
+
+Comme un ensemble d'options prédéfinies, similaire à un réseau logique à constantes.
+
+## Code Source
+```c
+enum
+{
+    sfxThrowOut=-1,
+    sfxNotUsed=0
+}
+```
+
+## Note Factorio-style
+*Ce pattern fonctionne comme palette de ressources dans Factorio. Il comme un ensemble d'options prédéfinies, similaire à un réseau logique à constantes.*
+
+## Patterns Similaires
+- [[enum_DOOM_a109ca01|sounds.c:42]] (global)
+
+## Note Perso
+*Ajouter vos notes personnelles ici...*
+
+## Statistiques du Pattern
+- **Première détection**: 2025-04-25
+- **Dernière mise à jour**: 2025-04-25
+- **Nombre d'occurrences**: 1 fichiers
+- **Analysé par IA**: Non
+- **Optimisable**: Non
+
+## Patterns liés
+*Aucun pattern lié trouvé*
