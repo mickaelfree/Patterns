@@ -1,0 +1,69 @@
+---
+tags: pattern, pattern/while, factorio, code-logic, project/philo, pattern/variant/potential_infinite
+date: 2025-05-07
+pattern_type: while
+pattern_variant: potential_infinite
+source_file: parsing.c
+line: 24
+project: philo
+first_seen: 2025-05-07
+occurrences: 3
+ai_analyzed: non
+optimizable: oui
+---
+
+# ⭕ Tapis roulant surveillé (WHILE) (Risque de tournage infini)
+
+## Contexte
+- **Fichier**: `parsing.c`
+- **Ligne**: 24
+- **Fonction**: ft_atoi
+- **Projet**: philo
+- **Variante**: Risque de tournage infini
+- **Complexité**: risquée
+
+## Métaphore Factorio
+⭕ **Tapis roulant surveillé**
+
+Comme un tapis roulant qui continue à fonctionner tant qu'une condition est vraie.
+
+## Code Source
+```c
+while (s[i])
+	{
+		if ((s[i] < '0' || s[i] > '9') || res > INT_MAX)
+			return (*error = 3, 0);
+		res = res * 10 + s[i++] - '0';
+	}
+```
+
+## Analyse Structurelle
+**Type détecté**: Risque de tournage infini
+
+Attention: Cette boucle pourrait être infinie si la condition n'est jamais modifiée dans le corps.
+
+**Analogie Factorio**:
+Comme un tapis roulant sans condition d'arrêt qui risque de tourner indéfiniment et bloquer votre usine.
+
+## Note Factorio-style
+*Ce pattern fonctionne comme tapis roulant surveillé dans Factorio. Il comme un tapis roulant qui continue à fonctionner tant qu'une condition est vraie.*
+
+## Patterns Similaires
+- [[while_philo_f54b0e2a|parsing.c:24]] (ft_atoi)
+- [[while_philo_f54b0e2a|parsing.c:24]] (ft_atoi)
+- [[while_philo_f54b0e2a|parsing.c:24]] (ft_atoi)
+- [[while_philo_f54b0e2a|parsing.c:24]] (ft_atoi)
+- [[while_philo_f54b0e2a|parsing.c:24]] (ft_atoi)
+
+## Note Perso
+*Ajouter vos notes personnelles ici...*
+
+## Statistiques du Pattern
+- **Première détection**: 2025-05-07
+- **Dernière mise à jour**: 2025-05-07
+- **Nombre d'occurrences**: 3 fichiers
+- **Analysé par IA**: Non
+- **Optimisable**: Oui
+
+## Patterns liés
+*Aucun pattern lié trouvé*

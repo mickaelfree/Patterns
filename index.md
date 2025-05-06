@@ -1,6 +1,6 @@
 ---
 tags: index, pattern, factorio
-date: 2025-04-25
+date: 2025-05-07
 ---
 
 # Bibliothèque Centrale de Patterns Factorio-Style
@@ -13,11 +13,12 @@ Chaque pattern est une brique logique réutilisable que vous pouvez explorer et 
 - [[projects/42/index|42]]
 - [[projects/DOOM/index|DOOM]]
 - [[projects/fdf/index|fdf]]
+- [[projects/philo/index|philo]]
 
 ## Statistiques
 
-- **Total de projets**: 3
-- **Date de mise à jour**: 2025-04-25 19:56:08
+- **Total de projets**: 4
+- **Date de mise à jour**: 2025-05-07 00:38:14
 
 ## Comment utiliser cette bibliothèque
 

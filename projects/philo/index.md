@@ -1,0 +1,1250 @@
+---
+tags: index, pattern, factorio, project/philo
+date: 2025-05-07
+project: philo
+---
+
+# Patterns Factorio-Style pour philo
+
+Cette bibliothèque contient des patterns de code extraits du projet **philo** et documentés dans un style inspiré par Factorio.
+Chaque pattern est une brique logique réutilisable que vous pouvez explorer et combiner.
+
+## Patterns par catégorie
+
+### 🔄 Répartiteur intelligent (ELSE IF)
+
+- [[else_if_philo_106ac6f7|message.c:27]] ft_message
+- [[else_if_philo_b93d7788|main.c:53]] start_simulation
+- [[else_if_philo_d9b36d2b|init_thread.c:86]] if
+
+### 🔢 Palette de ressources (ENUM)
+
+- [[enum_philo_ae69f8d5|philo.h:86]] 
+- [[enum_philo_ae69f8d5|philo_bonus.h:116]] 
+
+### 🏭 Usine modulaire (FUNCTION)
+
+- [[function_philo_9b4f92f8|init.c:15]] init_philos
+- [[function_philo_5419fbee|simulation.c:15]] is_all_eat
+- [[function_philo_45c22255|init_bonus.c:15]] init_philos
+- [[function_philo_0b190e42|str_utils_bonus.c:15]] ft_strlen
+- [[function_philo_f1197f19|utils_bonus.c:15]] error_message
+- [[function_philo_d1bab0e3|end.c:15]] end
+- [[function_philo_66add90f|main.c:15]] show_data
+- [[function_philo_a8a6f9aa|parsing.c:15]] ft_atoi
+- [[function_philo_ae0588d6|end.c:15]] error_parsing
+- [[function_philo_8017eae5|message.c:15]] ft_message
+- [[function_philo_1b457b61|init_data.c:15]] init_data
+- [[function_philo_b06a4fbe|init_mutex.c:15]] init_mutex
+- [[function_philo_1f1cc8c8|init_thread.c:15]] init_thread
+- [[function_philo_f646acb0|parsing.c:15]] ft_atoi
+- [[function_philo_ae0588d6|end.c:15]] error_parsing
+- [[function_philo_dac39d42|message.c:15]] ft_message
+- [[function_philo_b40b1bc3|init_data.c:15]] init_data
+- [[function_philo_10ee275b|init_mutex.c:15]] init_all_fork
+- [[function_philo_1f1cc8c8|init_thread.c:15]] init_thread
+- [[function_philo_f646acb0|parsing.c:15]] ft_atoi
+- [[function_philo_ae0588d6|end.c:15]] error_parsing
+- [[function_philo_db53e8fc|main.c:15]] main
+- [[function_philo_35f3c52c|message.c:15]] ft_message
+- [[function_philo_48fe74c3|time.c:15]] get_time_pass
+- [[function_philo_d4484d40|init_data.c:15]] init_data
+- [[function_philo_f91293e4|init_mutex.c:15]] init_all_fork
+- [[function_philo_862a1ebb|init_thread.c:15]] init_thread
+- [[function_philo_f646acb0|parsing.c:15]] ft_atoi
+- [[function_philo_16093f9a|check.c:15]] la_morgue
+- [[function_philo_57e82367|eat.c:15]] ft_eat
+- [[function_philo_ed1e85b0|routine.c:15]] is_finish
+- [[function_philo_1ed5040c|sleep.c:15]] philo_sleep
+- [[function_philo_ebaa7d09|take_fork.c:15]] give_first_fork
+- [[function_philo_ae0588d6|end.c:15]] error_parsing
+- [[function_philo_db53e8fc|main.c:15]] main
+- [[function_philo_35f3c52c|message.c:15]] ft_message
+- [[function_philo_48fe74c3|time.c:15]] get_time_pass
+- [[function_philo_d4484d40|init_data.c:15]] init_data
+- [[function_philo_f91293e4|init_mutex.c:15]] init_all_fork
+- [[function_philo_8f4513c6|init_philo.c:15]] get_second_fork
+- [[function_philo_862a1ebb|init_thread.c:15]] init_thread
+- [[function_philo_f646acb0|parsing.c:15]] ft_atoi
+- [[function_philo_f40035a6|check.c:15]] la_morgue
+- [[function_philo_cb9b634c|eat.c:15]] ft_eat
+- [[function_philo_f2f68eb9|routine.c:15]] is_finish
+- [[function_philo_4176d21f|sleep.c:15]] philo_sleep
+- [[function_philo_ebaa7d09|take_fork.c:15]] give_first_fork
+- [[function_philo_ae0588d6|end.c:15]] error_parsing
+- [[function_philo_db53e8fc|main.c:15]] main
+- [[function_philo_4c24bac2|message.c:15]] ft_message
+- [[function_philo_48fe74c3|time.c:15]] get_time_pass
+- [[function_philo_2f43dc4d|init_data.c:15]] init_data
+- [[function_philo_f91293e4|init_mutex.c:15]] init_all_fork
+- [[function_philo_8f4513c6|init_philo.c:15]] get_second_fork
+- [[function_philo_f646acb0|parsing.c:15]] ft_atoi
+- [[function_philo_45b800cc|check.c:15]] la_morgue
+- [[function_philo_fcff5367|eat.c:15]] ft_eat
+- [[function_philo_abbadec9|routine.c:15]] is_finish
+- [[function_philo_df95f54b|sleep.c:15]] philo_sleep
+- [[function_philo_ebaa7d09|take_fork.c:15]] give_first_fork
+- [[function_philo_f47fedb0|gestion_thread.c:15]] someone_died
+- [[function_philo_d788c67e|main.c:15]] main
+- [[function_philo_725d1ea1|message_and_end.c:15]] ft_message
+- [[function_philo_64f64532|init_free_all_mutex.c:15]] init_all_fork
+- [[function_philo_106ebbd4|init_free_data.c:15]] init_data
+- [[function_philo_a9a23d19|init_free_philo.c:15]] get_second_fork
+- [[function_philo_04b21656|init_parsing.c:15]] ft_atoi
+- [[function_philo_97bae922|eat_sleep_think.c:15]] ft_eat
+- [[function_philo_cf268522|routine_and_fork.c:15]] give_fork
+- [[function_philo_f47fedb0|gestion_thread.c:15]] someone_died
+- [[function_philo_d788c67e|main.c:15]] main
+- [[function_philo_725d1ea1|message_and_end.c:15]] ft_message
+- [[function_philo_64f64532|init_free_all_mutex.c:15]] init_all_fork
+- [[function_philo_106ebbd4|init_free_data.c:15]] init_data
+- [[function_philo_a9a23d19|init_free_philo.c:15]] get_second_fork
+- [[function_philo_04b21656|init_parsing.c:15]] ft_atoi
+- [[function_philo_97bae922|eat_sleep_think.c:15]] ft_eat
+- [[function_philo_cf268522|routine_and_fork.c:15]] give_fork
+- [[function_philo_5b4eaa58|main.c:15]] main
+- [[function_philo_f5ad666c|end.c:15]] end
+- [[function_philo_98a3b6ee|main.c:15]] show_data
+- [[function_philo_3068f465|init_data.c:15]] init_mutex
+- [[function_philo_a8a6f9aa|parsing.c:15]] ft_atoi
+- [[function_philo_9ec33ccd|end.c:15]] end
+- [[function_philo_98a3b6ee|main.c:15]] show_data
+- [[function_philo_a8a6f9aa|parsing.c:15]] ft_atoi
+- [[function_philo_0b190e42|str_utils.c:16]] ft_strlen
+- [[function_philo_9675a68d|thread.c:17]] is_finish
+- [[function_philo_d986f2be|thread.c:17]] is_finish
+- [[function_philo_ec88dbca|utils.c:18]] ft_strlen
+- [[function_philo_1849ebc9|main_bonus.c:18]] check_args
+- [[function_philo_99262539|time.c:19]] get_time_in_ms
+- [[function_philo_f59e1634|exit.c:19]] msg
+- [[function_philo_d785dc8f|main.c:19]] has_simulation_stopped
+- [[function_philo_99262539|time.c:19]] get_time_in_ms
+- [[function_philo_e252faf3|main.c:19]] check_args
+- [[function_philo_f1197f19|utils.c:19]] error_message
+- [[function_philo_22d4b4f1|main.c:19]] main
+- [[function_philo_22d4b4f1|main.c:19]] main
+- [[function_philo_456b4114|grim_reaper.c:20]] set_sim_stop_flag
+- [[function_philo_26052561|parsing.c:20]] contains_only_digits
+- [[function_philo_26052561|parsing.c:20]] contains_only_digits
+- [[function_philo_48fe74c3|time.c:20]] get_time_pass
+- [[function_philo_48fe74c3|time.c:20]] get_time_pass
+- [[function_philo_69c08919|time.c:20]] get_time_pass
+- [[function_philo_947e4088|main.c:21]] start_simulation
+- [[function_philo_fda00ed9|output.c:21]] print_status_debug
+- [[function_philo_02ac98d2|philosopher.c:21]] eat_sleep_routine
+- [[function_philo_4c3627d9|grim_reaper.c:21]] kill_all_philos
+- [[function_philo_e1449edc|output.c:21]] print_status_debug
+- [[function_philo_e5f5dbac|philosopher.c:21]] eat_sleep_routine
+- [[function_philo_d2e76b9f|utils_bonus.c:22]] error_message
+- [[function_philo_96fdbe13|sleep.c:22]] philo_sleep
+- [[function_philo_30b4bf7f|sleep.c:22]] philo_sleep
+- [[function_philo_3da0789c|philosopher_utils.c:23]] grab_fork
+- [[function_philo_c116e0b1|ipc.c:24]] philo_open_global_semaphores
+- [[function_philo_b981346a|init_thread.c:24]] init_thread
+- [[function_philo_b981346a|init_thread.c:24]] init_thread
+- [[function_philo_b981346a|init_thread.c:24]] init_thread
+- [[function_philo_0160bb6e|sleep.c:24]] philo_sleep
+- [[function_philo_b981346a|init_thread.c:24]] init_thread
+- [[function_philo_8d16dbfc|str_utils_bonus.c:25]] ft_strlen
+- [[function_philo_8d16dbfc|str_utils.c:26]] ft_strlen
+- [[function_philo_74729bad|utils.c:26]] error_message
+- [[function_philo_2f48bd2b|end.c:26]] error_parsing
+- [[function_philo_2f48bd2b|end.c:26]] error_parsing
+- [[function_philo_2f48bd2b|end.c:26]] error_parsing
+- [[function_philo_2f48bd2b|end.c:26]] error_parsing
+- [[function_philo_2f48bd2b|end.c:26]] error_parsing
+- [[function_philo_40238030|routine_and_fork.c:26]] give_fork
+- [[function_philo_40238030|routine_and_fork.c:26]] give_fork
+- [[function_philo_f580adf6|init_data.c:26]] init_mutex
+- [[function_philo_9c6b9ccc|time.c:27]] get_time_pass
+- [[function_philo_bd9a03c4|time.c:27]] get_time_pass
+- [[function_philo_e6ac7bec|time.c:27]] get_time_pass
+- [[function_philo_b981346a|init_thread.c:27]] free_thread
+- [[function_philo_b981346a|init_free_thread.c:27]] free_thread
+- [[function_philo_b981346a|init_free_thread.c:27]] free_thread
+- [[function_philo_8e1fdb66|init_mutex.c:28]] init_all_fork
+- [[function_philo_fceeb329|init_mutex.c:28]] init_all_fork
+- [[function_philo_5664264e|take_fork.c:28]] give_first_fork
+- [[function_philo_fceeb329|init_mutex.c:28]] init_all_fork
+- [[function_philo_9ead4534|init_philo.c:28]] get_second_fork
+- [[function_philo_afb0a72b|take_fork.c:28]] give_first_fork
+- [[function_philo_fceeb329|init_mutex.c:28]] init_all_fork
+- [[function_philo_9ead4534|init_philo.c:28]] get_second_fork
+- [[function_philo_27c3bbb2|take_fork.c:28]] give_first_fork
+- [[function_philo_545ba396|init_free_philo.c:28]] get_second_fork
+- [[function_philo_545ba396|init_free_philo.c:28]] get_second_fork
+- [[function_philo_cc9b5be6|eat_sleep_think.c:29]] ft_eat
+- [[function_philo_10434119|eat_sleep_think.c:29]] ft_eat
+- [[function_philo_53855466|time.c:30]] philo_sleep
+- [[function_philo_19ec99f5|main.c:30]] show_data
+- [[function_philo_9613b853|init_philo.c:30]] ft_init_all_philo
+- [[function_philo_a362d45b|main.c:30]] main
+- [[function_philo_65d2d6a0|thread.c:31]] is_finish
+- [[function_philo_9613b853|init_philo.c:31]] ft_init_all_philo
+- [[function_philo_8aa35be5|init_philo.c:31]] ft_init_all_philo
+- [[function_philo_8a5a1f82|time.c:32]] philo_sleep
+- [[function_philo_a9eb7d6a|init_mutex.c:32]] init_mutex
+- [[function_philo_d352d0b9|init_thread.c:32]] free_thread
+- [[function_philo_d352d0b9|init_thread.c:32]] free_thread
+- [[function_philo_7916a54f|exit.c:33]] error_failure
+- [[function_philo_30242d81|init_data.c:33]] free_data
+- [[function_philo_5bb13436|grim_reaper.c:34]] has_simulation_stopped
+- [[function_philo_a11f9f12|init_data.c:34]] init_data
+- [[function_philo_1feb1722|message_and_end.c:34]] ft_message
+- [[function_philo_1feb1722|message_and_end.c:34]] ft_message
+- [[function_philo_3f37fec4|time.c:34]] get_time_pass
+- [[function_philo_e2931a2a|utils.c:35]] destroy_all
+- [[function_philo_f217761a|parsing.c:35]] ft_atoi
+- [[function_philo_f217761a|parsing.c:35]] ft_atoi
+- [[function_philo_c02c9143|init_data.c:35]] init_data
+- [[function_philo_f217761a|parsing.c:35]] ft_atoi
+- [[function_philo_c02c9143|init_data.c:35]] init_data
+- [[function_philo_f217761a|parsing.c:35]] ft_atoi
+- [[function_philo_217300f2|init_data.c:35]] init_data
+- [[function_philo_f217761a|parsing.c:35]] ft_atoi
+- [[function_philo_9b7253c0|init_free_data.c:35]] init_data
+- [[function_philo_168fe0d9|init_parsing.c:35]] ft_atoi
+- [[function_philo_9b7253c0|init_free_data.c:35]] init_data
+- [[function_philo_168fe0d9|init_parsing.c:35]] ft_atoi
+- [[function_philo_69c08919|main.c:35]] get_time_pass
+- [[function_philo_30242d81|init_data.c:35]] free_data
+- [[function_philo_52477ba6|end.c:36]] error_thread_and_mutex
+- [[function_philo_52477ba6|end.c:36]] error_thread_and_mutex
+- [[function_philo_a11f9f12|init_data.c:36]] init_data
+- [[function_philo_52477ba6|end.c:36]] error_thread_and_mutex
+- [[function_philo_52477ba6|end.c:36]] error_thread_and_mutex
+- [[function_philo_4cceccfa|end.c:36]] error_thread_and_mutex
+- [[function_philo_e622384e|gestion_thread.c:36]] someone_died
+- [[function_philo_81c42d6a|init_free_all_mutex.c:36]] init_all_fork
+- [[function_philo_f487c63f|eat_sleep_think.c:36]] philo_sleep
+- [[function_philo_e622384e|gestion_thread.c:36]] someone_died
+- [[function_philo_81c42d6a|init_free_all_mutex.c:36]] init_all_fork
+- [[function_philo_272008d6|eat_sleep_think.c:36]] philo_sleep
+- [[function_philo_2816b817|time.c:37]] ft_sleep
+- [[function_philo_514d0f23|check.c:37]] la_morgue
+- [[function_philo_a18a46e5|main_bonus.c:38]] check_args
+- [[function_philo_682b3fd0|time.c:38]] ft_sleep
+- [[function_philo_8f90b5e2|check.c:38]] la_morgue
+- [[function_philo_00b10525|parsing.c:39]] integer_atoi
+- [[function_philo_29298dcc|main.c:39]] start_simulation
+- [[function_philo_00b10525|parsing.c:39]] integer_atoi
+- [[function_philo_3674707c|main.c:39]] check_args
+- [[function_philo_599d1fbb|take_fork.c:39]] give_fork
+- [[function_philo_49ec1c29|parsing.c:40]] parsing
+- [[function_philo_514d0f23|check.c:41]] la_morgue
+- [[function_philo_76c23159|parsing.c:41]] parsing
+- [[function_philo_826d933c|parsing.c:41]] parsing
+- [[function_philo_7090bad1|output.c:42]] write_status_debug
+- [[function_philo_7090bad1|output.c:42]] write_status_debug
+- [[function_philo_f96bdcc4|init_bonus.c:42]] init_philos
+- [[function_philo_2f6f6908|init_mutex.c:42]] free_all_fork
+- [[function_philo_538c2493|init_mutex.c:42]] free_all_fork
+- [[function_philo_538c2493|init_mutex.c:42]] free_all_fork
+- [[function_philo_538c2493|init_mutex.c:42]] free_all_fork
+- [[function_philo_3595abac|routine_and_fork.c:42]] ft_take_fork
+- [[function_philo_3595abac|routine_and_fork.c:42]] ft_take_fork
+- [[function_philo_58ce77ff|init.c:43]] init_philos
+- [[function_philo_3b5cdf92|init_philo.c:44]] ft_init_all_philo
+- [[function_philo_4cb92a8e|utils.c:45]] print_action
+- [[function_philo_3b5cdf92|init_philo.c:45]] ft_init_all_philo
+- [[function_philo_3b5cdf92|init_philo.c:45]] ft_init_all_philo
+- [[function_philo_e184d753|message_and_end.c:45]] error_parsing
+- [[function_philo_e184d753|message_and_end.c:45]] error_parsing
+- [[function_philo_f90bffe8|ft_calloc_and_time.c:46]] get_time_pass
+- [[function_philo_f90bffe8|ft_calloc_and_time.c:46]] get_time_pass
+- [[function_philo_5ee0ee7c|exit.c:47]] destroy_mutexes
+- [[function_philo_085da665|main.c:47]] stop_simulation
+- [[function_philo_21741da3|time.c:47]] sim_start_delay
+- [[function_philo_6c5142d2|parsing.c:48]] parsing
+- [[function_philo_6c5142d2|parsing.c:48]] parsing
+- [[function_philo_4be16d8a|parsing.c:48]] parsing
+- [[function_philo_89cca348|take_fork.c:48]] give_fork
+- [[function_philo_4be16d8a|parsing.c:48]] parsing
+- [[function_philo_4be16d8a|parsing.c:48]] parsing
+- [[function_philo_fb3f3cb5|philosopher.c:49]] think_routine
+- [[function_philo_8a359be6|main.c:49]] get_time_pass
+- [[function_philo_5d05b076|init_philo.c:50]] free_philo
+- [[function_philo_da92a3f5|init_thread.c:50]] on_or_off_all_thread
+- [[function_philo_845f64c7|init_thread.c:50]] on_or_off_all_thread
+- [[function_philo_21741da3|time.c:51]] sim_start_delay
+- [[function_philo_8aa229b0|utils_bonus.c:51]] destroy_all
+- [[function_philo_5d05b076|init_philo.c:51]] free_philo
+- [[function_philo_192c8be9|init_philo.c:51]] free_philo
+- [[function_philo_9d4a2e9f|take_fork.c:51]] give_fork
+- [[function_philo_5bc8a8eb|cleanup.c:52]] sem_error_cleanup
+- [[function_philo_e10b8b12|simulation_bonus.c:52]] philo_routine
+- [[function_philo_85cbc232|init_parsing.c:52]] parsing
+- [[function_philo_4be16d8a|init_parsing.c:52]] parsing
+- [[function_philo_2e075d62|grim_reaper.c:53]] kill_philo
+- [[function_philo_e45df06f|philosopher.c:53]] think_routine
+- [[function_philo_82a118f0|utils.c:54]] get_current_time
+- [[function_philo_83f17cca|init.c:55]] set_philo_sem_names
+- [[function_philo_1fbcd095|init.c:55]] init_forks
+- [[function_philo_31ab95cb|check.c:55]] evryone_eat
+- [[function_philo_e9b749ad|message_and_end.c:55]] error_thread_and_mutex
+- [[function_philo_e9b749ad|message_and_end.c:55]] error_thread_and_mutex
+- [[function_philo_3b5cdf92|init_philo.c:55]] free_philo
+- [[function_philo_00231f1c|exit.c:56]] child_exit
+- [[function_philo_083b8c57|gestion_thread.c:56]] evryone_to_eat
+- [[function_philo_083b8c57|gestion_thread.c:56]] evryone_to_eat
+- [[function_philo_ebd95979|ipc.c:57]] philo_open_local_semaphores
+- [[function_philo_5b4d7af6|check.c:57]] evryone_eat
+- [[function_philo_12a7371b|init_data.c:57]] free_data
+- [[function_philo_33f8c09a|init.c:58]] assign_forks
+- [[function_philo_c2ef467a|ft_calloc_and_time.c:58]] get_time_pass
+- [[function_philo_c2ef467a|ft_calloc_and_time.c:58]] get_time_pass
+- [[function_philo_c1f0bd74|parsing.c:59]] init_parsing
+- [[function_philo_c1f0bd74|parsing.c:59]] init_parsing
+- [[function_philo_3690299f|thread.c:60]] ft_take_fork
+- [[function_philo_8aa35be5|init_philo.c:60]] ft_init_all_philo
+- [[function_philo_4cb92a8e|utils_bonus.c:61]] print_action
+- [[function_philo_56eb0823|take_fork.c:61]] get_second_fork
+- [[function_philo_31ab95cb|check.c:61]] evryone_eat
+- [[function_philo_8400425c|main.c:61]] main
+- [[function_philo_5d05b076|init_philo.c:61]] free_philo
+- [[function_philo_23f41e02|parsing.c:62]] is_valid_input
+- [[function_philo_23f41e02|parsing.c:62]] is_valid_input
+- [[function_philo_4661af4e|output.c:63]] print_status
+- [[function_philo_5befb639|output.c:63]] print_status
+- [[function_philo_a37c50db|main.c:65]] stop_simulation
+- [[function_philo_5a5e57b5|init_mutex.c:65]] init_mutex
+- [[function_philo_f59e1634|exit.c:66]] msg
+- [[function_philo_2f5a09a4|simulation.c:67]] philo_routine
+- [[function_philo_aff45449|init_free_all_mutex.c:67]] init_all_mutex
+- [[function_philo_aff45449|init_free_all_mutex.c:67]] init_all_mutex
+- [[function_philo_0892e169|cleanup.c:68]] table_cleanup
+- [[function_philo_c2dd7444|utils.c:70]] unlink_global_sems
+- [[function_philo_f50440c9|utils_bonus.c:70]] get_current_time
+- [[function_philo_fa16e47d|init_mutex.c:71]] init_mutex
+- [[function_philo_fa16e47d|init_mutex.c:71]] init_mutex
+- [[function_philo_fa16e47d|init_mutex.c:71]] init_mutex
+- [[function_philo_333ca6fb|simulation_bonus.c:73]] philo_routine
+- [[function_philo_65073bc0|grim_reaper.c:74]] end_condition_reached
+- [[function_philo_64b31b31|take_fork.c:74]] get_first_fork
+- [[function_philo_3b5cdf92|init_philo.c:74]] ft_init_all_philo
+- [[function_philo_335971e3|init_thread.c:75]] is_dead
+- [[function_philo_8961b431|init_philo.c:75]] free_all_philo
+- [[function_philo_8961b431|init_free_philo.c:75]] free_all_philo
+- [[function_philo_8961b431|init_free_philo.c:75]] free_all_philo
+- [[function_philo_de458fda|philosopher.c:76]] lone_philo_routine
+- [[function_philo_5ee8367f|main.c:76]] ft_sleep
+- [[function_philo_81ebc57d|ipc.c:77]] init_philo_ipc
+- [[function_philo_3b7ad477|gestion_thread.c:77]] toujour_a_table
+- [[function_philo_3b7ad477|gestion_thread.c:77]] toujour_a_table
+- [[function_philo_15f6f82c|output.c:79]] write_status
+- [[function_philo_dfe17055|utils.c:79]] unlink_global_sems
+- [[function_philo_7916a54f|exit.c:80]] error_failure
+- [[function_philo_192c8be9|init_philo.c:80]] free_philo
+- [[function_philo_785ab295|output.c:81]] write_status
+- [[function_philo_8b6bd670|init_free_all_mutex.c:81]] init_all_mutex
+- [[function_philo_8b6bd670|init_free_all_mutex.c:81]] init_all_mutex
+- [[function_philo_52da9b40|check.c:82]] cheack_all_thread
+- [[function_philo_e8be3a30|init_thread.c:86]] if
+- [[function_philo_08c8454e|check.c:86]] check_all_thread
+- [[function_philo_456a3ad7|simulation_bonus.c:88]] start_simulation
+- [[function_philo_52da9b40|check.c:88]] cheack_all_thread
+- [[function_philo_023bf552|grim_reaper.c:102]] end_condition_reached
+- [[function_philo_6d05d75d|simulation.c:102]] launcher
+- [[function_philo_d4674e44|init.c:105]] init_global_mutexes
+- [[function_philo_6d4fac48|philosopher.c:106]] philosopher_routine
+- [[function_philo_24b1f3aa|init.c:107]] init_global_semaphores
+- [[function_philo_3b517456|output.c:109]] write_outcome
+- [[function_philo_fa8bab8e|output.c:110]] write_outcome
+- [[function_philo_d5c68b3b|philosopher.c:124]] philosopher
+- [[function_philo_030e89d4|main.c:130]] main
+
+### 🔍 Capteur logique (IF)
+
+- [[if_philo_070b610c|routine_and_fork.c:17]] give_fork
+- [[if_philo_070b610c|routine_and_fork.c:17]] give_fork
+- [[if_philo_b0ce4c28|gestion_thread.c:20]] someone_died
+- [[if_philo_b0ce4c28|gestion_thread.c:20]] someone_died
+- [[if_philo_1e358c52|message_and_end.c:22]] ft_message
+- [[if_philo_1e358c52|message_and_end.c:22]] ft_message
+- [[if_philo_dd42c718|simulation_bonus.c:23]] 
+- [[if_philo_2afff2f7|check.c:23]] la_morgue
+- [[if_philo_0a1a739b|check.c:23]] la_morgue
+- [[if_philo_91fb0585|check.c:25]] la_morgue
+- [[if_philo_ba552428|cleanup.c:26]] 
+- [[if_philo_aee39c36|utils_bonus.c:27]] destroy_all
+- [[if_philo_8c6ee2cb|message.c:27]] ft_message
+- [[if_philo_bf2fef7e|exit.c:28]] 
+- [[if_philo_f474db8e|init_mutex.c:30]] free_all_fork
+- [[if_philo_b4d9dacc|init_mutex.c:30]] free_all_fork
+- [[if_philo_b4d9dacc|init_mutex.c:30]] free_all_fork
+- [[if_philo_b4d9dacc|init_mutex.c:30]] free_all_fork
+- [[if_philo_4048a94c|take_fork.c:30]] give_fork
+- [[if_philo_f3074cfa|simulation.c:31]] is_all_eat
+- [[if_philo_8b90873d|philosopher.c:32]] eat_sleep_routine
+- [[if_philo_5a814f91|take_fork.c:32]] give_fork
+- [[if_philo_971d555d|take_fork.c:32]] give_fork
+- [[if_philo_8820aefb|routine_and_fork.c:32]] ft_take_fork
+- [[if_philo_8820aefb|routine_and_fork.c:32]] ft_take_fork
+- [[if_philo_41188b25|main.c:34]] start_simulation
+- [[if_philo_b4d9dacc|init_free_all_mutex.c:41]] free_all_fork
+- [[if_philo_b4d9dacc|init_free_all_mutex.c:41]] free_all_fork
+- [[if_philo_d7484838|thread.c:45]] ft_take_fork
+- [[if_philo_4b75acf8|take_fork.c:45]] ft_take_fork
+- [[if_philo_09547345|init_mutex.c:46]] init_mutex
+- [[if_philo_09547345|init_mutex.c:46]] init_mutex
+- [[if_philo_09547345|init_mutex.c:46]] init_mutex
+- [[if_philo_246cbf70|time.c:48]] ft_sleep
+- [[if_philo_7aff3097|simulation.c:51]] 
+- [[if_philo_66db0cad|main.c:53]] start_simulation
+- [[if_philo_246cbf70|time.c:53]] ft_sleep
+- [[if_philo_b0d3c659|take_fork.c:57]] ft_take_fork
+- [[if_philo_d9e68386|grim_reaper.c:58]] kill_philo
+- [[if_philo_25d1ab12|init.c:62]] assign_forks
+- [[if_philo_f49442e9|main.c:62]] ft_sleep
+- [[if_philo_0ab58c9a|init_thread.c:63]] is_dead
+- [[if_philo_61c86d37|init_thread.c:64]] is_dead
+- [[if_philo_6cf02bfd|cleanup.c:70]] table_cleanup
+- [[if_philo_3dbc570a|main.c:74]] 
+- [[if_philo_9f1639c7|take_fork.c:80]] ft_take_fork
+- [[if_philo_1cc2d859|output.c:82]] write_status
+- [[if_philo_71415ee3|output.c:84]] write_status
+- [[if_philo_927fe02d|philosopher.c:84]] lone_philo_routine
+- [[if_philo_3e518cbb|init_thread.c:86]] if
+- [[if_philo_a2716f69|output.c:87]] write_status
+- [[if_philo_e7629bc4|thread.c:90]] 
+- [[if_philo_a0812442|grim_reaper.c:93]] end_condition_reached
+- [[if_philo_517f6acc|simulation_bonus.c:97]] launcher
+- [[if_philo_0a41fb7f|grim_reaper.c:105]] end_condition_reached
+- [[if_philo_bb4cea43|grim_reaper.c:112]] end_condition_reached
+- [[if_philo_803c4c96|main.c:112]] 
+- [[if_philo_dc697f72|philosopher.c:132]] philosopher
+- [[if_philo_8ebb1383|philosopher.c:137]] philosopher
+
+### 🚚 Convoyeur de sortie (RETURN)
+
+- [[return_philo_8ef32131|main.c:18]] 
+- [[return_philo_7aa30fec|init_mutex.c:18]] init_mutex
+- [[return_philo_7aa30fec|init_thread.c:18]] init_thread
+- [[return_philo_8ef32131|main.c:18]] 
+- [[return_philo_7aa30fec|init_thread.c:18]] init_thread
+- [[return_philo_7aa30fec|init_thread.c:18]] init_thread
+- [[return_philo_f830ac5d|eat.c:18]] ft_eat
+- [[return_philo_f830ac5d|sleep.c:18]] philo_sleep
+- [[return_philo_7aa30fec|init_thread.c:18]] init_thread
+- [[return_philo_f830ac5d|eat.c:18]] ft_eat
+- [[return_philo_476b77aa|eat.c:18]] ft_eat
+- [[return_philo_b0b225d0|eat_sleep_think.c:18]] ft_eat
+- [[return_philo_b0b225d0|eat_sleep_think.c:18]] ft_eat
+- [[return_philo_b83d5c36|main.c:18]] main
+- [[return_philo_7aa30fec|init_data.c:18]] init_mutex
+- [[return_philo_af2ba932|end.c:19]] end
+- [[return_philo_b83d5c36|sleep.c:19]] philo_sleep
+- [[return_philo_9f01a664|routine.c:19]] is_finish
+- [[return_philo_b83d5c36|sleep.c:19]] philo_sleep
+- [[return_philo_3d7c9daa|gestion_thread.c:19]] someone_died
+- [[return_philo_3d7c9daa|gestion_thread.c:19]] someone_died
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_9fb06fd5|init_philo.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_9fb06fd5|init_philo.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_091285a0|main.c:20]] main
+- [[return_philo_9fb06fd5|init_philo.c:20]] 
+- [[return_philo_1e04caa5|routine.c:20]] is_finish
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_091285a0|main.c:20]] main
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_091285a0|main.c:20]] main
+- [[return_philo_9fb06fd5|init_thread.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:20]] 
+- [[return_philo_091285a0|main.c:20]] main
+- [[return_philo_9fb06fd5|init_free_thread.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:20]] 
+- [[return_philo_091285a0|main.c:20]] main
+- [[return_philo_9fb06fd5|init_free_thread.c:20]] 
+- [[return_philo_9fb06fd5|init_philo.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:20]] 
+- [[return_philo_7a899ebc|init_data.c:21]] 
+- [[return_philo_61bbc82c|parsing.c:21]] ft_atoi
+- [[return_philo_f830ac5d|init_data.c:21]] init_data
+- [[return_philo_7dba8062|parsing.c:21]] ft_atoi
+- [[return_philo_f830ac5d|init_data.c:21]] init_data
+- [[return_philo_7dba8062|parsing.c:21]] ft_atoi
+- [[return_philo_2fcfbe2c|time.c:21]] get_time_pass
+- [[return_philo_f830ac5d|init_data.c:21]] init_data
+- [[return_philo_7dba8062|parsing.c:21]] ft_atoi
+- [[return_philo_b83d5c36|sleep.c:21]] philo_sleep
+- [[return_philo_2fcfbe2c|time.c:21]] get_time_pass
+- [[return_philo_f830ac5d|init_data.c:21]] init_data
+- [[return_philo_7dba8062|parsing.c:21]] ft_atoi
+- [[return_philo_7aa30fec|message.c:21]] ft_message
+- [[return_philo_2fcfbe2c|time.c:21]] get_time_pass
+- [[return_philo_f830ac5d|init_data.c:21]] init_data
+- [[return_philo_7dba8062|parsing.c:21]] ft_atoi
+- [[return_philo_922ea824|routine.c:21]] is_finish
+- [[return_philo_f830ac5d|init_free_data.c:21]] init_data
+- [[return_philo_7dba8062|init_parsing.c:21]] ft_atoi
+- [[return_philo_f830ac5d|init_free_data.c:21]] init_data
+- [[return_philo_7dba8062|init_parsing.c:21]] ft_atoi
+- [[return_philo_7aa30fec|init_data.c:21]] init_mutex
+- [[return_philo_61bbc82c|parsing.c:21]] ft_atoi
+- [[return_philo_af2ba932|end.c:21]] end
+- [[return_philo_7a899ebc|init_data.c:21]] 
+- [[return_philo_61bbc82c|parsing.c:21]] ft_atoi
+- [[return_philo_c6a06c39|str_utils_bonus.c:22]] ft_strlen
+- [[return_philo_422dd215|check.c:22]] la_morgue
+- [[return_philo_1e04caa5|routine.c:22]] is_finish
+- [[return_philo_422dd215|check.c:22]] la_morgue
+- [[return_philo_c2f46fd4|simulation.c:23]] is_all_eat
+- [[return_philo_c6a06c39|str_utils.c:23]] ft_strlen
+- [[return_philo_d2a350df|init_philo.c:23]] 
+- [[return_philo_d2a350df|init_philo.c:23]] 
+- [[return_philo_d2a350df|init_philo.c:23]] 
+- [[return_philo_9f01a664|routine.c:23]] is_finish
+- [[return_philo_422dd215|check.c:23]] la_morgue
+- [[return_philo_9fb06fd5|init_philo.c:23]] 
+- [[return_philo_d8b25a58|time.c:24]] get_time_in_ms
+- [[return_philo_d8b25a58|time.c:24]] get_time_in_ms
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_091285a0|main.c:24]] main
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_091285a0|main.c:24]] main
+- [[return_philo_971c6430|thread.c:24]] is_finish
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_e914ff1b|time.c:24]] get_time_pass
+- [[return_philo_922ea824|routine.c:24]] is_finish
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_e914ff1b|time.c:24]] get_time_pass
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_e914ff1b|time.c:24]] get_time_pass
+- [[return_philo_342a27a1|init_thread.c:24]] 
+- [[return_philo_d9e234de|ft_calloc_and_time.c:24]] 
+- [[return_philo_342a27a1|init_free_thread.c:24]] 
+- [[return_philo_d9e234de|ft_calloc_and_time.c:24]] 
+- [[return_philo_342a27a1|init_free_thread.c:24]] 
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_d9e234de|ft_calloc.c:24]] 
+- [[return_philo_9fb06fd5|exit.c:25]] 
+- [[return_philo_9fb06fd5|cleanup.c:25]] 
+- [[return_philo_df3b0f94|exit.c:25]] msg
+- [[return_philo_c6a06c39|utils.c:25]] ft_strlen
+- [[return_philo_b83d5c36|eat.c:25]] ft_eat
+- [[return_philo_7571530c|init_philo.c:25]] get_second_fork
+- [[return_philo_9f01a664|routine.c:25]] is_finish
+- [[return_philo_7571530c|init_philo.c:25]] get_second_fork
+- [[return_philo_7571530c|init_free_philo.c:25]] get_second_fork
+- [[return_philo_7571530c|init_free_philo.c:25]] get_second_fork
+- [[return_philo_ec0d0e6b|init.c:26]] 
+- [[return_philo_80559777|main.c:26]] has_simulation_stopped
+- [[return_philo_091285a0|main.c:26]] main
+- [[return_philo_2fcfbe2c|time.c:26]] get_time_pass
+- [[return_philo_091285a0|main.c:26]] main
+- [[return_philo_2fcfbe2c|time.c:26]] get_time_pass
+- [[return_philo_922ea824|routine.c:26]] is_finish
+- [[return_philo_b83d5c36|eat.c:26]] ft_eat
+- [[return_philo_b83d5c36|eat_sleep_think.c:26]] ft_eat
+- [[return_philo_b83d5c36|eat_sleep_think.c:26]] ft_eat
+- [[return_philo_b83d5c36|time.c:26]] get_time_pass
+- [[return_philo_7dba8062|parsing.c:27]] ft_atoi
+- [[return_philo_6c8b1056|init_philo.c:27]] 
+- [[return_philo_7aa30fec|init_thread.c:27]] free_thread
+- [[return_philo_2ca8faf0|parsing.c:27]] ft_atoi
+- [[return_philo_f830ac5d|thread.c:27]] is_finish
+- [[return_philo_7aa30fec|init_thread.c:27]] free_thread
+- [[return_philo_2ca8faf0|parsing.c:27]] ft_atoi
+- [[return_philo_7aa30fec|init_thread.c:27]] free_thread
+- [[return_philo_2ca8faf0|parsing.c:27]] ft_atoi
+- [[return_philo_7aa30fec|init_thread.c:27]] free_thread
+- [[return_philo_2ca8faf0|parsing.c:27]] ft_atoi
+- [[return_philo_b83d5c36|sleep.c:27]] philo_think
+- [[return_philo_2ca8faf0|parsing.c:27]] ft_atoi
+- [[return_philo_b83d5c36|sleep.c:27]] philo_think
+- [[return_philo_2ca8faf0|init_parsing.c:27]] ft_atoi
+- [[return_philo_2ca8faf0|init_parsing.c:27]] ft_atoi
+- [[return_philo_7dba8062|parsing.c:27]] ft_atoi
+- [[return_philo_7dba8062|parsing.c:27]] ft_atoi
+- [[return_philo_c2f46fd4|parsing.c:28]] contains_only_digits
+- [[return_philo_c2f46fd4|parsing.c:28]] contains_only_digits
+- [[return_philo_b83d5c36|thread.c:28]] is_finish
+- [[return_philo_6c8b1056|init_philo.c:28]] 
+- [[return_philo_6c8b1056|init_philo.c:28]] 
+- [[return_philo_9fb06fd5|thread.c:28]] 
+- [[return_philo_7dba8062|time.c:28]] get_time_pass
+- [[return_philo_f01c0439|init_data.c:28]] 
+- [[return_philo_c2f46fd4|ipc.c:29]] philo_open_global_semaphores
+- [[return_philo_44e4e06c|init_data.c:29]] 
+- [[return_philo_e914ff1b|time.c:29]] get_time_pass
+- [[return_philo_e914ff1b|time.c:29]] get_time_pass
+- [[return_philo_f830ac5d|sleep.c:29]] philo_think
+- [[return_philo_7aa30fec|message_and_end.c:29]] ft_message
+- [[return_philo_f830ac5d|routine_and_fork.c:29]] ft_take_fork
+- [[return_philo_7aa30fec|message_and_end.c:29]] ft_message
+- [[return_philo_f830ac5d|routine_and_fork.c:29]] ft_take_fork
+- [[return_philo_5ffe5fb2|end.c:29]] end
+- [[return_philo_7aa30fec|init_data.c:29]] destroy_mutex
+- [[return_philo_44e4e06c|init_data.c:30]] 
+- [[return_philo_52742993|parsing.c:30]] ft_atoi
+- [[return_philo_b83d5c36|eat.c:30]] ft_eat
+- [[return_philo_7aa30fec|init_thread.c:30]] free_thread
+- [[return_philo_f830ac5d|gestion_thread.c:30]] someone_died
+- [[return_philo_7aa30fec|init_free_thread.c:30]] free_thread
+- [[return_philo_f830ac5d|gestion_thread.c:30]] someone_died
+- [[return_philo_7aa30fec|init_free_thread.c:30]] free_thread
+- [[return_philo_52742993|parsing.c:30]] ft_atoi
+- [[return_philo_44e4e06c|init_data.c:30]] 
+- [[return_philo_52742993|parsing.c:30]] ft_atoi
+- [[return_philo_0383d4aa|init.c:31]] 
+- [[return_philo_093beae5|main.c:31]] start_simulation
+- [[return_philo_f09edb4b|parsing.c:31]] contains_only_digits
+- [[return_philo_da8a2537|grim_reaper.c:31]] kill_all_philos
+- [[return_philo_f09edb4b|parsing.c:31]] contains_only_digits
+- [[return_philo_5a809fa8|thread.c:31]] is_finish
+- [[return_philo_c52679de|init_data.c:31]] init_data
+- [[return_philo_2ca8faf0|parsing.c:31]] ft_atoi
+- [[return_philo_2ca8faf0|parsing.c:31]] ft_atoi
+- [[return_philo_2ca8faf0|parsing.c:31]] ft_atoi
+- [[return_philo_b83d5c36|sleep.c:31]] philo_think
+- [[return_philo_2ca8faf0|parsing.c:31]] ft_atoi
+- [[return_philo_2ca8faf0|parsing.c:31]] ft_atoi
+- [[return_philo_2ca8faf0|init_parsing.c:31]] ft_atoi
+- [[return_philo_2ca8faf0|init_parsing.c:31]] ft_atoi
+- [[return_philo_e914ff1b|time.c:31]] get_time_pass
+- [[return_philo_9fb06fd5|simulation_bonus.c:32]] 
+- [[return_philo_52742993|parsing.c:32]] ft_atoi
+- [[return_philo_52742993|parsing.c:32]] ft_atoi
+- [[return_philo_7aa30fec|message.c:32]] 
+- [[return_philo_c52679de|init_data.c:32]] init_data
+- [[return_philo_52742993|parsing.c:32]] ft_atoi
+- [[return_philo_7aa30fec|message.c:32]] 
+- [[return_philo_c52679de|init_data.c:32]] init_data
+- [[return_philo_52742993|parsing.c:32]] ft_atoi
+- [[return_philo_c52679de|init_data.c:32]] init_data
+- [[return_philo_52742993|parsing.c:32]] ft_atoi
+- [[return_philo_9f01a664|check.c:32]] la_morgue
+- [[return_philo_c52679de|init_free_data.c:32]] init_data
+- [[return_philo_52742993|init_parsing.c:32]] ft_atoi
+- [[return_philo_c52679de|init_free_data.c:32]] init_data
+- [[return_philo_52742993|init_parsing.c:32]] ft_atoi
+- [[return_philo_44e4e06c|init_data.c:32]] 
+- [[return_philo_c2f46fd4|ipc.c:33]] philo_open_global_semaphores
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_c52679de|init_data.c:33]] init_data
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_9f01a664|check.c:33]] la_morgue
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_18984f02|time.c:33]] ft_sleep
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:33]] 
+- [[return_philo_b83d5c36|gestion_thread.c:33]] someone_died
+- [[return_philo_27fc48df|init_free_all_mutex.c:33]] init_all_fork
+- [[return_philo_b83d5c36|eat_sleep_think.c:33]] philo_sleep
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:33]] 
+- [[return_philo_b83d5c36|gestion_thread.c:33]] someone_died
+- [[return_philo_27fc48df|init_free_all_mutex.c:33]] init_all_fork
+- [[return_philo_b83d5c36|eat_sleep_think.c:33]] philo_sleep
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:33]] 
+- [[return_philo_822cccd5|init.c:34]] 
+- [[return_philo_f09edb4b|simulation.c:34]] is_all_eat
+- [[return_philo_7aa30fec|message.c:34]] ft_message
+- [[return_philo_422dd215|check.c:34]] la_morgue
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_7aa30fec|init_mutex.c:35]] free_mutex
+- [[return_philo_7aa30fec|init_philo.c:35]] ft_init_all_philo
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_18984f02|time.c:35]] ft_sleep
+- [[return_philo_422dd215|check.c:35]] la_morgue
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_18984f02|time.c:35]] ft_sleep
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_24a7a4ba|ft_calloc_and_time.c:35]] 
+- [[return_philo_24a7a4ba|ft_calloc_and_time.c:35]] 
+- [[return_philo_7a899ebc|ft_calloc.c:35]] 
+- [[return_philo_24a7a4ba|ft_calloc.c:35]] 
+- [[return_philo_c2f46fd4|simulation.c:36]] is_all_eat
+- [[return_philo_7aa30fec|init_data.c:36]] free_data
+- [[return_philo_7aa30fec|init_philo.c:36]] ft_init_all_philo
+- [[return_philo_7aa30fec|init_philo.c:36]] ft_init_all_philo
+- [[return_philo_9f01a664|check.c:36]] la_morgue
+- [[return_philo_d0c3e5e5|exit.c:37]] error_failure
+- [[return_philo_c2f46fd4|ipc.c:37]] philo_open_global_semaphores
+- [[return_philo_f830ac5d|init_thread.c:37]] on_or_off_all_thread
+- [[return_philo_d7eec856|time.c:37]] ft_sleep
+- [[return_philo_f830ac5d|init_thread.c:37]] on_or_off_all_thread
+- [[return_philo_01b62d36|main.c:37]] main
+- [[return_philo_24a7a4ba|ft_calloc.c:37]] 
+- [[return_philo_67435915|parsing.c:37]] 
+- [[return_philo_67435915|parsing.c:37]] 
+- [[return_philo_093beae5|main.c:38]] start_simulation
+- [[return_philo_a4226355|main.c:38]] main
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_8a7b2c10|time.c:38]] ft_sleep
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_7571530c|init_philo.c:38]] get_first_fork
+- [[return_philo_422dd215|check.c:38]] la_morgue
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_7571530c|init_philo.c:38]] get_first_fork
+- [[return_philo_9fb06fd5|routine.c:38]] 
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:38]] 
+- [[return_philo_7571530c|init_free_philo.c:38]] get_first_fork
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:38]] 
+- [[return_philo_7571530c|init_free_philo.c:38]] get_first_fork
+- [[return_philo_6c8b1056|init_philo.c:38]] 
+- [[return_philo_7aa30fec|init_data.c:38]] free_data
+- [[return_philo_9fb06fd5|ft_calloc.c:38]] 
+- [[return_philo_b0e89d76|end.c:39]] end
+- [[return_philo_b0e89d76|end.c:39]] end
+- [[return_philo_b0e89d76|end.c:39]] end
+- [[return_philo_b0e89d76|end.c:39]] end
+- [[return_philo_5ffe5fb2|end.c:39]] end
+- [[return_philo_b83d5c36|routine_and_fork.c:39]] ft_take_fork
+- [[return_philo_b83d5c36|routine_and_fork.c:39]] ft_take_fork
+- [[return_philo_9fb06fd5|exit.c:40]] 
+- [[return_philo_f09edb4b|main.c:40]] start_simulation
+- [[return_philo_a4226355|main.c:40]] main
+- [[return_philo_86dcf271|time.c:40]] ft_sleep
+- [[return_philo_86dcf271|time.c:40]] ft_sleep
+- [[return_philo_86dcf271|time.c:40]] ft_sleep
+- [[return_philo_9fb06fd5|routine.c:40]] 
+- [[return_philo_7a899ebc|ft_calloc.c:40]] 
+- [[return_philo_9fb06fd5|init.c:41]] 
+- [[return_philo_c2f46fd4|ipc.c:41]] philo_open_global_semaphores
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_18984f02|parsing.c:41]] parsing
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_18984f02|parsing.c:41]] parsing
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_18984f02|parsing.c:41]] parsing
+- [[return_philo_9fb06fd5|routine.c:41]] 
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_18984f02|parsing.c:41]] parsing
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_18984f02|parsing.c:41]] parsing
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:41]] 
+- [[return_philo_18984f02|init_parsing.c:41]] parsing
+- [[return_philo_b83d5c36|eat_sleep_think.c:41]] philo_think
+- [[return_philo_9fb06fd5|ft_calloc_and_time.c:41]] 
+- [[return_philo_18984f02|init_parsing.c:41]] parsing
+- [[return_philo_b83d5c36|eat_sleep_think.c:41]] philo_think
+- [[return_philo_b83d5c36|main.c:41]] get_time_pass
+- [[return_philo_9fb06fd5|ft_calloc.c:41]] 
+- [[return_philo_f09edb4b|ipc.c:42]] philo_open_global_semaphores
+- [[return_philo_9fb06fd5|routine.c:42]] 
+- [[return_philo_f830ac5d|take_fork.c:42]] ft_take_fork
+- [[return_philo_9fb06fd5|thread.c:42]] 
+- [[return_philo_9fb06fd5|init_data.c:42]] 
+- [[return_philo_a18ae2ea|grim_reaper.c:43]] has_simulation_stopped
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_c30fbd20|init_thread.c:43]] on_or_off_all_thread
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_c30fbd20|init_thread.c:43]] on_or_off_all_thread
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_7aa30fec|message.c:43]] 
+- [[return_philo_e26eabfb|routine.c:43]] 
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_7aa30fec|message.c:43]] 
+- [[return_philo_9fb06fd5|routine.c:43]] 
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_cef1c906|ft_calloc_and_time.c:43]] 
+- [[return_philo_cef1c906|ft_calloc_and_time.c:43]] 
+- [[return_philo_7a899ebc|ft_calloc.c:43]] 
+- [[return_philo_7dba8062|main.c:43]] get_time_pass
+- [[return_philo_cef1c906|ft_calloc.c:43]] 
+- [[return_philo_9fb06fd5|cleanup.c:44]] 
+- [[return_philo_b83d5c36|time.c:44]] ft_sleep
+- [[return_philo_b83d5c36|time.c:44]] ft_sleep
+- [[return_philo_b83d5c36|time.c:44]] ft_sleep
+- [[return_philo_9fb06fd5|routine.c:44]] 
+- [[return_philo_52742993|init_parsing.c:44]] parsing
+- [[return_philo_52742993|init_parsing.c:44]] parsing
+- [[return_philo_b83d5c36|time.c:44]] ft_sleep
+- [[return_philo_b83d5c36|parsing.c:45]] parsing
+- [[return_philo_21903520|init_thread.c:45]] on_or_off_all_thread
+- [[return_philo_52742993|parsing.c:45]] parsing
+- [[return_philo_7aa30fec|init_mutex.c:45]] init_mutex
+- [[return_philo_21903520|init_thread.c:45]] on_or_off_all_thread
+- [[return_philo_52742993|parsing.c:45]] parsing
+- [[return_philo_52742993|parsing.c:45]] parsing
+- [[return_philo_52742993|parsing.c:45]] parsing
+- [[return_philo_e26eabfb|routine.c:45]] 
+- [[return_philo_52742993|parsing.c:45]] parsing
+- [[return_philo_cef1c906|ft_calloc.c:45]] 
+- [[return_philo_6d36c340|utils.c:46]] 
+- [[return_philo_18984f02|time.c:46]] ft_sleep
+- [[return_philo_9fb06fd5|routine.c:46]] 
+- [[return_philo_beec63d7|time.c:46]] ft_sleep
+- [[return_philo_9fb06fd5|init_philo.c:46]] 
+- [[return_philo_9fb06fd5|routine.c:46]] 
+- [[return_philo_9fb06fd5|init_free_philo.c:46]] 
+- [[return_philo_d3218fe2|routine_and_fork.c:46]] is_finish
+- [[return_philo_9fb06fd5|init_free_philo.c:46]] 
+- [[return_philo_d3218fe2|routine_and_fork.c:46]] is_finish
+- [[return_philo_93fddb14|main.c:46]] main
+- [[return_philo_b83d5c36|parsing.c:46]] parsing
+- [[return_philo_e914ff1b|main.c:46]] get_time_pass
+- [[return_philo_b83d5c36|parsing.c:46]] parsing
+- [[return_philo_9fb06fd5|grim_reaper.c:47]] 
+- [[return_philo_8ef3d22f|init.c:47]] 
+- [[return_philo_b83d5c36|main_bonus.c:47]] main
+- [[return_philo_1936459d|str_utils_bonus.c:47]] ft_atoi
+- [[return_philo_b83d5c36|init_thread.c:47]] on_or_off_all_thread
+- [[return_philo_b83d5c36|init_thread.c:47]] on_or_off_all_thread
+- [[return_philo_beec63d7|time.c:47]] ft_sleep
+- [[return_philo_beec63d7|time.c:47]] ft_sleep
+- [[return_philo_9fb06fd5|init_philo.c:47]] 
+- [[return_philo_9fb06fd5|routine.c:47]] 
+- [[return_philo_3d7c9daa|gestion_thread.c:47]] evryone_to_eat
+- [[return_philo_3d7c9daa|gestion_thread.c:47]] evryone_to_eat
+- [[return_philo_9fb06fd5|init_philo.c:47]] 
+- [[return_philo_1936459d|str_utils.c:48]] ft_atoi
+- [[return_philo_9fb06fd5|thread.c:48]] 
+- [[return_philo_9fb06fd5|routine.c:48]] 
+- [[return_philo_422dd215|check.c:48]] evryone_eat
+- [[return_philo_bd2c20c2|routine_and_fork.c:48]] is_finish
+- [[return_philo_bd2c20c2|routine_and_fork.c:48]] is_finish
+- [[return_philo_9fb06fd5|exit.c:49]] 
+- [[return_philo_9fb06fd5|simulation_bonus.c:49]] 
+- [[return_philo_197671b5|parsing.c:49]] parsing
+- [[return_philo_540e0c21|end.c:49]] end
+- [[return_philo_18984f02|time.c:49]] ft_sleep
+- [[return_philo_540e0c21|end.c:49]] end
+- [[return_philo_540e0c21|end.c:49]] end
+- [[return_philo_422dd215|check.c:49]] evryone_eat
+- [[return_philo_540e0c21|end.c:49]] end
+- [[return_philo_9fb06fd5|routine.c:49]] 
+- [[return_philo_540e0c21|end.c:49]] end
+- [[return_philo_d2a350df|init_philo.c:49]] 
+- [[return_philo_d2a350df|init_free_philo.c:49]] 
+- [[return_philo_52742993|init_parsing.c:49]] parsing
+- [[return_philo_d2a350df|init_free_philo.c:49]] 
+- [[return_philo_52742993|init_parsing.c:49]] parsing
+- [[return_philo_c36ae855|main.c:50]] start_simulation
+- [[return_philo_583b614c|init_mutex.c:50]] init_mutex
+- [[return_philo_9fb06fd5|routine.c:50]] 
+- [[return_philo_583b614c|init_mutex.c:50]] init_mutex
+- [[return_philo_d2a350df|init_philo.c:50]] 
+- [[return_philo_583b614c|init_mutex.c:50]] init_mutex
+- [[return_philo_d1c6d45b|init_data.c:50]] 
+- [[return_philo_197671b5|parsing.c:50]] parsing
+- [[return_philo_197671b5|parsing.c:50]] parsing
+- [[return_philo_b83d5c36|main.c:51]] main
+- [[return_philo_31ca2486|utils.c:51]] get_current_time
+- [[return_philo_18984f02|parsing.c:51]] parsing
+- [[return_philo_47532ebb|time.c:51]] ft_sleep
+- [[return_philo_9fb06fd5|routine.c:51]] 
+- [[return_philo_18984f02|parsing.c:52]] integer_atoi
+- [[return_philo_9fb06fd5|grim_reaper.c:52]] 
+- [[return_philo_18984f02|parsing.c:52]] integer_atoi
+- [[return_philo_f830ac5d|check.c:52]] evryone_eat
+- [[return_philo_422dd215|check.c:52]] evryone_eat
+- [[return_philo_b83d5c36|take_fork.c:52]] ft_take_fork
+- [[return_philo_7e82b804|init_philo.c:52]] 
+- [[return_philo_18984f02|parsing.c:52]] parsing
+- [[return_philo_18984f02|parsing.c:52]] parsing
+- [[return_philo_caeb48d4|parsing.c:53]] integer_atoi
+- [[return_philo_caeb48d4|parsing.c:53]] integer_atoi
+- [[return_philo_f830ac5d|gestion_thread.c:53]] evryone_to_eat
+- [[return_philo_f830ac5d|gestion_thread.c:53]] evryone_to_eat
+- [[return_philo_f830ac5d|take_fork.c:54]] ft_take_fork
+- [[return_philo_f830ac5d|check.c:54]] evryone_eat
+- [[return_philo_44e4e06c|init_data.c:54]] 
+- [[return_philo_7aa30fec|init_philo.c:55]] free_all_philo
+- [[return_philo_b83d5c36|time.c:55]] ft_sleep
+- [[return_philo_e914ff1b|ft_calloc_and_time.c:55]] get_time_pass
+- [[return_philo_e914ff1b|ft_calloc_and_time.c:55]] get_time_pass
+- [[return_philo_b83d5c36|time.c:55]] ft_sleep
+- [[return_philo_7aa30fec|init_philo.c:56]] free_all_philo
+- [[return_philo_7aa30fec|init_philo.c:56]] free_all_philo
+- [[return_philo_6c8b1056|init_philo.c:56]] 
+- [[return_philo_6c8b1056|init_free_philo.c:56]] 
+- [[return_philo_6c8b1056|init_free_philo.c:56]] 
+- [[return_philo_9fb06fd5|grim_reaper.c:57]] 
+- [[return_philo_9fb06fd5|simulation.c:57]] 
+- [[return_philo_6c8b1056|init_philo.c:57]] 
+- [[return_philo_8f43028f|main.c:57]] main
+- [[return_philo_beec63d7|time.c:57]] ft_sleep
+- [[return_philo_52742993|parsing.c:58]] parsing
+- [[return_philo_beec63d7|time.c:58]] ft_sleep
+- [[return_philo_f830ac5d|check.c:58]] evryone_eat
+- [[return_philo_9fb06fd5|init_free_all_mutex.c:58]] 
+- [[return_philo_9fb06fd5|init_free_all_mutex.c:58]] 
+- [[return_philo_b83d5c36|main.c:58]] ft_sleep
+- [[return_philo_c2f46fd4|init.c:59]] set_philo_sem_names
+- [[return_philo_9fb06fd5|utils.c:59]] 
+- [[return_philo_9bb8f445|parsing.c:59]] init_parsing
+- [[return_philo_9bb8f445|parsing.c:59]] init_parsing
+- [[return_philo_9bb8f445|parsing.c:59]] init_parsing
+- [[return_philo_5ffe5fb2|message_and_end.c:59]] end
+- [[return_philo_5ffe5fb2|message_and_end.c:59]] end
+- [[return_philo_9fb06fd5|routine_and_fork.c:59]] 
+- [[return_philo_99728ea3|cleanup.c:60]] sem_error_cleanup
+- [[return_philo_f09edb4b|init.c:60]] set_philo_sem_names
+- [[return_philo_c2f46fd4|main.c:60]] start_simulation
+- [[return_philo_b83d5c36|time.c:60]] ft_sleep
+- [[return_philo_7aa30fec|init_data.c:60]] free_data
+- [[return_philo_f09edb4b|main.c:61]] start_simulation
+- [[return_philo_9fb06fd5|routine_and_fork.c:61]] 
+- [[return_philo_9fb06fd5|routine_and_fork.c:61]] 
+- [[return_philo_52742993|parsing.c:61]] parsing
+- [[return_philo_c2f46fd4|ipc.c:62]] philo_open_local_semaphores
+- [[return_philo_9fb06fd5|simulation.c:62]] 
+- [[return_philo_beec63d7|time.c:62]] ft_sleep
+- [[return_philo_f830ac5d|init_thread.c:62]] is_dead
+- [[return_philo_7aa30fec|parsing.c:62]] free_parsing
+- [[return_philo_7aa30fec|parsing.c:62]] free_parsing
+- [[return_philo_f09edb4b|grim_reaper.c:63]] kill_philo
+- [[return_philo_f830ac5d|init_thread.c:63]] is_dead
+- [[return_philo_9fb06fd5|routine_and_fork.c:63]] 
+- [[return_philo_9bb8f445|init_parsing.c:63]] init_parsing
+- [[return_philo_9fb06fd5|routine_and_fork.c:63]] 
+- [[return_philo_52742993|parsing.c:63]] parsing
+- [[return_philo_9fb06fd5|grim_reaper.c:64]] 
+- [[return_philo_f09edb4b|ipc.c:64]] philo_open_local_semaphores
+- [[return_philo_9fb06fd5|simulation.c:64]] 
+- [[return_philo_b83d5c36|take_fork.c:64]] ft_take_fork
+- [[return_philo_3e528d06|init_free_all_mutex.c:64]] 
+- [[return_philo_3e528d06|init_free_all_mutex.c:64]] 
+- [[return_philo_c2f46fd4|grim_reaper.c:65]] kill_philo
+- [[return_philo_7aa30fec|init_philo.c:65]] ft_init_all_philo
+- [[return_philo_9fb06fd5|init_philo.c:65]] 
+- [[return_philo_9fb06fd5|init_free_philo.c:65]] 
+- [[return_philo_9fb06fd5|routine_and_fork.c:65]] 
+- [[return_philo_9fb06fd5|init_free_philo.c:65]] 
+- [[return_philo_9fb06fd5|routine_and_fork.c:65]] 
+- [[return_philo_7aa30fec|init_philo.c:66]] free_all_philo
+- [[return_philo_80559777|utils.c:67]] 
+- [[return_philo_31ca2486|utils_bonus.c:67]] get_current_time
+- [[return_philo_9bb8f445|init_parsing.c:67]] init_parsing
+- [[return_philo_9fb06fd5|routine_and_fork.c:67]] 
+- [[return_philo_9fb06fd5|routine_and_fork.c:67]] 
+- [[return_philo_7aa30fec|init_mutex.c:68]] free_mutex
+- [[return_philo_cd82b0a9|init_mutex.c:68]] init_mutex
+- [[return_philo_cd82b0a9|init_mutex.c:68]] init_mutex
+- [[return_philo_cd82b0a9|init_mutex.c:68]] init_mutex
+- [[return_philo_f830ac5d|init_thread.c:69]] is_dead
+- [[return_philo_540e0c21|message_and_end.c:69]] end
+- [[return_philo_9fb06fd5|routine_and_fork.c:69]] 
+- [[return_philo_540e0c21|message_and_end.c:69]] end
+- [[return_philo_01b62d36|main.c:69]] main
+- [[return_philo_93dce5ce|main.c:71]] main
+- [[return_philo_cc4072b4|parsing.c:71]] is_valid_input
+- [[return_philo_cc4072b4|parsing.c:71]] is_valid_input
+- [[return_philo_f830ac5d|init_thread.c:71]] is_dead
+- [[return_philo_b83d5c36|main.c:71]] ft_sleep
+- [[return_philo_df3b0f94|exit.c:72]] msg
+- [[return_philo_b83d5c36|init_thread.c:72]] is_dead
+- [[return_philo_fa90e360|init_philo.c:72]] 
+- [[return_philo_fa90e360|init_free_philo.c:72]] 
+- [[return_philo_fa90e360|init_free_philo.c:72]] 
+- [[return_philo_b2aeabbc|main.c:73]] main
+- [[return_philo_beec63d7|main.c:73]] ft_sleep
+- [[return_philo_84dd2653|parsing.c:74]] is_valid_input
+- [[return_philo_84dd2653|parsing.c:74]] is_valid_input
+- [[return_philo_b83d5c36|init_thread.c:74]] is_dead
+- [[return_philo_0b634c12|main.c:75]] main
+- [[return_philo_b2aeabbc|main.c:76]] main
+- [[return_philo_cc4072b4|parsing.c:76]] is_valid_input
+- [[return_philo_cc4072b4|parsing.c:76]] is_valid_input
+- [[return_philo_f830ac5d|take_fork.c:77]] ft_take_fork
+- [[return_philo_b2aeabbc|main.c:78]] main
+- [[return_philo_cd82b0a9|init_free_all_mutex.c:78]] init_all_mutex
+- [[return_philo_cd82b0a9|init_free_all_mutex.c:78]] init_all_mutex
+- [[return_philo_f09edb4b|parsing.c:79]] is_valid_input
+- [[return_philo_9fb06fd5|grim_reaper.c:79]] 
+- [[return_philo_ec0d0e6b|init.c:79]] 
+- [[return_philo_f09edb4b|parsing.c:79]] is_valid_input
+- [[return_philo_dfa72eed|main.c:80]] main
+- [[return_philo_7aa30fec|ipc.c:80]] init_philo_ipc
+- [[return_philo_7dc412ca|main.c:80]] 
+- [[return_philo_7aa30fec|init_philo.c:80]] free_all_philo
+- [[return_philo_7aa30fec|init_free_philo.c:80]] free_all_philo
+- [[return_philo_7aa30fec|init_free_philo.c:80]] free_all_philo
+- [[return_philo_ec0d0e6b|init.c:81]] 
+- [[return_philo_f24c886c|init_bonus.c:81]] 
+- [[return_philo_f99f5c11|main.c:81]] main
+- [[return_philo_da8a2537|cleanup.c:82]] table_cleanup
+- [[return_philo_9fb06fd5|grim_reaper.c:82]] 
+- [[return_philo_77cb5fa0|main.c:83]] 
+- [[return_philo_093beae5|utils.c:83]] start_grim_reaper_threads
+- [[return_philo_d0c3e5e5|exit.c:84]] error_failure
+- [[return_philo_8f43028f|main.c:84]] main
+- [[return_philo_f09edb4b|grim_reaper.c:85]] end_condition_reached
+- [[return_philo_7aa30fec|output.c:85]] write_status
+- [[return_philo_9fb06fd5|grim_reaper.c:85]] 
+- [[return_philo_ec0d0e6b|init.c:85]] 
+- [[return_philo_7aa30fec|init_philo.c:85]] free_all_philo
+- [[return_philo_a4226355|main.c:85]] main
+- [[return_philo_093beae5|utils.c:86]] start_grim_reaper_threads
+- [[return_philo_ec0d0e6b|init.c:87]] 
+- [[return_philo_9fb06fd5|philosopher.c:87]] 
+- [[return_philo_f830ac5d|main.c:87]] 
+- [[return_philo_f09edb4b|utils.c:87]] start_grim_reaper_threads
+- [[return_philo_b83d5c36|take_fork.c:87]] ft_take_fork
+- [[return_philo_0383d4aa|init.c:89]] 
+- [[return_philo_6db7b92f|init.c:89]] 
+- [[return_philo_7aa30fec|ipc.c:89]] init_philo_ipc
+- [[return_philo_7aa30fec|output.c:89]] write_status
+- [[return_philo_7aa30fec|output.c:91]] write_status
+- [[return_philo_9fb06fd5|grim_reaper.c:91]] 
+- [[return_philo_b83d5c36|main.c:91]] 
+- [[return_philo_8f43028f|main.c:91]] main
+- [[return_philo_a0a41650|init.c:95]] 
+- [[return_philo_9fb06fd5|exit.c:96]] 
+- [[return_philo_f09edb4b|grim_reaper.c:96]] end_condition_reached
+- [[return_philo_a0a41650|init.c:96]] 
+- [[return_philo_c2f46fd4|grim_reaper.c:98]] end_condition_reached
+- [[return_philo_9fb06fd5|thread.c:98]] 
+- [[return_philo_9fb06fd5|simulation.c:99]] 
+- [[return_philo_9fb06fd5|philosopher.c:103]] 
+- [[return_philo_9fb06fd5|thread.c:104]] 
+- [[return_philo_c2f46fd4|init.c:109]] init_global_mutexes
+- [[return_philo_9fb06fd5|philosopher.c:109]] 
+- [[return_philo_f09edb4b|grim_reaper.c:110]] end_condition_reached
+- [[return_philo_9fb9056d|init.c:111]] init_global_mutexes
+- [[return_philo_2e2a3790|philosopher.c:111]] 
+- [[return_philo_9fb06fd5|grim_reaper.c:112]] 
+- [[return_philo_9fb9056d|init.c:113]] init_global_mutexes
+- [[return_philo_adb0bfeb|init.c:113]] init_global_semaphores
+- [[return_philo_f09edb4b|init.c:114]] init_global_mutexes
+- [[return_philo_7aa30fec|output.c:116]] write_outcome
+- [[return_philo_adb0bfeb|init.c:117]] init_global_semaphores
+- [[return_philo_9fb06fd5|grim_reaper.c:118]] 
+- [[return_philo_9fb06fd5|philosopher.c:119]] 
+- [[return_philo_c2f46fd4|grim_reaper.c:119]] end_condition_reached
+- [[return_philo_da8a2537|main.c:119]] 
+- [[return_philo_9fb06fd5|grim_reaper.c:121]] 
+- [[return_philo_adb0bfeb|init.c:121]] init_global_semaphores
+- [[return_philo_b83d5c36|main.c:124]] 
+- [[return_philo_adb0bfeb|init.c:125]] init_global_semaphores
+- [[return_philo_7aa30fec|output.c:127]] write_outcome
+- [[return_philo_ec0d0e6b|init.c:129]] 
+- [[return_philo_adb0bfeb|init.c:129]] init_global_semaphores
+- [[return_philo_f09edb4b|init.c:130]] init_global_semaphores
+- [[return_philo_9fb06fd5|grim_reaper.c:132]] 
+- [[return_philo_93dce5ce|main.c:136]] main
+- [[return_philo_b2aeabbc|main.c:138]] main
+- [[return_philo_9fb06fd5|init.c:139]] 
+- [[return_philo_9fb06fd5|init.c:141]] 
+- [[return_philo_9fb06fd5|grim_reaper.c:141]] 
+- [[return_philo_b2aeabbc|main.c:141]] main
+- [[return_philo_40d64294|init.c:143]] 
+- [[return_philo_b2aeabbc|main.c:143]] main
+- [[return_philo_ec0d0e6b|init.c:145]] 
+- [[return_philo_9b9b3daf|main.c:145]] main
+- [[return_philo_44eac3c9|main.c:148]] main
+- [[return_philo_9fb06fd5|init.c:156]] 
+- [[return_philo_9fb06fd5|init.c:159]] 
+- [[return_philo_ec0d0e6b|init.c:162]] 
+- [[return_philo_40d64294|init.c:163]] 
+
+### 📐 Plan d'assemblage (STRUCT)
+
+- [[struct_philo_fa8bf4da|struct.h:20]] 
+- [[struct_philo_2e30ef31|struct.h:20]] 
+- [[struct_philo_783f4d01|struct.h:20]] 
+- [[struct_philo_7068351e|struct.h:20]] 
+- [[struct_philo_893626ca|struct.h:20]] 
+- [[struct_philo_893626ca|struct.h:20]] 
+- [[struct_philo_893626ca|struct.h:20]] 
+- [[struct_philo_893626ca|struct.h:20]] 
+- [[struct_philo_59bda0c5|struct.h:20]] 
+- [[struct_philo_bd9c4a8b|struct.h:20]] 
+- [[struct_philo_e6b0b02d|struct.h:27]] 
+- [[struct_philo_2476208b|struct.h:27]] 
+- [[struct_philo_1e8d4ac1|struct.h:28]] 
+- [[struct_philo_c1516846|struct.h:28]] 
+- [[struct_philo_b0b60516|philo.h:29]] 
+- [[struct_philo_c1516846|struct.h:30]] 
+- [[struct_philo_c1516846|struct.h:30]] 
+- [[struct_philo_a2ea1eda|struct.h:30]] 
+- [[struct_philo_c1516846|struct.h:30]] 
+- [[struct_philo_c10a01bd|philo.h:37]] 
+- [[struct_philo_6ee41d44|struct.h:37]] 
+- [[struct_philo_6ee41d44|struct.h:39]] 
+- [[struct_philo_6ee41d44|struct.h:39]] 
+- [[struct_philo_6ee41d44|struct.h:39]] 
+- [[struct_philo_6ee41d44|struct.h:40]] 
+- [[struct_philo_6bcfd8a7|philo_bonus.h:42]] 
+- [[struct_philo_40bbf096|struct.h:45]] 
+- [[struct_philo_e35ce53d|philo.h:46]] 
+- [[struct_philo_40bbf096|struct.h:47]] 
+- [[struct_philo_908d6f4e|struct.h:47]] 
+- [[struct_philo_908d6f4e|struct.h:47]] 
+- [[struct_philo_908d6f4e|struct.h:48]] 
+- [[struct_philo_c10a01bd|philo_bonus.h:50]] 
+- [[struct_philo_02e1a80a|philo.h:57]] 
+- [[struct_philo_06fc4ff7|philo.h:59]] 
+- [[struct_philo_8232e8b6|philo_bonus.h:59]] 
+- [[struct_philo_9ba0a9ce|philo_bonus.h:69]] 
+- [[struct_philo_1e91ec9a|philo.h:75]] 
+- [[struct_philo_24e5ee13|philo_bonus.h:77]] 
+- [[struct_philo_5fd84978|philo_bonus.h:99]] 
+
+### 🔧 Typedef struct (TYPEDEF STRUCT)
+
+- [[typedef_struct_philo_ccc33d89|struct.h:20]] 
+- [[typedef_struct_philo_4a23d377|struct.h:20]] 
+- [[typedef_struct_philo_2b6811ee|struct.h:20]] 
+- [[typedef_struct_philo_551aa08b|struct.h:20]] 
+- [[typedef_struct_philo_551aa08b|struct.h:20]] 
+- [[typedef_struct_philo_551aa08b|struct.h:20]] 
+- [[typedef_struct_philo_551aa08b|struct.h:20]] 
+- [[typedef_struct_philo_02654fd8|struct.h:20]] 
+- [[typedef_struct_philo_39631847|struct.h:28]] 
+- [[typedef_struct_philo_509cc89e|philo.h:29]] 
+- [[typedef_struct_philo_39631847|struct.h:30]] 
+- [[typedef_struct_philo_39631847|struct.h:30]] 
+- [[typedef_struct_philo_ff4232d7|struct.h:30]] 
+- [[typedef_struct_philo_39631847|struct.h:30]] 
+- [[typedef_struct_philo_c884d1f6|philo.h:37]] 
+- [[typedef_struct_philo_79a2d728|struct.h:37]] 
+- [[typedef_struct_philo_79a2d728|struct.h:39]] 
+- [[typedef_struct_philo_79a2d728|struct.h:39]] 
+- [[typedef_struct_philo_79a2d728|struct.h:39]] 
+- [[typedef_struct_philo_79a2d728|struct.h:40]] 
+- [[typedef_struct_philo_a31c8021|philo_bonus.h:42]] 
+- [[typedef_struct_philo_358f0284|philo.h:46]] 
+- [[typedef_struct_philo_c884d1f6|philo_bonus.h:50]] 
+- [[typedef_struct_philo_d089f551|philo.h:57]] 
+- [[typedef_struct_philo_dff4eaee|philo.h:59]] 
+- [[typedef_struct_philo_74ffcd16|philo_bonus.h:59]] 
+- [[typedef_struct_philo_d3736f05|philo_bonus.h:69]] 
+- [[typedef_struct_philo_8976cf5d|philo.h:75]] 
+- [[typedef_struct_philo_7315f66a|philo_bonus.h:77]] 
+- [[typedef_struct_philo_b432efc2|philo_bonus.h:99]] 
+
+### ⭕ Tapis roulant surveillé (WHILE)
+
+- [[while_philo_be85d99a|init.c:20]] init_philos
+- [[while_philo_6324ac77|simulation_bonus.c:20]] 
+- [[while_philo_f410a7d5|init_mutex.c:20]] init_all_fork
+- [[while_philo_3aca0f65|init_mutex.c:20]] init_all_fork
+- [[while_philo_3aca0f65|init_mutex.c:20]] init_all_fork
+- [[while_philo_3aca0f65|init_mutex.c:20]] init_all_fork
+- [[while_philo_351ff764|init_bonus.c:22]] init_philos
+- [[while_philo_6df29fbe|simulation.c:24]] is_all_eat
+- [[while_philo_e54efa32|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|init_parsing.c:24]] ft_atoi
+- [[while_philo_f54b0e2a|init_parsing.c:24]] ft_atoi
+- [[while_philo_e54efa32|parsing.c:24]] ft_atoi
+- [[while_philo_e54efa32|parsing.c:24]] ft_atoi
+- [[while_philo_9ce97116|parsing.c:25]] contains_only_digits
+- [[while_philo_9ce97116|parsing.c:25]] contains_only_digits
+- [[while_philo_c32b0efa|init_free_all_mutex.c:25]] init_all_fork
+- [[while_philo_c32b0efa|init_free_all_mutex.c:25]] init_all_fork
+- [[while_philo_8b2d2a61|grim_reaper.c:26]] kill_all_philos
+- [[while_philo_2f8bf6a5|main_bonus.c:26]] check_args
+- [[while_philo_a118b547|main.c:27]] start_simulation
+- [[while_philo_a9b324b7|main.c:27]] check_args
+- [[while_philo_1e690fc1|init.c:28]] 
+- [[while_philo_6a01fbf5|cleanup.c:29]] 
+- [[while_philo_d89f808a|exit.c:31]] 
+- [[while_philo_a4e02c33|init_mutex.c:32]] free_all_fork
+- [[while_philo_adb68ed0|init_mutex.c:32]] free_all_fork
+- [[while_philo_adb68ed0|init_mutex.c:32]] free_all_fork
+- [[while_philo_adb68ed0|init_mutex.c:32]] free_all_fork
+- [[while_philo_b8647823|init.c:33]] 
+- [[while_philo_dc3e415b|time.c:35]] philo_sleep
+- [[while_philo_854c4c48|routine.c:35]] 
+- [[while_philo_476fd465|time.c:36]] ft_sleep
+- [[while_philo_180aed28|time.c:36]] ft_sleep
+- [[while_philo_f9524bcb|time.c:36]] ft_sleep
+- [[while_philo_7ad76b61|time.c:37]] philo_sleep
+- [[while_philo_9a814fe0|routine.c:38]] 
+- [[while_philo_637a18f2|str_utils_bonus.c:39]] ft_atoi
+- [[while_philo_6b5d8880|init_thread.c:39]] on_or_off_all_thread
+- [[while_philo_6b5d8880|init_thread.c:39]] on_or_off_all_thread
+- [[while_philo_592216a8|utils.c:40]] 
+- [[while_philo_637a18f2|str_utils.c:40]] ft_atoi
+- [[while_philo_35c7d664|routine.c:40]] 
+- [[while_philo_3659176a|main.c:41]] main
+- [[while_philo_0bc5e7d9|simulation_bonus.c:42]] 
+- [[while_philo_c8186297|gestion_thread.c:42]] evryone_to_eat
+- [[while_philo_c8186297|gestion_thread.c:42]] evryone_to_eat
+- [[while_philo_4b500f47|check.c:43]] evryone_eat
+- [[while_philo_adb68ed0|init_free_all_mutex.c:43]] free_all_fork
+- [[while_philo_adb68ed0|init_free_all_mutex.c:43]] free_all_fork
+- [[while_philo_4b500f47|check.c:44]] evryone_eat
+- [[while_philo_170fc936|simulation.c:45]] 
+- [[while_philo_1f5a22af|parsing.c:46]] integer_atoi
+- [[while_philo_01e6d333|main.c:46]] start_simulation
+- [[while_philo_1f5a22af|parsing.c:46]] integer_atoi
+- [[while_philo_60e2f99f|time.c:46]] ft_sleep
+- [[while_philo_c471b52d|time.c:47]] ft_sleep
+- [[while_philo_4b500f47|check.c:47]] evryone_eat
+- [[while_philo_00ba2758|init.c:48]] init_forks
+- [[while_philo_d2d8b14f|grim_reaper.c:49]] 
+- [[while_philo_f4f660d0|main.c:50]] main
+- [[while_philo_60e2f99f|time.c:51]] ft_sleep
+- [[while_philo_76d86c29|exit.c:52]] destroy_mutexes
+- [[while_philo_1f5bf02c|main.c:52]] stop_simulation
+- [[while_philo_0b594e93|routine_and_fork.c:56]] 
+- [[while_philo_ffdaa2b9|init_thread.c:57]] is_dead
+- [[while_philo_7a7b1e6d|init_thread.c:58]] is_dead
+- [[while_philo_0b594e93|routine_and_fork.c:58]] 
+- [[while_philo_9f3bd50c|main.c:60]] ft_sleep
+- [[while_philo_5071d544|utils.c:62]] 
+- [[while_philo_03ea9fea|check.c:63]] cheack_all_thread
+- [[while_philo_81498bee|gestion_thread.c:63]] toujour_a_table
+- [[while_philo_81498bee|gestion_thread.c:63]] toujour_a_table
+- [[while_philo_2bee95fc|check.c:65]] check_all_thread
+- [[while_philo_6a08fe7f|parsing.c:68]] is_valid_input
+- [[while_philo_6a08fe7f|parsing.c:68]] is_valid_input
+- [[while_philo_03ea9fea|check.c:69]] cheack_all_thread
+- [[while_philo_d796587f|main.c:71]] main
+- [[while_philo_1a21a2c2|init_bonus.c:75]] 
+- [[while_philo_9b4a96a3|main.c:78]] main
+- [[while_philo_b8375173|init_thread.c:80]] continue_all_thread
+- [[while_philo_7040cc8e|grim_reaper.c:81]] end_condition_reached
+- [[while_philo_5771415f|init.c:81]] 
+- [[while_philo_b9eee0e8|init_thread.c:82]] 
+- [[while_philo_7b66a956|init_philo.c:82]] free_all_philo
+- [[while_philo_7b66a956|init_free_philo.c:82]] free_all_philo
+- [[while_philo_7b66a956|init_free_philo.c:82]] free_all_philo
+- [[while_philo_1bbdb9f5|init.c:83]] 
+- [[while_philo_01c5ae85|gestion_thread.c:83]] thread_gestion
+- [[while_philo_01c5ae85|gestion_thread.c:83]] thread_gestion
+- [[while_philo_36e28f5e|check.c:87]] thread_start
+- [[while_philo_36e28f5e|check.c:91]] thread_start
+- [[while_philo_5c27f067|gestion_thread.c:91]] thread_gestion
+- [[while_philo_5c27f067|gestion_thread.c:91]] thread_gestion
+- [[while_philo_36e28f5e|check.c:93]] thread_start
+- [[while_philo_e8e4b6fe|check.c:94]] thread_start
+- [[while_philo_e8e4b6fe|check.c:98]] thread_start
+- [[while_philo_e8e4b6fe|check.c:100]] thread_start
+- [[while_philo_5ee3af3a|simulation_bonus.c:104]] launcher
+- [[while_philo_05e4c94e|main.c:106]] 
+- [[while_philo_15dbec86|philosopher.c:110]] philosopher_routine
+- [[while_philo_ebef7e08|simulation.c:110]] launcher
+- [[while_philo_34001c70|philosopher.c:114]] 
+- [[while_philo_d2ad0c8d|grim_reaper.c:115]] 
+- [[while_philo_24d2fe46|output.c:117]] write_outcome
+- [[while_philo_17284b7a|simulation.c:119]] launcher
+- [[while_philo_14d7f12d|grim_reaper.c:136]] 
+
+
+## Statistiques
+
+- **Total de patterns extraits**: 1199
+- **Types de patterns**: 8
+- **Date de génération**: 2025-05-07 00:38:14
+
+## Retour à l'index général
+[[index|Retour à l'index général des patterns]]
+
+## Graphe de patterns
+
+Pour visualiser les connexions entre les patterns de ce projet, ouvrez la [Vue graphique](obsidian://graph) dans Obsidian 
+et filtrez par le tag `project/philo`.
